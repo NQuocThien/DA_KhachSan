@@ -1,4 +1,4 @@
-html {
+/* html {
     box-sizing: border-box;
   }
   * {
@@ -132,4 +132,41 @@ html {
     object-fit: cover;
     border-radius: 10px;
   }
-  
+   */
+.container {
+  top:68px;
+width: 100%;
+height: 400px;
+position: relative;
+}
+/* .slider-item {
+  width: 100%;
+  height: 100px;
+  border: none;
+} */
+.slider-item img {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+}
+
+.buton__Slide span {
+  position: relative;
+  color: white;
+  font-size: 40px;
+  opacity: 0.6;
+}
+span#btn__right {
+  top: 40%;
+  right: 10px;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
+span#bnt__left {
+  top: 40%;
+  left: 10px;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+}
