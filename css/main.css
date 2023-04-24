@@ -2,45 +2,132 @@ body{
     padding: 0;
     margin: 0;
 }
+
+:root{
+    --color_header: #3b3939;
+    --color_textNav: white;
+
+}
+
 #header{
     align-items:center;
-    background-color:#000000;
-    display:flex;
-    position: fixed;
+    background-color:var(--color_header);
     font-size:12px;
-    padding:0px 45px;   
-    width: 100%;
-    height: 85px;
 }
+
 .menu {
-    display: flex;
     align-items:center;
 }
-.logo{
-    margin-left: 35px;
-   
-}
+
 .logo img{
     
-    height: 83px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+
 }
 .menu_nav{
     list-style: none;
-    font-size:14px;
     align-items: center;
-    display: flex; 
+
 }
 .menu_nav a{
-    font-size:14px;
+    font-size:16px;
     font-weight:600;
     letter-spacing:2px;
-    padding:4.8px 12px;
+    padding:4px 10px;
     text-decoration: none;
-    color:#e8e6e3;
+    color:white;
+}
+#menu_nav,#logo_header{
+    background-color: var(--color_header);
 }
 .menu_nav a:hover{
     color: #ffa51e;
 }
 
+#header .menu .menu__sub{
+    color: aliceblue;
+    font-size: 18px;
+}
+#header .menu .menu__sub .menu__sub-icon{
+    cursor: pointer;
+}
+/* ============================================== Container============================================ */
+
+/* .slider {
+max-width: 1000px;
+margin: 25px auto;
+position: relative;
+} */
+.slider-next,
+.slider-prev {
+position: absolute;
+top: 70%;
+width: 50px;
+height: 50px;
+margin: 0 40px;
+border-radius: 100rem;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #999;
+background-color: white;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+cursor: pointer;
+font-size: 20px;
+z-index: 10;
+}
+.slider-next {
+right: -25px;
+}
+.slider-prev {
+left: -25px;
+}
+.slider-dots {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+z-index: 10;
+}
+.slider-dots li {
+margin: 0 10px;
+width: 15px;
+height: 15px;
+border-radius: 100rem;
+background-color: #999;
+cursor: pointer;
+transition: background-color 0.25s linear;
+}
+.slider-dots li.active {
+background-color: white;
+}
+.slider-wrapper {
+width: 100%;
+height: 600px;
+overflow: hidden;
+position: relative;
+}
+.slider-main {
+display: flex;
+position: relative;
+transition: transform 0.25s linear;
+height: 100%;
+}
+.slider-item {
+height: 100%;
+width: 100%;
+flex: 1 0 100%;
+user-select: none;
+}
+.slider-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 10px;
+}
+  

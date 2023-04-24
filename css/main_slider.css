@@ -36,13 +36,13 @@ html {
     line-height: 1;
     padding: 25px;
   }
-  .slider {
+  #container .slider {
     max-width: 1000px;
-    margin: 25px auto;
+    margin: 85px auto;
     position: relative;
     display: flex;
   }
-  .slider-next {
+  /* .slider-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -132,4 +132,4 @@ html {
     object-fit: cover;
     border-radius: 10px;
   }
-  
+   */
