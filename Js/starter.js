@@ -26,6 +26,11 @@ window.addEventListener("load", function(){
                 sliderMain.style = `transform: translateX(${positionX}px) `;
                 console.log(index,sliderLength );
             }
+            else{
+                index=0;
+                positionX=0;
+                sliderMain.style = `transform: translateX(${positionX}px) `;
+            }
         }else if(direction === -1){
             if(index > 0)
             {
@@ -33,6 +38,11 @@ window.addEventListener("load", function(){
                 positionX += sliderItemWidth;
                 sliderMain.style = `transform: translateX(${positionX}px) `;
                 console.log(index);
+            }
+            else{
+                index=sliderLength-1;
+                positionX= -sliderItemWidth*index;
+                sliderMain.style = `transform: translateX(${positionX}px) `;
             }
         }
     }
