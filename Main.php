@@ -97,6 +97,125 @@
         </div>
     </div>
     <script src="./Js/starter.js"></script>
+    <div class="booking">
+        <div class="row row_booking">
+            <div class="col l-6">
+                <div class="booking__item one_item">
+                    <div class="tab_main"><a href="">Đặt phòng ngay</a></div>
+                    <div class="tab_item"></div>
+                    <div class="tab_content">
+                        <form action="" method="post">
+                            <div class="row">
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Họ và tên
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <input type="text" class="form_control" name="_name" id="Full_name" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Điện thoại
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <input type="text" class="form_control" name="_name" id="phone" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col l-4 ">
+                                    <div class="form_group">
+                                        <label for="">Email
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <input type="text" class="form_control" name="_name" id="Email" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Chi nhánh
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <select name="" id="select_from">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Khu vực
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <select name="" id="select_from">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Khách sạn
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <select name="" id="select_from">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Loại phòng
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <select name="" id="select_from">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Ngày đến
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <input type="text" class="form_control" name="_name" id="date_den" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Ngày đi
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <input type="text" class="form_control" name="_name" id="date_di" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="col l-8">
+                                    <div class="form_group">
+                                        <label for="">Ghi chú
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <textarea name="" id="textarea_fromG" cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col l-4">
+                                    <div class="form_group">
+                                        <label for="">Số lượng phòng
+                                            <span class="starRed">*</span>
+                                        </label>
+                                        <input type="text" class="form_control" name="_name" id="Full_name" placeholder="">
+                                        <input type="submit" value="Đặt phòng" id="submit_datphong">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- // intro_branch -->
@@ -121,10 +240,7 @@
     
     <div id="footer">
     
-
+     
     </div>
-
-    
-
 </body>
 </html>

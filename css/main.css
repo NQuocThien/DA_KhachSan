@@ -23,6 +23,7 @@ body{
 }
 .logo img{
     height:70px;
+   
     width: 120px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -110,5 +111,66 @@ position: relative;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+.booking{
+    /* display: flex; */
+    width: 100%;
+    margin-top: -5px;
+}
+.row_booking{
+    width: 100%;
+}
+.one_item{
+    padding: 45px;
+}
+.tab_main{
+    display: flex;
+    align-items: center;
+    
+    border-bottom: 2px solid #d69c2f;
+
+}
+.tab_main a{
+    font-size: 16px;
+    padding: 10px 25px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #d69c2f;
+}
+.form_group>input{
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin-top:10px;
+}
+.form_group #submit_datphong{
+    background: #d69c2f;
+    margin: 17px 0 0 0;
+    border: 1px solid #efeee9;
+    color: #FFF;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.form_group .starRed{
+    color: red;
+}
+#select_from{
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+#textarea_fromG{
+    max-width: 350px;
+    width: 350px;
+    height: 100px;
 }
   
