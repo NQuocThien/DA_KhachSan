@@ -59,13 +59,6 @@
     <div id="container" class = "grid">
         <div class="slider l-12 m-12 c-12">
             <i class="fa fa-angle-left slider-prev"></i>
-            <ul class="slider-dots">
-                <li class="slider-dot-item active" data-index="0"></li>
-                <li class="slider-dot-item" data-index="1"></li>
-                <li class="slider-dot-item" data-index="2"></li>
-                <li class="slider-dot-item" data-index="3"></li>
-                <li class="slider-dot-item" data-index="4"></li>
-            </ul>
             <div class="slider-wrapper">
                 <div class="slider-main">
                 <div class="slider-item">
@@ -105,6 +98,27 @@
     </div>
     <script src="./Js/starter.js"></script>
 
+
+    <!-- // intro_branch -->
+    <div class="intro_branch">
+        <div class="grid wide">
+            <h2 class="_title">HỆ THỐNG CHI NHÁNH KHÁCH SẠN AGU</h2>
+            <div class="row">
+                <div class="l-4 m-4 c-12">
+                    
+                </div>
+                <div class="l-4 m-4 c-12">
+                    
+                </div>
+                <div class="l-4 m-4 c-12">
+                    
+                </div>
+            </div>
+            
+
+        </div>        
+    </div>
+    
     <div id="footer">
     
 
