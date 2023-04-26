@@ -21,7 +21,7 @@
         box-sizing: border-box;
       }
       .col {
-        text-align: center;
+        
         background-clip: content-box;
         margin-top: 8px;
         margin-bottom: 8px;
