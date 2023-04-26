@@ -3,7 +3,10 @@ body{
     margin: 0;
     background-color: #ffffff;
 }
-
+a{
+    text-decoration: none;
+   
+}
 :root{
     --color_header: #3b3939;
     --color_textNav: white;
@@ -124,13 +127,14 @@ position: relative;
     /* display: flex; */
     width: 100%;
     margin-top: -5px;
-    background-color: #efeee9;
+    
 }
 .row_booking{
     width: 100%;
 }
 .one_item{
     padding: 45px;
+    background-color: #efeee9;
 }
 .tab_main{
     display: flex;
@@ -179,9 +183,22 @@ position: relative;
 }
 #textarea_fromG{
     max-width: 350px;
+    max-height: 500px;
     width: 350px;
     height: 100px;
 }
+.booking_header .title_box{
+    color: #222;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.intro_genar a{
+    border-bottom: 1px dotted;
+    color: #000;
+}
+
 /* ================================= warp card============================== */
 .intro_branch{
     height: auto;
