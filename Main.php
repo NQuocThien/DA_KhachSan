@@ -21,7 +21,6 @@
         box-sizing: border-box;
       }
       .col {
-        text-align: center;
         background-clip: content-box;
         margin-top: 8px;
         margin-bottom: 8px;
@@ -335,34 +334,113 @@
         </div>
     
         <div class="service grid wide">
+            <h2 class="title">
+                DỊCH VỤ - TIỆN NGHI
+            </h2>
+            <P class="title-sub">Dịch vụ nhà hàng, karaoke, coffee, phòng họp,... tại MIA Hotel</P>
         <div class="row">
             
             <div class="col l-3">
                 <div class="tap_service_mains">
-                    <a href="active">GYM</a>
-                    <a href="">VISA</a>
-                    <a href="">Dịch Vụ Phòng Hộp</a>
-                    <a href="">Thuê Xe</a>
-                    <a href="">Nhà Hàngasasas</a> 
+                    <a class="tap_service-item active"  href="#">GYM</a>
+                    <a class="tap_service-item " href="#">VISA</a>
+                    <a class="tap_service-item " href="#">Dịch Vụ Phòng Hộp</a>
+                    <a class="tap_service-item " href="#">Thuê Xe</a>
+                    <a class="tap_service-item " href="#">Nhà Hàng</a> 
                 </div>
-                <div class="l-9">
-    
-                    <div class="tap_service_contains">
-                        <div class="tap_service_contains_item col l-4">
-                            <div class="">
-                                
-                            </div>
-
-
+               
+        </div>
+        <div class="col l-9">
+            <div class="tap_service_contains ">
+                <div class="contains_item active">
+                    <div class="row">
+                        <div class="item-img col l-4">
+                            <img src="./images/gym.jpg" alt="">
                         </div>
-    
+                        <div class="item_body col l-8">
+                            
+                            <h3 class="title fronText">
+                                GYM
+                            </h3>
+                            <p class="content fronText">
+                                Một phòng tập thể dục năng động với trang thiết bị công nghệ cao để căng cơ và thư giãn trong phòng xông hơi và tháp Jacuzzi để bắt đầu và kết thúc một ngày bận rộn. Phòng Tập Thể Hình GYM  tại ROSALIZA INTERNATIONAL HOTEL với trang Thiết Bị Chuyên Nghiệp Đạt Chuẩn 100% USA . 
+                            </p>
+                            <a class = "btn fronText" >Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- visa -->
+                <div class="contains_item ">
+                    <div class="row">
+                        <div class="item-img col l-4">
+                            <img src="./images/visa.jpg" alt="">
+                        </div>
+                        <div class="item_body col l-8">
+                            <h3 class="title fronText">
+                            VISA
+                            </h3>
+                            <p class="content fronText">
+                            What is a `Visa on Arrival?: this is most likely the easiest way to obtain your visa without having to chase down embassies, consulates and the like prior to your trip, and is a valid alternative when applying for a tourist visa.
+                            </p>
+                            <a class = "btn fronText" >Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- phòng hộp -->
+                <div class="contains_item ">
+                    <div class="row">
+                        <div class="item-img col l-4">
+                            <img src="./images/phonghop.jpg" alt="">
+                        </div>
+                        <div class="item_body col l-8">
+                            <h3 class="title fronText">
+                            Dịch Vụ Phòng họp
+                            </h3>
+                            <p class="content fronText">
+                            You come to Hanoi to prepare for an event and to find a place to rent meeting rooms, meeting with partners to completely eliminate a job to find a venue for this important event at Rosaliza Hotel. Guests can rent a meeting room at the hotel you will really feel satisfied by all that Rosaliza brings. A luxurious design style, friendly reception space,
+                            </p>
+                            <a class = "btn fronText" >Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Thuê xe  -->
+                <div class="contains_item ">
+                    <div class="row">
+                        <div class="item-img col l-4">
+                            <img src="./images/visa.jpg" alt="">
+                        </div>
+                        <div class="item_body col l-8">
+                            <h3 class="title fronText">
+                            Thuê xe
+                            </h3>
+                            <p class="content fronText">
+                            - Dịch vụ thuê xe oto và xe máy đi theo ngày <br>
+                            - Dịch vụ thuê xe đón Nội Bài về khách sạn và từ khách sạn đi Nội Bài
+                            </p>
+                            <a class = "btn fronText" >Xem thêm</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nhà hàng -->
+                <div class="contains_item ">
+                    <div class="row">
+                        <div class="item-img col l-4">
+                            <img src="./images/nhahang.jpg" alt="">
+                        </div>
+                        <div class="item_body col l-8">
+                            <h3 class="title fronText">
+                            Nhà hàng
+                            </h3>
+                            <p class="content fronText">
+                            Nhà hàng Rosaliza  thuộc Khách sạn Rozaliza Hà Nội  có vị trí tại tầng 3 trong khuôn viên khách sạn cao 14 tầng nhà hàng chuyên phục vụ các món ăn Âu, Á, và truyền thống Việt Nam trong một bầu không khí sang trọng, ấm cúng có không gian nhìn ra con phố cổ Trần Quốc Toản.
+                            </p>
+                            <a class = "btn fronText" >Xem thêm</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="l-9">
-
-        </div>
+        <script src="./Js/tabService.js"></script>
     </div>
     
 
