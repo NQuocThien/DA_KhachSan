@@ -21,7 +21,7 @@
         box-sizing: border-box;
       }
       .col {
-        text-align: center;
+        /* text-align: center; */
         background-clip: content-box;
         margin-top: 8px;
         margin-bottom: 8px;
@@ -374,9 +374,53 @@
 
 
         <!-- Footter -->
-    <div id="footer">
-    
-     
-    </div>
+      <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col l-4">
+                    <div class="footer_name">
+                        <h3 class="title">Thông tin liên hệ</h3>
+                        <div class="address">
+                            <span >AGU HoTel</span>
+                            <p>Địa chỉ: 12/a,Long Xuyên, An Giang</p>
+                            <p>Điện thoại: 0123456789</p>
+                            <p>Hotline: 09090909</p>
+                            <p>Email: aguhotel@gmail.com</p>
+                            <p>Website: </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-4">
+                    <div class="footer_name">
+                        <h3 class="title">Thông tin liên hệ</h3>
+                        <ul class="menu_footer">
+                            <li><a href="">GYM</a></li>
+                            <li><a href="">VISA</a></li>
+                            <li><a href="">PHÒNG HỌP</a></li>
+                            <li><a href="">NHÀ HÀNG</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col l-4">
+                    <div class="footer_name">
+                        <h3 class="title">Thông tin liên hệ</h3>
+                        <div class="form_submit">
+                            <input type="text" placeholder="Enter your Email">
+                            <a href="" class=" buton btn_footer">Đăng ký</a>
+                        </div>
+                        <div class="list_icon_mxh">
+                            <div class="icon_item"><a href=""><span><i class="fa-brands fa-facebook"></i></span></a></div>
+                            <div class="icon_item"><a href=""><span><i class="fa-brands fa-instagram"></i></span></a></div>
+                            <div class="icon_item"><a href=""><span><i class="fa-brands fa-youtube"></i></span></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-12 end_footer">
+                     <p>Copyright AGU Hotels | Design by aguhotel.vn</p>
+                        
+                </div>
+            </div>
+        </div>
+      </footer>
 </body>
 </html>
