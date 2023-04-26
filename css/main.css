@@ -1,12 +1,18 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: #ffffff;
 }
 
 :root{
     --color_header: #3b3939;
     --color_textNav: white;
 
+}
+
+.fronText{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
 }
 
 #header{
@@ -112,10 +118,13 @@ position: relative;
     object-fit: cover;
     border-radius: 10px;
 }
+/* ==================================Booking ====================== */
+
 .booking{
     /* display: flex; */
     width: 100%;
     margin-top: -5px;
+    background-color: #efeee9;
 }
 .row_booking{
     width: 100%;
@@ -173,4 +182,70 @@ position: relative;
     width: 350px;
     height: 100px;
 }
-  
+/* ================================= warp card============================== */
+.intro_branch{
+    height: auto;
+    
+}
+.warpCard 
+{
+    height: auto;
+    border: 1px dotted #d69c2f;
+    padding: 0;
+    border-radius: 5% 0% 5% 0%;
+}
+.warpCard .card_img{
+
+    border-radius: 5% 0% 0% 0%;
+    overflow: hidden;
+}
+.warpCard .card_img img{
+
+    transition: all .5s ease-in-out;
+
+}
+.warpCard .card_img:hover img{
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+.warpCard .card_title {
+    background-color:#d69c2f ;
+}
+.warpCard .card_title a{
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: start;
+}
+.warpCard .card_title {
+    padding: 0 10px;
+    text-align: start;
+}
+.warpCard .card_body{
+    padding: 0 10px;
+    text-align: start;
+    font-size: 14px;
+}
+.warpCard .card_body .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 80px;
+    background-color:#d69c2f ;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.btn.btn1{
+    border-radius: 18px 0 18px 0 !important;
+}
+.warpCard .card_body .btn a{
+    color: white;
+}
+/*============================================ hotel-highlights */
+
+.hotel-highlights{
+    height: auto;
+    background-color: #efeee9;
+    padding: 40xp 0;
+}

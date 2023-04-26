@@ -22,7 +22,6 @@
       }
       .col {
         text-align: center;
-        background-color: #ccc;
         background-clip: content-box;
         margin-top: 8px;
         margin-bottom: 8px;
@@ -216,28 +215,165 @@
         </div>
     </div>
 
-
-
     <!-- // intro_branch -->
-    <div class="intro_branch">
+    <div class="intro_branch grid wide">
+        <h2 class="_title fronText">HỆ THỐNG CHI NHÁNH KHÁCH SẠN AGU</h2>
         <div class="grid wide">
-            <h2 class="_title">HỆ THỐNG CHI NHÁNH KHÁCH SẠN AGU</h2>
             <div class="row">
-                <div class="l-4 m-4 c-12">
-                    
+                <div class = "col l-4 m-4 c-12">
+
+                    <div class="warpCard">
+                        <div class="card_img">
+                            <img src="./images/ksn1.jpg" class = "l-12"alt="
+                            " alt="">
+                        </div>
+                        <div class="card_title l-12 m-12 c-12 ">
+                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                        </div>
+                        <div class="card_body fronText">
+                            <p>Khách sạn mang phong cách nhẹ nhàn yên tĩnh</p>
+                            <div class="btn">
+                                <a href="" class="fronText">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="l-4 m-4 c-12">
-                    
-                </div>
-                <div class="l-4 m-4 c-12">
-                    
+                <div class = "col l-4 m-4 c-12">
+
+                    <div class="warpCard">
+                        <div class="card_img">
+                            <img src="./images/ksn1.jpg" class = "l-12"alt="
+                            " alt="">
+                        </div>
+                        <div class="card_title l-12 m-12 c-12 ">
+                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                        </div>
+                        <div class="card_body fronText">
+                            <p>Khách sạn mang phong cách nhẹ nhàn yên tĩnh</p>
+                            <div class="btn">
+                                <a href="" class="fronText">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
 
-        </div>        
+
+      
+    <div class="hotel-highlights grid wide  ">
+        <h2 class="_title fronText">KHÁCH SẠN NỔI BẬT</h2>
+        <P class = "sub-title fronText">Một số khách sạn nổi bật của AGU</P>
+            <div class="grid wide">
+                <div class="row">
+                    <div class = "col l-3 m-3 c-12">
+
+                        <div class="warpCard">
+                            <div class="card_img">
+                                <img src="./images/ksn1.jpg" class = "l-12"alt="
+                                " alt="">
+                            </div>
+                            <div class="card_title l-12 m-12 c-12 ">
+                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                            </div>
+                            <div class="card_body fronText">
+                                <p>Xếp loại: </p>
+                                <p>Địa chỉ: </p>
+                                <p>Liên hệ: </p>
+                                <div class="btn btn1">
+                                    <a href="" class="fronText">Xem thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class = "col l-3 m-3 c-12">
+
+                        <div class="warpCard">
+                            <div class="card_img">
+                                <img src="./images/ksn1.jpg" class = "l-12"alt="
+                                " alt="">
+                            </div>
+                            <div class="card_title l-12 m-12 c-12 ">
+                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                            </div>
+                            <div class="card_body fronText">
+                                <p>Xếp loại: </p>
+                                <p>Địa chỉ: </p>
+                                <p>Liên hệ: </p>
+                                <div class="btn btn1">
+                                    <a href="" class="fronText">Xem thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class = "col l-3 m-3 c-12">
+
+                        <div class="warpCard">
+                            <div class="card_img">
+                                <img src="./images/ksn1.jpg" class = "l-12"alt="
+                                " alt="">
+                            </div>
+                            <div class="card_title l-12 m-12 c-12 ">
+                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                            </div>
+                            <div class="card_body fronText">
+                                <p>Xếp loại: </p>
+                                <p>Địa chỉ: </p>
+                                <p>Liên hệ: </p>
+                                <div class="btn btn1">
+                                    <a href="" class="fronText">Xem thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    
+        <div class="service grid wide">
+        <div class="row">
+            
+            <div class="col l-3">
+                <div class="tap_service_mains">
+                    <a href="active">GYM</a>
+                    <a href="">VISA</a>
+                    <a href="">Dịch Vụ Phòng Hộp</a>
+                    <a href="">Thuê Xe</a>
+                    <a href="">Nhà Hàngasasas</a> 
+                </div>
+                <div class="l-9">
+    
+                    <div class="tap_service_contains">
+                        <div class="tap_service_contains_item col l-4">
+                            <div class="">
+                                
+                            </div>
+
+
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-9">
+
+        </div>
     </div>
     
+
+
+
+
+
+
+
+
+        <!-- Footter -->
     <div id="footer">
     
      
