@@ -39,7 +39,7 @@
                 <ul id="menu_nav" class="menu_nav col l-10 m-0 c-0">
                       <a href="">Trang chủ</a>   
                       <a href="">Giới thiệu</a>  
-                      <a href="">Khách sạn</a>  
+                      <a href="./menu/hotel.php">Khách sạn</a>  
                       <a href="">Dịch vụ</a>  
                       <a href="">Tour</a>  
                       <a href="">Tin tức</a>  
@@ -281,6 +281,7 @@
                 </div>
             </div>
         </div>
+       
     </div>
 
 
