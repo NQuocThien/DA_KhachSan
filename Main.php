@@ -22,6 +22,7 @@
       }
       .col {
         /* text-align: center; */
+        
         background-clip: content-box;
         margin-top: 8px;
         margin-bottom: 8px;
@@ -39,7 +40,7 @@
                 <ul id="menu_nav" class="menu_nav col l-10 m-0 c-0">
                       <a href="">Trang chủ</a>   
                       <a href="">Giới thiệu</a>  
-                      <a href="">Khách sạn</a>  
+                      <a href="./menu/hotel.php">Khách sạn</a>  
                       <a href="">Dịch vụ</a>  
                       <a href="">Tour</a>  
                       <a href="">Tin tức</a>  
@@ -207,7 +208,30 @@
                         </form>
                     </div>
                 </div>
-
+            </div>
+            <div class="col l-6">
+                <div class="booking__item two_item">
+                    <div class="booking_header">
+                        <h3 class="title_box">Tin tức nổi bật</h3>
+                    </div>
+                    <div class="bookingbody">
+                        <div class="media row">
+                            <div class="media_img col l-4"><img src="" alt=""></div>
+                            <div class="media_body col l-8">
+                                <h5>Khách sạn Mializa Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội</h5>
+                                <p>Khách sạn MiaLiza  Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội </p>
+                            </div>
+                        </div>
+                        <div class="intro_genar row">
+                            
+                            <a href="" class="col l-12">
+                                <i class="fa-solid fa-check"></i>
+                                <span>Vẻ đẹp của mùa thu Hà Nội khiến bao người lưu luyến</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
             <div>
 
@@ -258,6 +282,7 @@
                 </div>
             </div>
         </div>
+       
     </div>
 
 
@@ -445,6 +470,19 @@
                 <script src="./Js/tabService.js"></script>
             </div>
         </div> 
+        </div>
+        <script src="./Js/tabService.js"></script>
+    </div>
+        </div>
+    
+
+
+
+
+
+
+
+
         <!-- Footter -->
       <footer>
         <div class="container">
