@@ -252,6 +252,8 @@ position: relative;
 /* ============================ service========== */
 .service{
     text-align: center;
+    height: auto;
+    
 }
 .service .row{
     background-color: #efeee9   ;
@@ -310,6 +312,9 @@ position: relative;
     display: flex;
 }
 /* ==============footer start */
+footer{
+    margin-top: 30px;
+}
 .container{
     width: 100%;
     background-color: #3b3939;
