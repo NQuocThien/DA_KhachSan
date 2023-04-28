@@ -1,0 +1,44 @@
+.fontText{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.list_new .new-item .new-body{
+    display: flex ;
+}
+.list_new .new-item .new-body .new-body_img {
+    height: 105px;
+
+    border: 1px dotted #ccc ;
+}
+.list_new .new-item .new-link {
+    color: #666666;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.list_new .new-item .new-body {
+   margin-top: 5px;
+}
+.list_new .new-item .new-link:hover {
+   text-decoration: underline;
+   color: #d8a767;
+}
+.list_new .new-item .new-body .new-body_img img {
+    max-height: 100px;
+    /* max-width: calc(100% ); */
+    width: 200px;
+    border: 1px #ccc ;
+}
+.list_new .new-item .new-body p {
+    margin: 0;
+    padding:0 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: start;
+}
+.list_new .new-item .new-about{
+    text-decoration: none;
+    color: #d8a767;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.list_new .new-item .new-about:hover{
+    text-decoration: underline;
+}
