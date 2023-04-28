@@ -15,14 +15,11 @@
     />
     <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
-    
     <style>
          * {
         box-sizing: border-box;
       }
       .col {
-        /* text-align: center; */
-        
         background-clip: content-box;
         margin-top: 8px;
         margin-bottom: 8px;
