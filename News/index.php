@@ -25,7 +25,7 @@
                 <a href="Main.php" id="logo_header" class="logo col l-2 m-2 c-2"><img src="../img/logo.jpg" alt=""></a>         
                 <ul id="menu_nav" class="menu_nav col l-10 m-0 c-0">
                     <a href="../Main.php">Trang chủ</a>   
-                    <a href="">Giới thiệu</a>  
+                    <a href="../GioiThieu/gioithieu.php">Giới thiệu</a>  
                     <a href="../menu/hotel.php">Khách sạn</a>  
                     <a href="">Dịch vụ</a>  
                     <a href="">Tour</a>  
