@@ -1,3 +1,7 @@
+<?php
+	include_once "../cauhinh.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,27 +59,33 @@
     </div>
     <div class="list_new grid wide">
         <div class="row">
-            <div class="new-item l-6">
-                <a href="" class="new-link">Những địa điểm nghỉ dưỡng tuyệt vời cho Lễ tình nhân 2021</a>
-                <div class="new-body">
-                    <div class="new-body_img l-4">
-                        <img src="../images/diadiem.jpg" alt="" >
+            <div class="l-2">
+                <div class="list_cd">
+                    <h3> DS chu de</h3>
+                        <?php
+                            $sql = "select * from chude";
+                            $danhsach = $connect->query($sql);
+                            //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+                            if (!$danhsach) {
+                                die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+                                exit();
+                            }
+                            while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
+                            {
+                                echo "<a href='index.php?do=baiviet_chude&id=".$row['MaChuDe']."'>".$row['TenChuDe']."</a> " ;
+                            }
+                        ?>
                     </div>
-                    <p class="l-8">14/2 - Ngày lễ tình nhân đang sắp đến gần. Bạn và người ấy đã tìm được chốn hẹn hò lý tưởng nào chưa? Nếu bạn vẫn đang còn nhiều phân vân hay muốn tìm một địa điểm thực sự ấm áp, bất ngờ thì hãy tham khảo những gợi ý dưới đây nhé. </p>
-                </div>
-                <a href="" class="new-about">chi tiet</a>
             </div>
-            
-            <!-- bai2 -->
-            <div class="new-item l-6">
-                <a href="" class="new-link">Những địa điểm nghỉ dưỡng tuyệt vời cho Lễ tình nhân 2021</a>
-                <div class="new-body">
-                    <div class="new-body_img l-4">
-                        <img src="../images/diadiem.jpg" alt="" >
-                    </div>
-                    <p class="l-8">14/2 - Ngày lễ tình nhân đang sắp đến gần. Bạn và người ấy đã tìm được chốn hẹn hò lý tưởng nào chưa? Nếu bạn vẫn đang còn nhiều phân vân hay muốn tìm một địa điểm thực sự ấm áp, bất ngờ thì hãy tham khảo những gợi ý dưới đây nhé. </p>
-                </div>
-                <a href="" class="new-about">chi tiet</a>
+            <div class="l-8">
+                <?php
+                    $do = isset($_GET['do']) ? $_GET['do'] : "home";
+                    include $do . ".php";
+                ?>
+                
+            </div>
+            <div class="l-2">
+                
             </div>
         </div>
 

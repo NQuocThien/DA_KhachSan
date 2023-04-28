@@ -43,7 +43,7 @@
                       <a href="./menu/hotel.php">Khách sạn</a>  
                       <a href="">Dịch vụ</a>  
                       <a href="">Tour</a>  
-                      <a href="./News/news.php">Tin tức</a>  
+                      <a href="./News/index.php">Tin tức</a>  
                       <a href="">Khuyến mãi</a>  
                       <a href="">Tuyển dụng</a>  
                       <a href="">Liên hệ</a>  
