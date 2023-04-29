@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel An Giang</title>
 
-    <link rel="stylesheet" href="./css/Grid.css">
+    <link rel="stylesheet" href="../css/Grid.css">
+    <link rel="stylesheet" href="../css/main.css">
     <!-- <link rel="stylesheet" href="./css/main.css"> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/main.css">
     <style>
          * {
         box-sizing: border-box;
@@ -32,7 +32,7 @@
     <div id="header" class = "grid">
         <div class="grid wide">
             <div class="menu row">
-                <a href="Main.php" id="logo_header" class="logo col l-2 m-2 c-2"><img src="./img/logo.jpg" alt=""></a>
+                <a href="Main.php" id="logo_header" class="logo col l-2 m-2 c-2"><img src="../img/logo.jpg" alt=""></a>
              
                 <ul id="menu_nav" class="menu_nav col l-10 m-0 c-0">
                       <a href="">Trang chủ</a>   
@@ -60,31 +60,31 @@
                 <div class="slider-main">
                 <div class="slider-item">
                     <img
-                    src="./images/ks1.jpg"
+                    src="../images/ks1.jpg"
                     alt=""
                     />
                 </div>
                 <div class="slider-item">
                     <img
-                    src="./images/ks2.jpg"
+                    src="../images/ks2.jpg"
                     alt=""
                     />
                 </div>
                 <div class="slider-item">
                     <img
-                    src="./images/ks3.jpg"
+                    src="../images/ks3.jpg"
                     alt=""
                     />
                 </div>
                 <div class="slider-item">
                     <img
-                    src="./images/ks4.jpg"
+                    src="../images/ks4.jpg"
                     alt=""
                     />
                 </div>
                 <div class="slider-item">
                     <img
-                    src="./images/ks5.jpg"
+                    src="../images/ks5.jpg"
                     alt=""
                     />
                 </div>
@@ -93,7 +93,7 @@
             <i class="fa fa-angle-right slider-next"></i>
         </div>
     </div>
-    <script src="./Js/starter.js"></script>
+    <script src="../Js/starter.js"></script>
     <div class="booking">
         <div class="row row_booking">
             <div class="col l-6">
@@ -245,7 +245,7 @@
 
                     <div class="warpCard">
                         <div class="card_img">
-                            <img src="./images/ksn1.jpg" class = "l-12"alt="
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
                             " alt="">
                         </div>
                         <div class="card_title l-12 m-12 c-12 ">
@@ -263,7 +263,7 @@
 
                     <div class="warpCard">
                         <div class="card_img">
-                            <img src="./images/ksn1.jpg" class = "l-12"alt="
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
                             " alt="">
                         </div>
                         <div class="card_title l-12 m-12 c-12 ">
@@ -286,75 +286,74 @@
       
     <div class="hotel-highlights grid  ">
         <div class="grid wide">
-                <h2 class="_title fronText">KHÁCH SẠN NỔI BẬT</h2>
-                <P class = "sub-title fronText">Một số khách sạn nổi bật của AGU</P>
-                <div class="row">
-                    <div class = "col l-3 m-3 c-12">
+            <h2 class="_title fronText">KHÁCH SẠN NỔI BẬT</h2>
+            <P class = "sub-title fronText">Một số khách sạn nổi bật của AGU</P>
+            <div class="row">
+                <div class = "col l-3 m-3 c-12">
 
-                        <div class="warpCard">
-                            <div class="card_img">
-                                <img src="./images/ksn1.jpg" class = "l-12"alt="
-                                " alt="">
-                            </div>
-                            <div class="card_title l-12 m-12 c-12 ">
-                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                            </div>
-                            <div class="card_body fronText">
-                                <p>Xếp loại: </p>
-                                <p>Địa chỉ: </p>
-                                <p>Liên hệ: </p>
-                                <div class="btn btn1">
-                                    <a href="" class="fronText">Xem thêm</a>
-                                </div>
+                    <div class="warpCard">
+                        <div class="card_img">
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
+                            " alt="">
+                        </div>
+                        <div class="card_title l-12 m-12 c-12 ">
+                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                        </div>
+                        <div class="card_body fronText">
+                            <p>Xếp loại: </p>
+                            <p>Địa chỉ: </p>
+                            <p>Liên hệ: </p>
+                            <div class="btn btn1">
+                                <a href="" class="fronText">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                   
-                    <div class = "col l-3 m-3 c-12">
+                </div>
+                
+                <div class = "col l-3 m-3 c-12">
 
-                        <div class="warpCard">
-                            <div class="card_img">
-                                <img src="./images/ksn1.jpg" class = "l-12"alt="
-                                " alt="">
-                            </div>
-                            <div class="card_title l-12 m-12 c-12 ">
-                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                            </div>
-                            <div class="card_body fronText">
-                                <p>Xếp loại: </p>
-                                <p>Địa chỉ: </p>
-                                <p>Liên hệ: </p>
-                                <div class="btn btn1">
-                                    <a href="" class="fronText">Xem thêm</a>
-                                </div>
+                    <div class="warpCard">
+                        <div class="card_img">
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
+                            " alt="">
+                        </div>
+                        <div class="card_title l-12 m-12 c-12 ">
+                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                        </div>
+                        <div class="card_body fronText">
+                            <p>Xếp loại: </p>
+                            <p>Địa chỉ: </p>
+                            <p>Liên hệ: </p>
+                            <div class="btn btn1">
+                                <a href="" class="fronText">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                   
-                    <div class = "col l-3 m-3 c-12">
+                </div>
+                
+                <div class = "col l-3 m-3 c-12">
 
-                        <div class="warpCard">
-                            <div class="card_img">
-                                <img src="./images/ksn1.jpg" class = "l-12"alt="
-                                " alt="">
-                            </div>
-                            <div class="card_title l-12 m-12 c-12 ">
-                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                            </div>
-                            <div class="card_body fronText">
-                                <p>Xếp loại: </p>
-                                <p>Địa chỉ: </p>
-                                <p>Liên hệ: </p>
-                                <div class="btn btn1">
-                                    <a href="" class="fronText">Xem thêm</a>
-                                </div>
+                    <div class="warpCard">
+                        <div class="card_img">
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
+                            " alt="">
+                        </div>
+                        <div class="card_title l-12 m-12 c-12 ">
+                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                        </div>
+                        <div class="card_body fronText">
+                            <p>Xếp loại: </p>
+                            <p>Địa chỉ: </p>
+                            <p>Liên hệ: </p>
+                            <div class="btn btn1">
+                                <a href="" class="fronText">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                   
                 </div>
             </div>
         </div>
+    </div>
     
         <div class="service grid wide">
             <h2 class="title">
@@ -374,12 +373,12 @@
                 
                 </div>
             
-            <div class="col l-9">
-                <div class="tap_service_contains ">
+               <div class="col l-9">
+                    <div class="tap_service_contains ">
                     <div class="contains_item active">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/gym.jpg" alt="">
+                                <img src="../images/gym.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 
@@ -397,7 +396,7 @@
                     <div class="contains_item ">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/visa.jpg" alt="">
+                                <img src="../images/visa.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 <h3 class="title fronText">
@@ -414,7 +413,7 @@
                     <div class="contains_item ">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/phonghop.jpg" alt="">
+                                <img src="../images/phonghop.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 <h3 class="title fronText">
@@ -431,7 +430,7 @@
                     <div class="contains_item ">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/visa.jpg" alt="">
+                                <img src="../images/visa.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 <h3 class="title fronText">
@@ -449,7 +448,7 @@
                     <div class="contains_item ">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/nhahang.jpg" alt="">
+                                <img src="../images/nhahang.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 <h3 class="title fronText">
@@ -462,26 +461,13 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
+                <script src="../Js/tabService.js"></script>
             </div>
-                <script src="./Js/tabService.js"></script>
-            </div>
-        </div> 
         </div>
-        <script src="./Js/tabService.js"></script>
-    </div>
-        </div>
-    
-
-
-
-
-
-
-
-
         <!-- Footter -->
-      <footer>
+    <footer>
         <div class="container">
             <div class="row">
                 <div class="col l-4">
@@ -523,11 +509,11 @@
                     </div>
                 </div>
                 <div class="col l-12 end_footer">
-                     <p>Copyright AGU Hotels | Design by aguhotel.vn</p>
+                        <p>Copyright AGU Hotels | Design by aguhotel.vn</p>
                         
                 </div>
             </div>
         </div>
-      </footer>
+    </footer>
 </body>
 </html>

@@ -1,12 +1,14 @@
 .fontText{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.body{
+    background-color: #ffffff;
+}
 .list_new .new-item .new-body{
     display: flex ;
 }
 .list_new .new-item .new-body .new-body_img {
-    height: 105px;
+    max-height: 105px;
 
     border: 1px dotted #ccc ;
 }
@@ -29,10 +31,16 @@
    color: #d8a767;
 }
 .list_new .new-item .new-body .new-body_img img {
-    max-height: 100px;
-    /* max-width: calc(100% ); */
-    width: 200px;
+    display: block;
+      max-width:230px;
+      max-height:95px;
+      width: auto;
+      height: auto;
+}
+.list_new .new-item .new-body .new-body_img{
+    max-height: auto;
     border: 1px #ccc ;
+    overflow: hidden;
 }
 .list_new .new-item .new-body p {
     margin: 0;

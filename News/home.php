@@ -13,18 +13,18 @@ $sql = "select t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat, t.MaChuDe, t.HinhAnh
 		while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
 		{
 
-            echo    "<div class=\"new-item l-6\">";
-            echo    "<a href= 'index.php?do=baiviet_chitiet&id= ".$row['MaBaiViet']."' class=\"new-link\">".$row['TieuDe']."</a> <br>";
-            echo    "<a href='index.php?do=baiviet_chude&id=".$row['MaChuDe']." ' class=\"new-link-cd\">".$row['TenChuDe']."</a> " ;
-            echo    "<p>".$row['NgayDang']."</p>";
-            echo    "<div class=\"new-body\">";
-            echo        "<div class=\"new-body_img l-4\">";
-            echo        "<img src='".$row['HinhAnh']."' alt=\"\" >";
-            echo     "</div>";
-            echo    "<p class=\"l-8\">".$row['TomTat']."</p>";
-            echo    "</div>";
-            echo    "<a href='index.php?do=baiviet_chitiet&id=".$row['MaBaiViet']."' class=\"new-about\">chi tiet</a>";
-            echo    "</div>";
+            echo    "<div class=\"new-item col l-6\">";
+            echo        "<a href= 'index.php?do=baiviet_chitiet&id= ".$row['MaBaiViet']."' class=\"new-link\">".$row['TieuDe']."</a> <br>";
+            echo        "<a href='index.php?do=baiviet_chude&id=".$row['MaChuDe']." ' class=\"new-link-cd\">".$row['TenChuDe']."</a> " ;
+            echo        "<p>".$row['NgayDang']."</p>";
+            echo        "<div class=\"new-body row \">";
+            echo              "<div class=\"new-body_img col l-4\">";
+            echo                    "<img src='".$row['HinhAnh']."' alt=\"\" >";
+            echo              "</div>";
+            echo                    "<p class=\"col l-8\">".$row['TomTat']."</p>";
+            echo        "</div>";
+            echo        "<a href='index.php?do=baiviet_chitiet&id=".$row['MaBaiViet']."' class=\"new-about\">chi tiet</a>";
+            echo      "</div>";
 		}
 
 ?>

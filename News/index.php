@@ -61,7 +61,7 @@
         <div class="row">
             <div class="l-2">
                 <div class="list_cd">
-                    <h3> DS chu de</h3>
+                    <h3> Danh </h3>
                         <?php
                             $sql = "select * from chude";
                             $danhsach = $connect->query($sql);
@@ -82,7 +82,6 @@
                     $do = isset($_GET['do']) ? $_GET['do'] : "home";
                     include $do . ".php";
                 ?>
-                
             </div>
             <div class="l-2">
                 
