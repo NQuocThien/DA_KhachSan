@@ -81,12 +81,15 @@
     background-color: #228b22;
     
 }
-.list_new .news-content h3{
+#about_content{
+    padding-top: 100px;
+}
+#about_content .news-content h3{
     margin: 0;
     text-shadow:  0 0 20px #0a0a0a;
     color: coral;
 }
-.list_new .news-content .ThongTin{
+#about_content .news-content .ThongTin{
     margin: 0;
     color: #9bad36;
 }

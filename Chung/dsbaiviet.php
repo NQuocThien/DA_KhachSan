@@ -14,8 +14,8 @@ $sql = "select t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat, t.MaChuDe, t.HinhAnh
 		{
 
             echo    "<div class=\"new-item col l-6\">";
-            echo        "<a href= 'index.php?do=baiviet_chitiet&id= ".$row['MaBaiViet']."' class=\"new-link\">".$row['TieuDe']."</a> <br>";
-            echo        "<a href='index.php?do=baiviet_chude&id=".$row['MaChuDe']." ' class=\"new-link-cd\">".$row['TenChuDe']."</a> " ;
+            echo        "<a href= 'index.php?do=baiviet_chitiet&news=dsbaiviet&id= ".$row['MaBaiViet']."' class=\"new-link\">".$row['TieuDe']."</a> <br>";
+            echo        "<a href='index.php?do=baiviet_chude&news=dsbaiviet&id=".$row['MaChuDe']." ' class=\"new-link-cd\">".$row['TenChuDe']."</a> " ;
             echo        "<p>".$row['NgayDang']."</p>";
             echo        "<div class=\"new-body row \">";
             echo              "<div class=\"new-body_img col l-4\">";
@@ -23,7 +23,7 @@ $sql = "select t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat, t.MaChuDe, t.HinhAnh
             echo              "</div>";
             echo                    "<p class=\"col l-8\">".$row['TomTat']."</p>";
             echo        "</div>";
-            echo        "<a href='index.php?do=baiviet_chitiet&id=".$row['MaBaiViet']."' class=\"new-about\">chi tiet</a>";
+            echo        "<a href='index.php?do=baiviet_chitiet&news=dsbaiviet&id=".$row['MaBaiViet']."' class=\"new-about\">chi tiet</a>";
             echo      "</div>";
 		}
 
