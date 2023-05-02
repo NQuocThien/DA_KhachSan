@@ -36,6 +36,7 @@
             </div>
             <i class="fa fa-angle-right slider-next"></i>
         </div>
+
     </div>
     <script src="../Js/starter.js"></script>
     <div class="booking">
@@ -45,14 +46,15 @@
                     <div class="tab_main"><a href="">Đặt phòng ngay</a></div>
                     <div class="tab_item"></div>
                     <div class="tab_content">
-                        <form action="" method="post">
+                        <form action="../handle/handle_datphong.php" method="POST" name="booking-form" id="booking-form">
                             <div class="row">
                                 <div class="col l-4">
                                     <div class="form_group">
                                         <label for="">Họ và tên
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="Full_name" placeholder="">
+                                        <input class = "form-control" type="text" class="form_control" name="full_name" id="full_name" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4">
@@ -60,7 +62,8 @@
                                         <label for="">Điện thoại
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="phone" placeholder="">
+                                        <input class = "form-control" type="text" class="form_control" name="number_phone" id="phone" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4 ">
@@ -68,7 +71,8 @@
                                         <label for="">Email
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="Email" placeholder="">
+                                        <input class = "form-control" type="text" class="form_control" name="email" id="email" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4">
@@ -76,47 +80,79 @@
                                         <label for="">Chi nhánh
                                             <span class="starRed">*</span>
                                         </label>
-                                        <select name="" id="select_from">
-                                            <option value=""></option>
+                                        <select class = "form-control select_from" name="select_branch" id="select_branch">
+                                            <option value="0">----Chọn----</option>
+                                            <?php
+                                                $sql = "SELECT * FROM chuoikhachsan";
+                                                $chuoiks = $connect->query($sql);
+                                                //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+                                                if (!$chuoiks) {
+                                                    die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+                                                    exit();
+                                                }
+                                                while ($row = $chuoiks->fetch_array(MYSQLI_ASSOC)) 		
+                                                {
+                                                    echo    "<option value = ".$row["MaChuoi"]." > ".$row["TenChuoi"]." </option>";
+                                                }
+                                            ?>
+                                        
                                         </select>
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
-                                <div class="col l-4">
-                                    <div class="form_group">
-                                        <label for="">Khu vực
-                                            <span class="starRed">*</span>
-                                        </label>
-                                        <select name="" id="select_from">
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-                                </div>
+                             
                                 <div class="col l-4">
                                     <div class="form_group">
                                         <label for="">Khách sạn
                                             <span class="starRed">*</span>
                                         </label>
-                                        <select name="" id="select_from">
-                                            <option value=""></option>
+                                        <select class = "form-control select_from"  name="select_hotel" id="select_hotel" >
+                                            <option value="0">---Chọn----</option>
                                         </select>
+                                        <span class="form-message"></span>
                                     </div>
+                                   <script>
+                                        jQuery(document).ready(function ($) {
+                                        $("#select_branch").change(function(){
+                                            var id = $("#select_branch").val();
+                                            $.post("../handle/handle_select.php",{id : id} , function(date)
+                                            {
+                                                $("#select_hotel").html(date);
+                                            });
+                                        });
+                                        $("#select_hotel").disabled = false;;
+                                    }) 
+                                   </script>
                                 </div>
                                 <div class="col l-4">
                                     <div class="form_group">
                                         <label for="">Loại phòng
                                             <span class="starRed">*</span>
                                         </label>
-                                        <select name="" id="select_from">
+                                        <select class = "form-control select_from" name="select_type-room" id="select_type-room" >
                                             <option value=""></option>
                                         </select>
+                                        <span class="form-message"></span>
                                     </div>
+                                    <script>
+                                        jQuery(document).ready(function ($) {
+                                        $("#select_hotel").change(function(){
+                                            var id = $("#select_hotel").val();
+                                            $.post("../handle/handle_select-hottel.php",{id : id} , function(date)
+                                            {
+                                                $("#select_type-room").html(date);
+                                            });
+                                        });
+                                    }) 
+                                   </script>
                                 </div>
                                 <div class="col l-4">
                                     <div class="form_group">
                                         <label for="">Ngày đến
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="date_den" placeholder="">
+                                        <input class = "form-control" type="date" class="form_control" name="date_come" id="date_come" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4">
@@ -124,7 +160,8 @@
                                         <label for="">Ngày đi
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="date_di" placeholder="">
+                                        <input class = "form-control" type="date" class="form_control" name="date_leave" id="date_leave" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-8">
@@ -132,7 +169,8 @@
                                         <label for="">Ghi chú
                                             <span class="starRed">*</span>
                                         </label>
-                                        <textarea name="" id="textarea_fromG" cols="30" rows="10"></textarea>
+                                        <textarea name="note" id="textarea_fromG" cols="30" rows="10"></textarea>
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4">
@@ -140,13 +178,15 @@
                                         <label for="">Số lượng phòng
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="Full_name" placeholder="">
-                                        <input type="submit" value="Đặt phòng" id="submit_datphong">
+                                        <input class = "form-control" type="text" class="form_control" name="number-room" id="number-room" placeholder="">
+                                        <span class="form-message"></span>
+                                        <input class = "form-control form-submit" type="submit" id="submit_datphong">
                                     </div>
                                 </div>
-                                
                             </div>
                         </form>
+                        <script src="../Js/validator.js"></script>
+                        <script src="../Js/handleFormBooking.js"></script>
                     </div>
                 </div>
             </div>
@@ -159,6 +199,7 @@
                         <div class="media row">
                             <div class="media_img col l-4"><img src="" alt=""></div>
                             <div class="media_body col l-8">
+                            
                                 <h5>Khách sạn Mializa Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội</h5>
                                 <p>Khách sạn MiaLiza  Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội </p>
                             </div>
@@ -166,8 +207,23 @@
                         <div class="intro_genar row">
                             
                             <a href="" class="col l-12">
-                                <i class="fa-solid fa-check"></i>
-                                <span>Vẻ đẹp của mùa thu Hà Nội khiến bao người lưu luyến</span>
+                            <?php
+                            $sql = "SELECT *
+                                    FROM baiviet
+                                    LIMIT 6;
+                            ";
+                            $danhsach = $connect->query($sql);
+                            //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+                            if (!$danhsach) {
+                                die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+                                exit();
+                            }
+                            while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
+                            {
+                                echo "<i class=\"fa-solid fa-check\"></i>";
+                                echo "<span>".$row["TieuDe"]."</span>";
+                            }
+                        ?>
                             </a>
                         </div>
                         

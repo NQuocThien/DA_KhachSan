@@ -1,7 +1,3 @@
-<?php
-	include_once "./cauhinh.php";
-
-?>
 
     <div class="main_banner">
         <img src="../images/ks1.jpg" alt="">

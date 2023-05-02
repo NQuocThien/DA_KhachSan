@@ -1,6 +1,6 @@
 <?php
 
-$sql = "select t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat, t.MaChuDe, t.HinhAnh, t.ChuThichAnh, l.MaChuDe, l.TenChuDe
+      $sql = "select t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat, t.MaChuDe, t.HinhAnh, t.ChuThichAnh, l.MaChuDe, l.TenChuDe
         from (chude l inner join baiviet t on t.MaChuDe=l.MaChuDe)
         group by t.MaChuDe, t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat
         having (t.NgayDang >= all (select NgayDang from baiviet where MaChuDe=l.MaChuDe))";

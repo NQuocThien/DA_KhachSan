@@ -1,3 +1,7 @@
+<?php
+	include_once "./cauhinh.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +17,7 @@
     <link rel="stylesheet" href="../css/hotel.css">
     <link rel="stylesheet" href="../css/new.css">
     <link rel="stylesheet" href="../css/basic.css">
+    <script src="../handle/jquery-1.8.0.min.js"></script>
     <!-- <link rel="stylesheet" href="./css/main.css"> -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
@@ -111,5 +116,13 @@
             </div>
         </div>
     </footer>
+    <div class="phone_contact">
+        <div class="number-phone">
+            <a href="tel:0789624614">0789624614</a>
+        </div>
+        <div class="phone-icon">
+            <i class="fa-solid fa-phone"></i>
+        </div>
+    </div>
 </body>
 </html>
