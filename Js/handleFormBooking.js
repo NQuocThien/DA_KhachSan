@@ -24,10 +24,11 @@ Validator({
     Validator.isRequired('#select_branch'),
 //     Validator.isRequired('#select_area'),
      Validator.isRequired('#select_hotel'),
-//    // Validator.isRequired('#select_type-room'),
-//     Validator.isRequired('#date_come'), 
-//     Validator.isRequired('#date_leave'),
-//     Validator.isRequired('#number-phone'),
+     Validator.isRequired('#select_type-room'),
+     Validator.isRequired('#date_come'), 
+     Validator.isRequired('#date_leave'),
+     Validator.isRequired('#number-room'),
+     Validator.isNumber('#number-room'),
     ]
 })
 // ========================= handle select branch =========================

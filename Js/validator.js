@@ -144,6 +144,14 @@ Validator.isEmail = function (selector, message){
         }
     }
 }
+Validator.isNumber = function (selector, message){
+    return {
+        selector: selector,
+        test: function (value){
+            return parseInt(value) ? undefined : message || 'Trường này phải là số';
+        }
+    }
+}
 Validator.minLength = function (selector, min, message){
     return {
         selector: selector,
