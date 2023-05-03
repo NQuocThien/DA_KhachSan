@@ -1,90 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="./img/iconweb.png">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel An Giang</title>
-
-    <link rel="stylesheet" href="./css/Grid.css">
-    <!-- <link rel="stylesheet" href="./css/main.css"> -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/main.css">
-    <style>
-         * {
-        box-sizing: border-box;
-      }
-      .col {
-        background-clip: content-box;
-        margin-top: 8px;
-        margin-bottom: 8px;
-      }
-    </style>
-</head>
-
-
-<body>
-    <div id="header" class = "grid">
-        <div class="grid wide">
-            <div class="menu row">
-                <a href="Main.php" id="logo_header" class="logo col l-2 m-2 c-2"><img src="./img/logo.jpg" alt=""></a>
-             
-                <ul id="menu_nav" class="menu_nav col l-10 m-0 c-0">
-                      <a href="">Trang chủ</a>   
-                      <a href="./GioiThieu/gioithieu.php">Giới thiệu</a>  
-                      <a href="./menu/hotel.php">Khách sạn</a>  
-                      <a href="">Dịch vụ</a>  
-                      <a href="">Tour</a>  
-                      <a href="./News/index.php">Tin tức</a>  
-                      <a href="">Khuyến mãi</a>  
-                      <a href="">Tuyển dụng</a>  
-                      <a href="">Liên hệ</a>  
-                </ul>
-                <div class="l-0 m-8 c-8 "></div>
-                <div class="menu__sub l-0 m-2 c-2">
-                    <i class="fa-solid fa-bars menu__sub-icon" ></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="container" class = "grid">
         <div class="slider l-12 m-12 c-12">
             <i class="fa fa-angle-left slider-prev"></i>
             <div class="slider-wrapper">
                 <div class="slider-main">
                 <div class="slider-item">
                     <img
-                    src="./images/ks1.jpg"
+                    src="../images/ks1.jpg"
                     alt=""
                     />
                 </div>
                 <div class="slider-item">
                     <img
-                    src="./images/ks2.jpg"
+                    src="../images/ks2.jpg"
                     alt=""
                     />
                 </div>
                 <div class="slider-item">
                     <img
-                    src="./images/ks3.jpg"
+                    src="../images/ks3.jpg"
                     alt=""
                     />
                 </div>
                 <div class="slider-item">
                     <img
-                    src="./images/ks4.jpg"
+                    src="../images/ks4.jpg"
                     alt=""
                     />
                 </div>
                 <div class="slider-item">
                     <img
-                    src="./images/ks5.jpg"
+                    src="../images/ks5.jpg"
                     alt=""
                     />
                 </div>
@@ -92,8 +36,9 @@
             </div>
             <i class="fa fa-angle-right slider-next"></i>
         </div>
+
     </div>
-    <script src="./Js/starter.js"></script>
+    <script src="../Js/starter.js"></script>
     <div class="booking">
         <div class="row row_booking">
             <div class="col l-6">
@@ -101,14 +46,15 @@
                     <div class="tab_main"><a href="">Đặt phòng ngay</a></div>
                     <div class="tab_item"></div>
                     <div class="tab_content">
-                        <form action="" method="post">
+                        <form action="../handle/handle_datphong.php" method="POST" name="booking-form" id="booking-form">
                             <div class="row">
                                 <div class="col l-4">
                                     <div class="form_group">
                                         <label for="">Họ và tên
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="Full_name" placeholder="">
+                                        <input class = "form-control" type="text" class="form_control" name="full_name" id="full_name" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4">
@@ -116,7 +62,8 @@
                                         <label for="">Điện thoại
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="phone" placeholder="">
+                                        <input class = "form-control" type="text" class="form_control" name="number_phone" id="phone" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4 ">
@@ -124,7 +71,8 @@
                                         <label for="">Email
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="Email" placeholder="">
+                                        <input class = "form-control" type="text" class="form_control" name="email" id="email" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4">
@@ -132,47 +80,79 @@
                                         <label for="">Chi nhánh
                                             <span class="starRed">*</span>
                                         </label>
-                                        <select name="" id="select_from">
-                                            <option value=""></option>
+                                        <select class = "form-control select_from" name="select_branch" id="select_branch">
+                                            <option value="0">----Chọn----</option>
+                                            <?php
+                                                $sql = "SELECT * FROM chuoikhachsan";
+                                                $chuoiks = $connect->query($sql);
+                                                //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+                                                if (!$chuoiks) {
+                                                    die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+                                                    exit();
+                                                }
+                                                while ($row = $chuoiks->fetch_array(MYSQLI_ASSOC)) 		
+                                                {
+                                                    echo    "<option value = ".$row["MaChuoi"]." > ".$row["TenChuoi"]." </option>";
+                                                }
+                                            ?>
+                                        
                                         </select>
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
-                                <div class="col l-4">
-                                    <div class="form_group">
-                                        <label for="">Khu vực
-                                            <span class="starRed">*</span>
-                                        </label>
-                                        <select name="" id="select_from">
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-                                </div>
+                             
                                 <div class="col l-4">
                                     <div class="form_group">
                                         <label for="">Khách sạn
                                             <span class="starRed">*</span>
                                         </label>
-                                        <select name="" id="select_from">
-                                            <option value=""></option>
+                                        <select class = "form-control select_from"  name="select_hotel" id="select_hotel" >
+                                            <option value="0">---Chọn----</option>
                                         </select>
+                                        <span class="form-message"></span>
                                     </div>
+                                   <script>
+                                        jQuery(document).ready(function ($) {
+                                        $("#select_branch").change(function(){
+                                            var id = $("#select_branch").val();
+                                            $.post("../handle/handle_select.php",{id : id} , function(date)
+                                            {
+                                                $("#select_hotel").html(date);
+                                            });
+                                        });
+                                        $("#select_hotel").disabled = false;;
+                                    }) 
+                                   </script>
                                 </div>
                                 <div class="col l-4">
                                     <div class="form_group">
                                         <label for="">Loại phòng
                                             <span class="starRed">*</span>
                                         </label>
-                                        <select name="" id="select_from">
+                                        <select class = "form-control select_from" name="select_type-room" id="select_type-room" >
                                             <option value=""></option>
                                         </select>
+                                        <span class="form-message"></span>
                                     </div>
+                                    <script>
+                                        jQuery(document).ready(function ($) {
+                                        $("#select_hotel").change(function(){
+                                            var id = $("#select_hotel").val();
+                                            $.post("../handle/handle_select-hottel.php",{id : id} , function(date)
+                                            {
+                                                $("#select_type-room").html(date);
+                                            });
+                                        });
+                                    }) 
+                                   </script>
                                 </div>
                                 <div class="col l-4">
                                     <div class="form_group">
                                         <label for="">Ngày đến
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="date_den" placeholder="">
+                                        <input class = "form-control" type="date" class="form_control" name="date_come" id="date_come" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4">
@@ -180,7 +160,8 @@
                                         <label for="">Ngày đi
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="date_di" placeholder="">
+                                        <input class = "form-control" type="date" class="form_control" name="date_leave" id="date_leave" placeholder="">
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-8">
@@ -188,7 +169,8 @@
                                         <label for="">Ghi chú
                                             <span class="starRed">*</span>
                                         </label>
-                                        <textarea name="" id="textarea_fromG" cols="30" rows="10"></textarea>
+                                        <textarea name="note" id="textarea_fromG" cols="30" rows="10"></textarea>
+                                        <span class="form-message"></span>
                                     </div>
                                 </div>
                                 <div class="col l-4">
@@ -196,13 +178,50 @@
                                         <label for="">Số lượng phòng
                                             <span class="starRed">*</span>
                                         </label>
-                                        <input type="text" class="form_control" name="_name" id="Full_name" placeholder="">
-                                        <input type="submit" value="Đặt phòng" id="submit_datphong">
+                                        <input class = "form-control" type="text" class="form_control" name="number-room" id="number-room" placeholder="">
+                                        <span class="form-message"></span>
+                                        <input class = "form-control form-submit" type="submit" id="submit_datphong">
                                     </div>
                                 </div>
-                                
                             </div>
                         </form>
+                        <script src="../Js/validator.js"></script>
+                        <script >
+                            var dateCome = document.querySelector('#date_come');
+                            var dateLeave = document.querySelector('#date_leave');
+                            var date = new Date();
+                            var year = date.getFullYear();
+                            var month = String(date.getMonth() +1).padStart(2, '0');
+                            var today = String(date.getDate()).padStart(2, '0');
+                            var dateCurrent = year + '-' + month + '-' + today;
+                            dateCome.min = dateCurrent;
+                            dateLeave.min = dateCurrent;
+                            dateCome.addEventListener('change', function()
+                            {
+                                console.log(dateCurrent, dateCome.value);
+                                dateLeave.min = dateCome.value;
+                            })
+                            Validator({
+                                form: '#booking-form',
+                                orrorSelector: '.form-message',
+                                formGroupSelector: '.form_group' ,
+                                rules: [
+                                Validator.isRequired('#full_name'),
+                                Validator.isRequired('#phone'),
+                                Validator.isRequired('#email'),
+                                Validator.isEmail('#email'),
+                                Validator.isRequired('#select_branch'),
+                            //     Validator.isRequired('#select_area'),
+                                Validator.isRequired('#select_hotel'),
+                                Validator.isRequired('#select_type-room'),
+                                Validator.isRequired('#date_come'), 
+                                Validator.isRequired('#date_leave'),
+                                Validator.isRequired('#number-room'),
+                                Validator.isNumber('#number-room'),
+                                ]
+                            }) 
+
+                        </script>
                     </div>
                 </div>
             </div>
@@ -215,6 +234,7 @@
                         <div class="media row">
                             <div class="media_img col l-4"><img src="" alt=""></div>
                             <div class="media_body col l-8">
+                            
                                 <h5>Khách sạn Mializa Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội</h5>
                                 <p>Khách sạn MiaLiza  Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội </p>
                             </div>
@@ -222,8 +242,23 @@
                         <div class="intro_genar row">
                             
                             <a href="" class="col l-12">
-                                <i class="fa-solid fa-check"></i>
-                                <span>Vẻ đẹp của mùa thu Hà Nội khiến bao người lưu luyến</span>
+                            <?php
+                            $sql = "SELECT *
+                                    FROM baiviet
+                                    LIMIT 6;
+                            ";
+                            $danhsach = $connect->query($sql);
+                            //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+                            if (!$danhsach) {
+                                die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+                                exit();
+                            }
+                            while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
+                            {
+                                echo "<i class=\"fa-solid fa-check\"></i>";
+                                echo "<span>".$row["TieuDe"]."</span>";
+                            }
+                        ?>
                             </a>
                         </div>
                         
@@ -245,7 +280,7 @@
 
                     <div class="warpCard">
                         <div class="card_img">
-                            <img src="./images/ksn1.jpg" class = "l-12"alt="
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
                             " alt="">
                         </div>
                         <div class="card_title l-12 m-12 c-12 ">
@@ -263,7 +298,7 @@
 
                     <div class="warpCard">
                         <div class="card_img">
-                            <img src="./images/ksn1.jpg" class = "l-12"alt="
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
                             " alt="">
                         </div>
                         <div class="card_title l-12 m-12 c-12 ">
@@ -286,75 +321,74 @@
       
     <div class="hotel-highlights grid  ">
         <div class="grid wide">
-                <h2 class="_title fronText">KHÁCH SẠN NỔI BẬT</h2>
-                <P class = "sub-title fronText">Một số khách sạn nổi bật của AGU</P>
-                <div class="row">
-                    <div class = "col l-3 m-3 c-12">
+            <h2 class="_title fronText">KHÁCH SẠN NỔI BẬT</h2>
+            <P class = "sub-title fronText">Một số khách sạn nổi bật của AGU</P>
+            <div class="row">
+                <div class = "col l-3 m-3 c-12">
 
-                        <div class="warpCard">
-                            <div class="card_img">
-                                <img src="./images/ksn1.jpg" class = "l-12"alt="
-                                " alt="">
-                            </div>
-                            <div class="card_title l-12 m-12 c-12 ">
-                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                            </div>
-                            <div class="card_body fronText">
-                                <p>Xếp loại: </p>
-                                <p>Địa chỉ: </p>
-                                <p>Liên hệ: </p>
-                                <div class="btn btn1">
-                                    <a href="" class="fronText">Xem thêm</a>
-                                </div>
+                    <div class="warpCard">
+                        <div class="card_img">
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
+                            " alt="">
+                        </div>
+                        <div class="card_title l-12 m-12 c-12 ">
+                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                        </div>
+                        <div class="card_body fronText">
+                            <p>Xếp loại: </p>
+                            <p>Địa chỉ: </p>
+                            <p>Liên hệ: </p>
+                            <div class="btn btn1">
+                                <a href="" class="fronText">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                   
-                    <div class = "col l-3 m-3 c-12">
+                </div>
+                
+                <div class = "col l-3 m-3 c-12">
 
-                        <div class="warpCard">
-                            <div class="card_img">
-                                <img src="./images/ksn1.jpg" class = "l-12"alt="
-                                " alt="">
-                            </div>
-                            <div class="card_title l-12 m-12 c-12 ">
-                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                            </div>
-                            <div class="card_body fronText">
-                                <p>Xếp loại: </p>
-                                <p>Địa chỉ: </p>
-                                <p>Liên hệ: </p>
-                                <div class="btn btn1">
-                                    <a href="" class="fronText">Xem thêm</a>
-                                </div>
+                    <div class="warpCard">
+                        <div class="card_img">
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
+                            " alt="">
+                        </div>
+                        <div class="card_title l-12 m-12 c-12 ">
+                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                        </div>
+                        <div class="card_body fronText">
+                            <p>Xếp loại: </p>
+                            <p>Địa chỉ: </p>
+                            <p>Liên hệ: </p>
+                            <div class="btn btn1">
+                                <a href="" class="fronText">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                   
-                    <div class = "col l-3 m-3 c-12">
+                </div>
+                
+                <div class = "col l-3 m-3 c-12">
 
-                        <div class="warpCard">
-                            <div class="card_img">
-                                <img src="./images/ksn1.jpg" class = "l-12"alt="
-                                " alt="">
-                            </div>
-                            <div class="card_title l-12 m-12 c-12 ">
-                                <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                            </div>
-                            <div class="card_body fronText">
-                                <p>Xếp loại: </p>
-                                <p>Địa chỉ: </p>
-                                <p>Liên hệ: </p>
-                                <div class="btn btn1">
-                                    <a href="" class="fronText">Xem thêm</a>
-                                </div>
+                    <div class="warpCard">
+                        <div class="card_img">
+                            <img src="../images/ksn1.jpg" class = "l-12"alt="
+                            " alt="">
+                        </div>
+                        <div class="card_title l-12 m-12 c-12 ">
+                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
+                        </div>
+                        <div class="card_body fronText">
+                            <p>Xếp loại: </p>
+                            <p>Địa chỉ: </p>
+                            <p>Liên hệ: </p>
+                            <div class="btn btn1">
+                                <a href="" class="fronText">Xem thêm</a>
                             </div>
                         </div>
                     </div>
-                   
                 </div>
             </div>
         </div>
+    </div>
     
         <div class="service grid wide">
             <h2 class="title">
@@ -374,12 +408,12 @@
                 
                 </div>
             
-            <div class="col l-9">
-                <div class="tap_service_contains ">
+               <div class="col l-9">
+                    <div class="tap_service_contains ">
                     <div class="contains_item active">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/gym.jpg" alt="">
+                                <img src="../images/gym.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 
@@ -397,7 +431,7 @@
                     <div class="contains_item ">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/visa.jpg" alt="">
+                                <img src="../images/visa.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 <h3 class="title fronText">
@@ -414,7 +448,7 @@
                     <div class="contains_item ">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/phonghop.jpg" alt="">
+                                <img src="../images/phonghop.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 <h3 class="title fronText">
@@ -431,7 +465,7 @@
                     <div class="contains_item ">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/visa.jpg" alt="">
+                                <img src="../images/visa.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 <h3 class="title fronText">
@@ -449,7 +483,7 @@
                     <div class="contains_item ">
                         <div class="row">
                             <div class="item-img col l-4">
-                                <img src="./images/nhahang.jpg" alt="">
+                                <img src="../images/nhahang.jpg" alt="">
                             </div>
                             <div class="item_body col l-8">
                                 <h3 class="title fronText">
@@ -462,72 +496,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-                <script src="./Js/tabService.js"></script>
-            </div>
-        </div> 
-        </div>
-        <script src="./Js/tabService.js"></script>
-    </div>
-        </div>
-    
-
-
-
-
-
-
-
-
-        <!-- Footter -->
-      <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col l-4">
-                    <div class="footer_name">
-                        <h3 class="title">Thông tin liên hệ</h3>
-                        <div class="address">
-                            <span >AGU Hotel</span>
-                            <p>Địa chỉ: 12/a,Long Xuyên, An Giang</p>
-                            <p>Điện thoại: 0123456789</p>
-                            <p>Hotline: 09090909</p>
-                            <p>Email: aguhotel@gmail.com</p>
-                            <p>Website: </p>
-                        </div>
                     </div>
                 </div>
-                <div class="col l-4">
-                    <div class="footer_name">
-                        <h3 class="title">Thông tin liên hệ</h3>
-                        <ul class="menu_footer">
-                            <li><a href="">GYM</a></li>
-                            <li><a href="">VISA</a></li>
-                            <li><a href="">PHÒNG HỌP</a></li>
-                            <li><a href="">NHÀ HÀNG</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col l-4">
-                    <div class="footer_name">
-                        <h3 class="title">Thông tin liên hệ</h3>
-                        <div class="form_submit">
-                            <input type="text" placeholder="Enter your Email">
-                            <a href="" class=" buton btn_footer">Đăng ký</a>
-                        </div>
-                        <div class="list_icon_mxh">
-                            <div class="icon_item"><a href=""><span><i class="fa-brands fa-facebook"></i></span></a></div>
-                            <div class="icon_item"><a href=""><span><i class="fa-brands fa-instagram"></i></span></a></div>
-                            <div class="icon_item"><a href=""><span><i class="fa-brands fa-youtube"></i></span></a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l-12 end_footer">
-                     <p>Copyright AGU Hotels | Design by aguhotel.vn</p>
-                        
-                </div>
+                <script src="../Js/tabService.js"></script>
             </div>
-        </div>
-      </footer>
-</body>
-</html>
