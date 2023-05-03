@@ -124,13 +124,9 @@ a{
 /* ==================================Booking ====================== */
 
 .booking{
-    /* display: flex; */
     width: 100%;
-    margin-top: -5px;
-    
-}
-.row_booking{
-    width: 100%;
+    margin-top: 26px;  
+    background-color: rgb(252, 230, 208);  
 }
 .one_item{
     padding: 45px;
@@ -139,9 +135,7 @@ a{
 .tab_main{
     display: flex;
     align-items: center;
-    
     border-bottom: 2px solid #d69c2f;
-
 }
 .tab_main a{
     font-size: 16px;
@@ -187,6 +181,7 @@ a{
     width: 350px;
     height: 100px;
 }
+
 .booking_header .title_box{
     color: #222;
     margin-bottom: 10px;
@@ -232,8 +227,7 @@ a{
 
 /* ================================= warp card============================== */
 .intro_branch{
-    height: auto;
-    
+    min-height: 450px;
 }
 .warpCard 
 {
@@ -288,7 +282,7 @@ a{
     border-radius: 18px 0 18px 0 !important;
 }
 .warpCard .card_body .btn a{
-    color: white;
+    color: white    ;
 }
 /*============================================ hotel-highlights */
 

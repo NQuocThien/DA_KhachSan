@@ -39,16 +39,16 @@
 
     </div>
     <script src="../Js/starter.js"></script>
-    <div class="booking">
-        <div class="row row_booking">
-            <div class="col l-6">
+    <div class="booking grid">
+        <div class="row ">
+            <div class="col l-6 m-12 c-12">
                 <div class="booking__item one_item">
                     <div class="tab_main"><a href="">Đặt phòng ngay</a></div>
                     <div class="tab_item"></div>
                     <div class="tab_content">
                         <form action="../handle/handle_datphong.php" method="POST" name="booking-form" id="booking-form">
                             <div class="row">
-                                <div class="col l-4">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Họ và tên
                                             <span class="starRed">*</span>
@@ -57,7 +57,7 @@
                                         <span class="form-message"></span>
                                     </div>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Điện thoại
                                             <span class="starRed">*</span>
@@ -66,7 +66,7 @@
                                         <span class="form-message"></span>
                                     </div>
                                 </div>
-                                <div class="col l-4 ">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Email
                                             <span class="starRed">*</span>
@@ -75,7 +75,7 @@
                                         <span class="form-message"></span>
                                     </div>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Chi nhánh
                                             <span class="starRed">*</span>
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
                              
-                                <div class="col l-4">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Khách sạn
                                             <span class="starRed">*</span>
@@ -124,7 +124,7 @@
                                     }) 
                                    </script>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Loại phòng
                                             <span class="starRed">*</span>
@@ -146,7 +146,7 @@
                                     }) 
                                    </script>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Ngày đến
                                             <span class="starRed">*</span>
@@ -155,7 +155,7 @@
                                         <span class="form-message"></span>
                                     </div>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Ngày đi
                                             <span class="starRed">*</span>
@@ -164,7 +164,7 @@
                                         <span class="form-message"></span>
                                     </div>
                                 </div>
-                                <div class="col l-8">
+                                <div class="col l-8 m-12 c-12">
                                     <div class="form_group">
                                         <label for="">Ghi chú
                                             <span class="starRed">*</span>
@@ -173,7 +173,7 @@
                                         <span class="form-message"></span>
                                     </div>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-6 c-12">
                                     <div class="form_group">
                                         <label for="">Số lượng phòng
                                             <span class="starRed">*</span>
@@ -225,45 +225,44 @@
                     </div>
                 </div>
             </div>
-            <div class="col l-6">
-                <div class="booking__item two_item">
-                    <div class="booking_header">
-                        <h3 class="title_box">Tin tức nổi bật</h3>
-                    </div>
-                    <div class="bookingbody">
-                        <div class="media row">
-                            <div class="media_img col l-4"><img src="" alt=""></div>
-                            <div class="media_body col l-8">
-                            
-                                <h5>Khách sạn Mializa Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội</h5>
-                                <p>Khách sạn MiaLiza  Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội </p>
-                            </div>
-                        </div>
-                        <div class="intro_genar row">
-                            
-                            <a href="" class="col l-12">
-                            <?php
-                            $sql = "SELECT *
-                                    FROM baiviet
-                                    LIMIT 6;
-                            ";
-                            $danhsach = $connect->query($sql);
-                            //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
-                            if (!$danhsach) {
-                                die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
-                                exit();
-                            }
-                            while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
-                            {
-                                echo "<i class=\"fa-solid fa-check\"></i>";
-                                echo "<span>".$row["TieuDe"]."</span>";
-                            }
-                        ?>
-                            </a>
-                        </div>
-                        
-                    </div>
+            <div class=" booking__item two_item col l-6 m-12 c-12">
+                <div class="booking_header">
+                    <h3 class="title_box">Tin tức nổi bật</h3>
                 </div>
+                <div class="bookingbody">
+                    <div class="media row">
+                        <div class="media_img col l-4"><img src="" alt=""></div>
+                        <div class="media_body col l-8">
+                        
+                            <h5>Khách sạn Mializa Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội</h5>
+                            <p>Khách sạn MiaLiza  Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội </p>
+                        </div>
+                    </div>
+                    <div class="intro_genar row">
+                        
+                        <a href="" class="col l-12">
+                        <?php
+                        $sql = "SELECT *
+                                FROM baiviet
+                                LIMIT 6;
+                        ";
+                        $danhsach = $connect->query($sql);
+                        //Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+                        if (!$danhsach) {
+                            die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+                            exit();
+                        }
+                        while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
+                        {
+                            echo "<i class=\"fa-solid fa-check\"></i>";
+                            echo "<span>".$row["TieuDe"]."</span>";
+                        }
+                    ?>
+                        </a>
+                    </div>
+                    
+                </div>
+              
             </div>
             <div>
 
@@ -276,41 +275,9 @@
         <h2 class="_title fronText">HỆ THỐNG CHI NHÁNH KHÁCH SẠN AGU</h2>
         <div class="grid wide">
             <div class="row">
-                <div class = "col l-4 m-4 c-12">
-
-                    <div class="warpCard">
-                        <div class="card_img">
-                            <img src="../images/ksn1.jpg" class = "l-12"alt="
-                            " alt="">
-                        </div>
-                        <div class="card_title l-12 m-12 c-12 ">
-                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                        </div>
-                        <div class="card_body fronText">
-                            <p>Khách sạn mang phong cách nhẹ nhàn yên tĩnh</p>
-                            <div class="btn">
-                                <a href="" class="fronText">Xem thêm</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class = "col l-4 m-4 c-12">
-
-                    <div class="warpCard">
-                        <div class="card_img">
-                            <img src="../images/ksn1.jpg" class = "l-12"alt="
-                            " alt="">
-                        </div>
-                        <div class="card_title l-12 m-12 c-12 ">
-                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                        </div>
-                        <div class="card_body fronText">
-                            <p>Khách sạn mang phong cách nhẹ nhàn yên tĩnh</p>
-                            <div class="btn">
-                                <a href="" class="fronText">Xem thêm</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php 
+                        include "intro_branch.php";
+                    ?>
                 </div>
             </div>
         </div>
@@ -318,74 +285,15 @@
     </div>
 
 
-      
+      <!-- Top khách sạn -->
     <div class="hotel-highlights grid  ">
         <div class="grid wide">
             <h2 class="_title fronText">KHÁCH SẠN NỔI BẬT</h2>
             <P class = "sub-title fronText">Một số khách sạn nổi bật của AGU</P>
             <div class="row">
-                <div class = "col l-3 m-3 c-12">
-
-                    <div class="warpCard">
-                        <div class="card_img">
-                            <img src="../images/ksn1.jpg" class = "l-12"alt="
-                            " alt="">
-                        </div>
-                        <div class="card_title l-12 m-12 c-12 ">
-                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                        </div>
-                        <div class="card_body fronText">
-                            <p>Xếp loại: </p>
-                            <p>Địa chỉ: </p>
-                            <p>Liên hệ: </p>
-                            <div class="btn btn1">
-                                <a href="" class="fronText">Xem thêm</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class = "col l-3 m-3 c-12">
-
-                    <div class="warpCard">
-                        <div class="card_img">
-                            <img src="../images/ksn1.jpg" class = "l-12"alt="
-                            " alt="">
-                        </div>
-                        <div class="card_title l-12 m-12 c-12 ">
-                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                        </div>
-                        <div class="card_body fronText">
-                            <p>Xếp loại: </p>
-                            <p>Địa chỉ: </p>
-                            <p>Liên hệ: </p>
-                            <div class="btn btn1">
-                                <a href="" class="fronText">Xem thêm</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class = "col l-3 m-3 c-12">
-
-                    <div class="warpCard">
-                        <div class="card_img">
-                            <img src="../images/ksn1.jpg" class = "l-12"alt="
-                            " alt="">
-                        </div>
-                        <div class="card_title l-12 m-12 c-12 ">
-                            <a href="" class ="fronText">Khách sạn ở hai Bà Trưng</a>
-                        </div>
-                        <div class="card_body fronText">
-                            <p>Xếp loại: </p>
-                            <p>Địa chỉ: </p>
-                            <p>Liên hệ: </p>
-                            <div class="btn btn1">
-                                <a href="" class="fronText">Xem thêm</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               <?php
+                    include "./hotel_highlights.php";
+                ?>
             </div>
         </div>
     </div>
