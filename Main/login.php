@@ -11,16 +11,16 @@
 </head>
 <body>
     <div class="wapper">
-        <from>
+        <form action="login_submit.php" method="post">
             <div class="box sign_in">
                 <h2>Sign in</h2>
                     <div class="input_box">
-                        <input type="text" required="required">
-                        <span><i class="fa-solid fa-user"></i>User name</span>
+                        <input type="text" required="required" name="user">
+                        <span><i class="fa-solid fa-user-secret"></i>User name</span>
                         <div></div>
                     </div>
                     <div class="input_box">
-                        <input type="password" required="required">
+                        <input type="password" required="required" name="pass">
                         <span><i class="fa-solid fa-lock"></i>Password</span>
                         <div></div>
                     </div>
@@ -30,23 +30,28 @@
                     </div>
                     <input type="submit" value="Login">
             </div>
-        </from>
+        </form>
         
-        <form action="mysql_login.php" method="post">
+        <form action="regis_submit.php" method="post">
             <div class="box sign_up">
                 <h2>Registration</h2>
                     <div class="input_box">
-                        <input type="text" required="required" name="account">
+                        <input type="text" required="required" name="username">
                         <span><i class="fa-solid fa-user"></i>User name</span>
                         <div></div>
                     </div>
                     <div class="input_box">
-                        <input type="password" required="required" name="Pass">
+                        <input type="text" required="required" name="user">
+                        <span><i class="fa-solid fa-user-secret"></i>User name</span>
+                        <div></div>
+                    </div>
+                    <div class="input_box">
+                        <input type="password" required="required" name="pass">
                         <span><i class="fa-solid fa-lock"></i>Password</span>
                         <div></div>
                     </div>
                     <div class="input_box">
-                        <input type="password" required="required" name ="ConPass">
+                        <input type="password" required="required" name ="conpass">
                         <span><i class="fa-solid fa-lock"></i>Confirm Password</span>
                         <div></div>
                     </div>
@@ -54,7 +59,7 @@
                         <div></div>
                         <a href="#" class="links_signin">Login</a>
                     </div>
-                    <a href="./mysql_login.php"><input type="submit" value="Register" /></a>
+                    <input type="submit" value="Register" />
             </div>
                 
                 

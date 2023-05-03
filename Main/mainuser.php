@@ -24,6 +24,14 @@
         <div class="col l-10">
             <header class="header heright">aa</header>
             <div class="content_right">
+                <div class="DSuser">
+                <?php
+                    ob_start();
+                    include "user.php";
+                    $content = ob_get_clean();
+                    echo $content;
+                ?>
+                </div>
                 
             </div>
         </div>

@@ -24,14 +24,13 @@ body{
 .wapper.active{
     height: 520px;
 }
-.wapper.active from .sign_in{
-    transition: none;
-    transform: translateX(-400px);
+.wapper.active  .box{
+    transform: translateX(-370px);
     
 }
-.wapper.active .sign_up{
+/* .wapper.active .sign_up{
    transform: translateX(-370px);
-}
+} */
 .wapper from.sign_in {
     position: absolute;
     top: 0;
@@ -43,6 +42,7 @@ body{
     position: absolute;
 }
 .box {
+    
     inset: 4px;
     padding: 50px 40px;
     z-index: 2;
