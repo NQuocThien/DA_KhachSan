@@ -93,3 +93,22 @@
     margin: 0;
     color: #9bad36;
 }
+/* ========hotel===== */
+#about_hotel{
+    /* padding-top: 100px; */
+}
+#about_hotel .infor-hotel .hearder image{
+    border: #666666 1px dotted;
+}
+#about_hotel .infor-hotel .hearder img{
+    max-width: calc(100% - 10px);
+}
+#about_hotel .infor-hotel .hearder .title{
+    color: #d69c2f;
+}
+#about_hotel .infor-hotel .hearder .lever i{
+    color: #d69c2f;
+}
+#about_hotel .infor-hotel .body .content{
+    padding: 0;
+}
