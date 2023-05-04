@@ -8,12 +8,12 @@
         echo    "        <img src=".$row["HinhAnh"]." class = \"l-12\" alt=\"\"> ";
         echo    "    </div> ";
         echo    "    <div class=\"card_title l-12 m-12 c-12 \"> ";
-        echo    "        <a href= \"\" class =\"fronText\">".$row["TenChuoi"]."</a> ";
+        echo    "        <a href= \"index.php?do=list_hotel&id=".$row["MaChuoi"]."\" class =\"fronText\">".$row["TenChuoi"]."</a> ";
         echo    "    </div> ";
         echo    "    <div class=\"card_body fronText\"> ";
         echo    "        <p>".$row["MoTa"]."</p> ";
         echo    "        <div class=\"btn\"> ";
-        echo    "            <a href=\"\" class=\"fronText\">Xem thêm</a> ";
+        echo    "        <a href= \"index.php?do=list_hotel&id=".$row["MaChuoi"]."\" class =\"fronText\">Xem thêm</a> ";
         echo    "        </div> ";
         echo    "    </div> ";
         echo    "</div> ";
