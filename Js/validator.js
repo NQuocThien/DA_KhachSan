@@ -167,4 +167,4 @@ Validator.isConfirmed = function (selector, getConfirmValue, message){
             return value === getConfirmValue() ? undefined : message || 'Mật khẩu không trùng khớp';
         }
     }
-}
+}   
