@@ -40,10 +40,12 @@
 				session_start();
 				$_SESSION['MaND'] = $dong['MaNguoiDung'];
 				$_SESSION['HoTen'] = $dong['TenNguoiDung'];
-				$_SESSION['QuyenHan'] = $dong['QuyenHan'];
+				$_SESSION['Taikhoan'] = $dong['TenDangNhap'];
+				$_SESSION['Quyen'] = $dong['Quyen'];
+				$_SESSION['Img'] = $dong['Img'];
 				
 			
-				header("Location: mainuser.php");
+				 header("Location: mainuser.php");
 			}
 			else
 			{

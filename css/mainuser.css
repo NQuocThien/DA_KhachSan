@@ -24,22 +24,23 @@ a{
 }
 .content .col:nth-child(1){
     padding-top: 13px;
-    background-color: #c1c1c1;
+    background-color:#3c8dbc;
 }
 .content .col:nth-child(2){
-    background-color: #eeeeee;
-    padding-top: 13px;
-   text-align:  end;
-}
-.content .col .header{
+    background-color: #3c8dbc;
+
    
 }
+.col .heleft {
+    color: #fff;
+}
+
 .table_left{
     position: absolute;
     top:0;
     left: 0;
     margin-top: 46px;
-    background-color: #4d526c;
+    background-color: #2c3b41;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -62,8 +63,67 @@ a{
     top: 0;
     left: 0;
     margin-top: 46px;
-    background-color: #c7d0ff;
+    background-color: #d2d6de;
     width: 100%;
     height: 500px;
+}
+
+.heright .heder_user{
+    padding: 5px 50px 5px 0;
+    float: right;
+    display: flex;
+    position: relative;
+}
+.heder_user img{
+    background-color: #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.heder_user_table img{
+    background-color: #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 14px;
+    float: left;
+
+}
+.heder_user_table{
+    padding: 20px 0 0 100px;
+    width: 250px;
+    margin:-10px 0 10px -50px;
+    color: #fff;
+}
+
+.heright .heder_user span{
+    position: relative;
+}
+.menu_user{
+    position: absolute;
+    box-shadow: 0 0 4px gray;
+    background-color: #000;
+    z-index: 99;
+    padding: 6px;
+    left: -220px;
+    display: none;
+    top: 45px; 
+}
+.menu_user ul {
+    display: flex;
+    flex-direction: column ;
+    padding: 6px;
+}
+
+.menu_user a{
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+    color: #fff;
+    
+}
+.menu_user a:hover{
+    background-color: #4d526c;
+    color: #000;
 }
 

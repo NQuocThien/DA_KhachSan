@@ -7,33 +7,51 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/Grid.css">
     <link rel="stylesheet" href="../css/mainuser.css">
+    <link rel="stylesheet" href="../css/infouser.css">
+    <?php session_start();?>
 </head>
 <body>
     <div class="content row">
         <div class="col l-2">
             <header class="header heleft">
-               <a href="#"> Hotel AGU</a>
+               <a href="#" style=" color: #fff;"> Hotel AGU</a>
             </header>
             <div class="table_left">
-                <a href="">Nội dung 1</a>
+                <div class="heder_user_table" >
+                        <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user_table" > 
+                        <span>admin</span>
+                </div>
+                <a href="mainuser.php?do=user">Danh Sách Người Dùng</a>
                 <a href="">Nội dung 1</a>
                 <a href="">Nội dung 1</a>
                 <a href="">Nội dung 1</a>
             </div>
         </div>
         <div class="col l-10">
-            <header class="header heright">aa</header>
-            <div class="content_right">
-                <div class="DSuser">
-                <?php
-                    ob_start();
-                    include "user.php";
-                    $content = ob_get_clean();
-                    echo $content;
-                ?>
+            <header class="header heright">
+                <div class="heder_user" >
+                    <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user" >
+                    
+                    <span>
+                        <div class="menu_user">
+                            <ul>
+                                <a href="mainuser.php?do=infouser">Thông tin cá nhân</a>
+                                <a href="#">Đăng xuất</a>
+                            </ul>
+                        </div>
+                    </span>
                 </div>
-                
+                <script src="../Js/mainuser.js"></script>
+
+            </header>
+            
+            <div id="container" class = "grid content_right">
+                <?php
+                    $do = isset($_GET['do']) ? $_GET['do'] : "user";
+                    include $do.".php";
+                ?>
             </div>
+            
         </div>
     </div>
 </body>

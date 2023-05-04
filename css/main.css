@@ -21,11 +21,16 @@ a{
 
 #header{
     align-items:center;
-    background-color:var(--color_header);
+    background-color:transparent;
+    color: #000;
     font-size:12px;
     position: fixed;
     z-index: 999;
     height: 85px;
+}
+#header:hover{
+    background-color: #3b3939;
+    color: #fff;
 }
 
 .menu {

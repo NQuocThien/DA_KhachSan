@@ -49,8 +49,8 @@
 			// Mã hóa mật khẩu
 			$pass = md5($pass);
 			
-			$sql_them = "INSERT INTO `user`(`TenNguoiDung`, `TenDangNhap`, `MatKhau`, `Quyen`, `Khoa`)
-					VALUES ('$username', '$user', '$pass', 2, 0)";
+			$sql_them = "INSERT INTO `user`(`TenNguoiDung`, `TenDangNhap`, `MatKhau`, `Quyen`, `Khoa`,`Img`)
+					VALUES ('$username', '$user', '$pass', 2, 0,'')";
 			$themnd = $connect->query($sql_them);
 			
 			if($themnd){

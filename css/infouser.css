@@ -1,0 +1,63 @@
+
+.content_right .main_infouser{
+    background-color: #fff;
+    margin: 10px; 
+    height:100%;
+    box-shadow: 0 -2px 0 rgb(163, 161, 161);
+}
+.content_right .ifo h3{
+   
+    padding: 10px;
+}
+.ifo .contener_user{
+    display: flex;
+    width: 400px;
+    height: 45px;
+    padding-top: 45px;
+    margin-left: 200px;
+   
+}
+.ifo .contener_user span{
+    padding-right: 10px;
+    font-weight: 600;
+}
+.ifo .img_user{
+    border: 1px solid #000;
+    width: 240px;
+    height: 240px;
+    border-radius: 10px;
+    position: relative;
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+}
+.ifo .img_user1{
+    border: 1px solid #000;
+    width: 240px;
+    height: 240px;
+    border-radius: 10px;
+    position: relative;
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+}
+.ifo form{
+    display: flex;
+
+    align-items: center;
+ 
+    flex-direction: column;
+}
+.ifo form .submit{
+    margin-top: 10px;
+    width: 100px;
+}
+.ifo #btn_chonImg{
+    position: absolute;
+    top:270px;
+    right: 430px;
+    border: none;
+    outline: none;
+    opacity: 0.5;
+    /* background-color: transparent; */
+    cursor: pointer;
+    color: #000;
+}
