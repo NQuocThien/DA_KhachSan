@@ -9,36 +9,13 @@
     <link rel="stylesheet" href="../css/mainuser.css">
     <link rel="stylesheet" href="../css/infouser.css">
 </head>
+    
+ 
 <body>
-    <?php session_start();
+<?php session_start();
     if(isset( $_SESSION['MaND']))
     {
         ?>
-        <div class="content grid ">
-            <div class="row">
-                <div class="header col l-2 ">
-                    <header class="heleft">
-                        <a href="#" style=" color: #fff;"> Hotel AGU</a>
-                    </header>
-                </div>
-                <div class="col l-10">
-                    <header class="header heright">
-                        <div class="heder_user" >
-                            <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user" >
-                            <span>
-                                <div class="menu_user">
-                                    <ul>
-                                        <a href="mainuser.php?do=infouser">Thông tin cá nhân</a>
-                                        <a href="mainuser.php?do=dangxuat">Đăng xuất</a>
-                                    </ul>
-                                </div>
-                            </span>
-    <link rel="stylesheet" href="../css/quanlyroom.css">
-    <?php session_start();?>
-    <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
-    
-</head>
-<body>
     <div class="content row">
         <div class="col l-2">
             <header class="header heleft">
@@ -59,14 +36,12 @@
                         
                     </li>
                 </ul>
-              
             </div>
         </div>
         <div class="col l-10">
             <header class="header heright">
                 <div class="heder_user" >
                     <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user" >
-                    
                     <span>
                         <div class="menu_user">
                             <ul>
@@ -75,39 +50,31 @@
                             </ul>
                         </div>
                         <script src="../Js/mainuser.js"></script>
-    
-                    </header>
-                    
-                    
+                </header>
+        </div>
+    </div>
+        <div class="row">
+            <div class="navigation col l-2">
+                <div class="table_left">
+                    <div class="heder_user_table" >
+                            <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user_table" > 
+                            <p><?php echo$_SESSION['HoTen']?></p>
+                    </div>
+                    <a href="mainuser.php?do=user">Danh Sách Người Dùng</a>
+                    <a href="">Danh sách đặt phòng</a>
+                    <a href="">Quản lý các chuổi</a>
+                    <a href="">Quản lý khách sạn</a>
+                    <a href="">Đăng bài</a>
+                    <a href="">Thống kê</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="navigation col l-2">
-                    <div class="table_left">
-                        <div class="heder_user_table" >
-                                <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user_table" > 
-                                <p><?php echo$_SESSION['HoTen']?></p>
-                        </div>
-                        <a href="mainuser.php?do=user">Danh Sách Người Dùng</a>
-                        <a href="">Danh sách đặt phòng</a>
-                        <a href="">Quản lý các chuổi</a>
-                        <a href="">Quản lý khách sạn</a>
-                        <a href="">Đăng bài</a>
-                        <a href="">Thống kê</a>
-                    </div>
-                </div>
-                <div class="container col l-10">
-                        <?php
-                            $do = isset($_GET['do']) ? $_GET['do'] : "user";
-                            include $do.".php";
-                        ?>
-                    </div>
-                </div>
+            <div class="container col l-10">
+                    <?php
+                        $do = isset($_GET['do']) ? $_GET['do'] : "user";
+                        include $do.".php";
+                    ?>
             </div>
         </div>
-
-    </div>
-
     <?php }else header("Location: login.php");?>
 </body>
 </html>

@@ -1,16 +1,16 @@
-
-.content_right .main_infouser{
+.container .main_infouser{
     background-color: #fff;
     margin: 10px;
     min-height: 500px; 
     height:100%;
     box-shadow: 0 -2px 0 rgb(163, 161, 161);
+    text-align: center;
 }
-.content_right .ifo h3{
-   
+.container .main_infouser h3{
     padding: 10px;
+    margin-left: 10px;
 }
-.ifo .contener_user{
+.contener_user{
     display: flex;
     width: 400px;
     height: 45px;
@@ -18,11 +18,11 @@
     margin-left: 200px;
    
 }
-.ifo .contener_user span{
+.contener_user span{
     padding-right: 10px;
     font-weight: 600;
 }
-.ifo .img_user{
+.img_user{
     border: 1px solid #000;
     width: 240px;
     height: 240px;
@@ -31,7 +31,7 @@
     background-size: 70% 70%;
     background-repeat: no-repeat;
 }
-.ifo .img_user1{
+.img_user1{
     border: 1px solid #000;
     width: 240px;
     height: 240px;
@@ -40,25 +40,24 @@
     background-size: 70% 70%;
     background-repeat: no-repeat;
 }
-.ifo form{
+form{
     display: flex;
 
     align-items: center;
  
     flex-direction: column;
 }
-.ifo form .submit{
+form .submit{
     margin-top: 10px;
     width: 100px;
 }
-.ifo #btn_chonImg{
+#btn_chonImg{
     position: absolute;
     top:270px;
     right: 430px;
     border: none;
     outline: none;
     opacity: 0.5;
-    /* background-color: transparent; */
     cursor: pointer;
     color: #000;
 }
