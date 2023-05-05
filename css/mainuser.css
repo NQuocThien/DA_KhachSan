@@ -14,6 +14,7 @@ a{
     border-bottom:1px solid #000 ;
     margin: 0;
 }
+
 .content .col{
     width: 100%;
     height: 45px;
@@ -31,10 +32,10 @@ a{
 
    
 }
-.col .heleft {
+.col .heleft a{
     color: #fff;
+    font-weight: 600;
 }
-
 .table_left{
     position: absolute;
     top:0;
@@ -46,17 +47,42 @@ a{
     flex-direction: column;
     height: auto;
 }
+
 .table_left a{
     display: block;
-    width: 100%;
+    width: 213px;
     padding: 10px 0;
     height: 45px;
     font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.table_left  a{
     color: #fff;
 }
-.table_left a:hover{
+.table_left li a:hover{
+    background-color: #5385ac;
+    color: #000;
+    
+}
+.table_left ul li{
+    list-style: none;
+    
+}
+#myList .li_mylist a.active{
     background-color: #eee;
     color: #000;
+}
+
+#myList .li_mylist a.active::before{
+    position: absolute;
+    content: "";
+    /* z-index: 99; */
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: #3c8dbc;
 }
 .content_right{
     position: absolute;
@@ -65,7 +91,8 @@ a{
     margin-top: 46px;
     background-color: #d2d6de;
     width: 100%;
-    height: 500px;
+    min-height: 500px;
+    height: auto;
 }
 
 .heright .heder_user{
@@ -79,6 +106,7 @@ a{
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    cursor: pointer;
 }
 .heder_user_table img{
     background-color: #000;
@@ -120,8 +148,10 @@ a{
     width: 180px;
     text-align: center;
     color: #fff;
+    position: relative;
     
 }
+
 .menu_user a:hover{
     background-color: #4d526c;
     color: #000;

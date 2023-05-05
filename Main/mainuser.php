@@ -8,23 +8,33 @@
     <link rel="stylesheet" href="../css/Grid.css">
     <link rel="stylesheet" href="../css/mainuser.css">
     <link rel="stylesheet" href="../css/infouser.css">
+    <link rel="stylesheet" href="../css/quanlyroom.css">
     <?php session_start();?>
+    <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <div class="content row">
         <div class="col l-2">
             <header class="header heleft">
-               <a href="#" style=" color: #fff;"> Hotel AGU</a>
+               <a href="mainuser.php" style="  color: #fff;" > Hotel AGU</a>
             </header>
-            <div class="table_left">
+            <div class="table_left" >
                 <div class="heder_user_table" >
                         <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user_table" > 
                         <span>admin</span>
-                </div>
-                <a href="mainuser.php?do=user">Danh Sách Người Dùng</a>
-                <a href="">Nội dung 1</a>
-                <a href="">Nội dung 1</a>
-                <a href="">Nội dung 1</a>
+                </div >
+                <ul id="myList" >
+                    <li class="li_mylist">
+                        <a  data-target="user.php?do=user">Danh Sách Người Dùng</a>
+                        
+                    </li>
+                    <li class="li_mylist">
+                        <a  data-target="quanlyroom.php?do=quanlyroom">Quản lý phòng</a>
+                        
+                    </li>
+                </ul>
+              
             </div>
         </div>
         <div class="col l-10">

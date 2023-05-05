@@ -42,7 +42,7 @@
                     </div>
                     <div class="input_box">
                         <input type="text" required="required" name="user">
-                        <span><i class="fa-solid fa-user-secret"></i>User name</span>
+                        <span><i class="fa-solid fa-user-secret"></i>User </span>
                         <div></div>
                     </div>
                     <div class="input_box">
