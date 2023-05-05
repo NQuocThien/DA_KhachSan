@@ -43,7 +43,7 @@
 				$_SESSION['Taikhoan'] = $dong['TenDangNhap'];
 				$_SESSION['Quyen'] = $dong['Quyen'];
 				$_SESSION['Img'] = $dong['Img'];
-				header("Location: mainuser.php");
+				header("Location: main.php");
 			}
 			else
 			{

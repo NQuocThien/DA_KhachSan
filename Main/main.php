@@ -13,12 +13,13 @@
 
     <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
 
+
+</head>
     <?php 
 
         session_start();
+        if(isset($_SESSION['MaND'])){
     ?>
-
-</head>
 <body>
  
 <div class="header grid">
@@ -34,7 +35,7 @@
                 <div class="menu_user">
                     <ul>
                         <a href="main.php?do=infouser">Thông tin cá nhân</a>
-                        <a href="#">Đăng xuất</a>
+                        <a href="main.php?do=dangxuat">Đăng xuất</a>
                     </ul>
                 </div>
             </div>
@@ -64,5 +65,6 @@
         <script src="../Js/mainuser.js"></script>
     </div>
 </div>
+<?php } else header("Location: login.php");?>
 </body>
 </html>
