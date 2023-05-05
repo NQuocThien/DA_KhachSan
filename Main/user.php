@@ -9,6 +9,7 @@
 	}
 
 ?>
+<div class="main_infouser" >
 <h3 style="width: 680px;margin-bottom: 45px;">Danh sách người dùng</h3>
 <table class="DanhSach" style="margin-left: 200px;">
 	<tr>
@@ -48,3 +49,4 @@
 		}
 	?>
 </table>
+</div>
