@@ -35,7 +35,7 @@ ul li{
     width: 200px;
     display: flex;
     flex-direction: column;
-    display: none;
+    /* display: none; */
 }
 
 .container .main_quanlroom 

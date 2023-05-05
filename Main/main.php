@@ -46,16 +46,13 @@
                 <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user_table" > 
                 <span><?php echo$_SESSION['HoTen']?></span>
             </div>
-            <ul id="myList" >
-                    <li class="li_mylist">
-                        <a href="main.php?do=user">Danh Sách Người Dùng</a>
-                    </li>
-                    <li class="li_mylist">
-                        <a href="main.php?do=quanlyroom">Quản lý phòng</a>
-                    </li>
-            </ul>
+            <div id="myList" class="row no-gutters">
+                <a class="col l-12 active" data-target="user.php?do=user">Danh Sách Người Dùng</a>
+                <a class="col l-12"data-target="quanlyroom.php?do=quanlyroom">Quản lý phòng</a>
+            </div>
+            <script src="../Js/mainuser.js"></script>
         </div>
-        <div class="col l-10 container">
+        <div class="col l-10 container" id="container">
             <?php
                 $do = isset($_GET['do']) ? $_GET['do'] : "user";
                 include $do.".php";
