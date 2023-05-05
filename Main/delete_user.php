@@ -6,7 +6,7 @@
 		$danhsach = $connect->query($sql_kiemtra);
 		
 		if (!$danhsach) {
-			die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+			die("Không thể thực hiện câu lệnh SQL: " . $sql_kiemtra);
 			exit();
 		}
         else{
