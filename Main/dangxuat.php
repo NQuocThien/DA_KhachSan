@@ -7,5 +7,5 @@
 	unset($_SESSION['Img']);
 	
 	// Chuyển hướng về trang index.php
-	header("Location: mainuser.php");
+	header("Location: main.php");
 ?>
