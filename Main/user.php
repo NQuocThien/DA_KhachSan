@@ -10,7 +10,7 @@
 
 ?>
 <div class="main_infouser" >
-<h3 style="width: 680px;margin-bottom: 45px;">Danh sách người dùng</h3>
+<h3 >Danh sách người dùng</h3>
 <table class="DanhSach" style="margin-left: 200px;">
 	<tr>
 		<th align='center' style=" padding: 0 10px;">Mã ND</th>

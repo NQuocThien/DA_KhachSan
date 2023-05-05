@@ -1,6 +1,14 @@
 <?php
     include "../Chung/cauhinh.php";
     session_start();
+    if(!isset($_POST['myFileIMG']))
+    {
+        echo '<script>
+        alert("vui long chon hinh ");
+        window.history.back();
+        </script>';
+        exit;
+    }
     if($_FILES["myFileIMG"]["error"] > 0)
     {
         echo "Error: " . $_POST["myFileIMG"]["error"]. "<br/>";

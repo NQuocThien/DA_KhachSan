@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../css/mainuser1.css">
     <link rel="stylesheet" href="../css/quanlyroom.css">
     <link rel="stylesheet" href="../css/infouser.css">
+
+    <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
+
     <?php 
 
         session_start();
@@ -30,7 +33,7 @@
                 <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user" >
                 <div class="menu_user">
                     <ul>
-                        <a href="mainuser.php?do=infouser">Thông tin cá nhân</a>
+                        <a href="main.php?do=infouser">Thông tin cá nhân</a>
                         <a href="#">Đăng xuất</a>
                     </ul>
                 </div>

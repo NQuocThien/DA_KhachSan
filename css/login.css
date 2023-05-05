@@ -143,10 +143,10 @@ body{
 }
 /* ====== Xử Lý form =======*/
 .form-message {
-font-size: 1rem;
+font-size: 10px;
 line-height: 1.6rem;
 padding: 4px 0 0;
-position: relative;
+user-select: none;
 }
 .form_group:hover {
 border-color: #1dbfaf;

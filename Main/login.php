@@ -62,7 +62,6 @@
                         <span><i class="fa-solid fa-lock"></i>Confirm Password</span>
                         <div></div>
                         <p class="form-message"></p>
-                       
                     </div>
                     <div class="links form_group">
                         <div></div>

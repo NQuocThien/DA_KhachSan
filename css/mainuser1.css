@@ -63,11 +63,18 @@
     top: 27px;
     left: 70px;
     font-size: 20px;
-    
 }
 .body .navigation .avatar img,
 .header .header_main .header_user img{
     width: 35px;
     height: 35px;
     border-radius: 35px;
+}
+
+.body .navigation .avatar span{
+    position: absolute;
+    color: white;
+    top: 27px;
+    left: 70px;
+    font-size: 20px;
 }
