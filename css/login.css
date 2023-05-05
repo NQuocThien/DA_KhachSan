@@ -94,10 +94,14 @@ body{
 }
 .box  .input_box input:focus~span,
 .box  .input_box input:valid~span
+
 {
     color: #fff;
     font-size: 0.7em;
     transform: translateY(-37px);
+}
+.box  .input_box input:focus~span:nth-child(3){
+    display: none;
 }
 .box  .input_box div{
     position: absolute;
@@ -114,6 +118,7 @@ body{
 .box  .input_box input:focus~div,
 .box  .input_box input:valid~div{
     height: 44px;
+    
 }
 .box  .links{
     display: flex;
@@ -146,7 +151,8 @@ body{
 font-size: 10px;
 line-height: 1.6rem;
 padding: 4px 0 0;
-user-select: none;
+position: absolute;
+transform: translateX(100px);
 }
 .form_group:hover {
 border-color: #1dbfaf;
