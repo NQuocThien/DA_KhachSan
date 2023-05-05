@@ -43,9 +43,7 @@
 				$_SESSION['Taikhoan'] = $dong['TenDangNhap'];
 				$_SESSION['Quyen'] = $dong['Quyen'];
 				$_SESSION['Img'] = $dong['Img'];
-				
-			
-				 header("Location: mainuser.php");
+				header("Location: mainuser.php");
 			}
 			else
 			{
@@ -53,9 +51,8 @@
                 alert("Người dùng đã bị khóa tài khoản!");
                 window.history.back();
                 </script>';
-        exit;
+        		exit;
 			}	
-		
 		}
 		else
 		{
