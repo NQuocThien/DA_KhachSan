@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/infouser.css">
     <link rel="stylesheet" href="../css/mainuser1.css">
     <link rel="stylesheet" href="../css/quanlyroom.css">
+    <link rel="stylesheet" href="../css/doimatkhau.css">
     <link rel="stylesheet" href="../css/quanlyloaiphong.css">
     <link rel="stylesheet" href="../css/infouser.css">
     <link rel="stylesheet" href="../css/manager_hotel.css">
@@ -24,57 +25,48 @@
     ?>
 <body>
  
-<div class="header">
-    <div class="grid wide">
-        <div class="tasbars row no-gutters">
-            <div class="col l-2 header_logo">
-                <header class="logo">
-                   <a href="../Chung/index.php" style="  color: #fff;" > Hotel AGU</a>
-                </header>
-            </div>
-            <div class="col l-10 header_main">
-                <div class="header_user" >
-                    <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user" >
-                    <div class="menu_user">
-                        <ul>
-                            <a href="main.php?do=infouser">Thông tin cá nhân</a>
-                            <a href="main.php?do=dangxuat">Đăng xuất</a>
-                        </ul>
-                    </div>
+<div class="header grid">
+    <div class="tasbars row no-gutters">
+        <div class="col l-2 header_logo">
+            <header class="logo">
+               <a href="mainuser.php" style="  color: #fff;" > Hotel AGU</a>
+            </header>
+        </div>
+        <div class="col l-10 header_main">
+            <div class="header_user" >
+                <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user" >
+                <div class="menu_user">
+                    <ul>
+                        <a href="main.php?do=infouser">Thông tin cá nhân</a>
+                        <a href="main.php?do=dangxuat">Đăng xuất</a>
+                    </ul>
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="body">
-        <div class="grid">
-            <div class="row no-gutters">
-                <div class="col l-2 navigation">
-                    <div class="avatar" >
-                        <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user_table" > 
-                        <span><?php echo$_SESSION['HoTen']?></span>
-                    </div>
-                    <div id="myList" class="row no-gutters">
-                        <a class="col l-12 active" data-target="user.php?do=user">Danh Sách Người Dùng</a>
-                        <a class="col l-12"data-target="quanlyroom.php?do=quanlyroom">Quản lý phòng</a>
-                        <a class="col l-12"data-target="ql_khachsan.php?do=ql_khachsan">Quản lý Khách sạn</a>
-                        <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaiphong">Quản lý đặt phòng</a>
-                        <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaiphong">Quản lý loại phòng</a>
-                        <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaip  hong">Quản lý tin tức</a>
-                    </div>
-                    <!-- <script src="../Js/mainuser.js"></script> -->
-                </div>
-                <div class="col l-10 container" id="container">
-                    <?php
-                        $do = isset($_GET['do']) ? $_GET['do'] : "ql_khachsan";
-                        include $do.".php";
-                    ?>
-                </div>
-                <script src="../Js/mainuser.js"></script>
+    <div class="body row no-gutters">
+        <div class="col l-2 navigation">
+            <div class="avatar" >
+                <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user_table" > 
+                <span><?php echo$_SESSION['HoTen']?></span>
             </div>
+            <div id="myList" class="row no-gutters">
+                <a class="col l-12 active" data-target="user.php?do=user">Danh Sách Người Dùng</a>
+                <a class="col l-12"data-target="quanlyroom.php?do=quanlyroom">Quản lý phòng</a>
+                <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaiphong">Quản lý Khách sạn</a>
+                <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaiphong">Quản lý đặt phòng</a>
+                <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaiphong">Quản lý loại phòng</a>
+                <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaip  hong">Quản lý tin tức</a>
+            </div>
+            <!-- <script src="../Js/mainuser.js"></script> -->
         </div>
-    
-        
+        <div class="col l-10 container" id="container">
+            <?php
+                $do = isset($_GET['do']) ? $_GET['do'] : "user";
+                include $do.".php";
+            ?>
+        </div>
+        <script src="../Js/mainuser.js"></script>
     </div>
 </div>
 <?php } else header("Location: login.php");?>

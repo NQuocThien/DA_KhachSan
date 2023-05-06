@@ -5,7 +5,7 @@
      $select_ksphong->execute();
      
      $date = date('d-m-Y H:i');
-        $tongphongforKS=$select_ksphong->rowCount();
+
     while ($row = $select_ksphong->fetch(PDO::FETCH_ASSOC)){
         if($row['TinhTrang']=='Đang ở'){
             echo "<div class=\"room\" style=\"background-color: #00a65a;\" >";
