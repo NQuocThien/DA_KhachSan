@@ -61,11 +61,10 @@ ul li{
     background-color: #2c3b41;
     color: gray;
     margin-top: 1px;
-    overflow: scroll;
+    overflow: auto;
 }
 .body .navigation .avatar{
     position: relative;
-    width: 250px;
     padding: 20px 0 10px 20px;
 }
 .body .navigation .avatar span{

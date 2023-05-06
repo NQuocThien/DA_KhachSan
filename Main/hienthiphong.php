@@ -17,7 +17,7 @@
             echo "<div class=\"room\" style=\"background-color: #3d8cbd;\" >";
         }
         echo "<form action=\"\">";
-        echo "<div class=\"img_iconroom\">".$_SESSION['MaKS2']."</div>";
+        echo "<div class=\"img_iconroom\">".$_SESSION['MaKS1']."</div>";
         echo "<div class=\"content_nameroom\">".$row['TenPhong']."</div>";
         echo "<div class=\"trangthai\">".$row['TinhTrang']."</div>";
         echo "<div class=\"ngaydat\"><i class=\"fa-solid fa-calendar-check\"></i>".  $date."</div>";
@@ -27,3 +27,12 @@
         echo "</div>";
     }
 ?>
+<div class="room"></div>
+<div class="room"></div>
+<div class="room"></div>
+<div class="room"></div>
+<div class="room"></div>
+<div class="room"></div>
+<div class="room"></div>
+<div class="room"></div>
+<div class="room"></div>

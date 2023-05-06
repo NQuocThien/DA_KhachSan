@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="../css/infouser.css">
     <link rel="stylesheet" href="../css/mainuser1.css">
     <link rel="stylesheet" href="../css/quanlyroom.css">
+    <link rel="stylesheet" href="../css/quanlyloaiphong.css">
     <link rel="stylesheet" href="../css/infouser.css">
-    <script src="../Js/quanlyroom.js"></script>
+
     <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
 
 
@@ -50,6 +51,7 @@
             <div id="myList" class="row no-gutters">
                 <a class="col l-12 active" data-target="user.php?do=user">Danh Sách Người Dùng</a>
                 <a class="col l-12"data-target="quanlyroom.php?do=quanlyroom">Quản lý phòng</a>
+                <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaiphong">Quản lý loại phòng</a>
             </div>
             <!-- <script src="../Js/mainuser.js"></script> -->
         </div>
@@ -60,7 +62,6 @@
             ?>
         </div>
         <script src="../Js/mainuser.js"></script>
-      
     </div>
 </div>
 <?php } else header("Location: login.php");?>

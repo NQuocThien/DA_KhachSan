@@ -8,27 +8,10 @@
              <input type="file" name ="myFileIMG"id="myFileInput" style="display:none">
              <img id="myImage" class="img_user2" style="display:none">
              <img src='../upload/<?php echo$_SESSION['Img']?>' id='myImage1' class='img_user1'style="display:block">
-            <script>
-            const fileInput = document.getElementById('myFileInput');
-            const image = document.getElementById('myImage');
-            const image1 = document.getElementById('myImage1');
-            fileInput.addEventListener('change', () => {
-                image1.style.display = 'none';
-                image.style.display = 'block';
-                // Lấy tệp hình ảnh đã chọn
-                const file = fileInput.files[0];
-                
-                // Hiển thị hình ảnh
-                const reader = new FileReader();
-                reader.readAsDataURL(file);
-                reader.onload = function () {
-                image.src = reader.result;
-                };
-            });
-            </script>
+           
             <input type="submit" value="Upload" name="submit">
 		</form>
-        <button id="btn_chonImg" onclick="document.getElementById('myFileInput').click()">
+        <button id="btn_chonImg" onclick="document.getElementById('myFileInput').click();">
         <i class="fa-solid fa-camera"></i>
     </button>
         <div class="contener_user">
