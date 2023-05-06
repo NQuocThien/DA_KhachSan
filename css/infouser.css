@@ -40,14 +40,14 @@
     background-size: 70% 70%;
     background-repeat: no-repeat;
 }
-form{
+.ifo form{
     display: flex;
 
     align-items: center;
  
     flex-direction: column;
 }
-form .submit{
+.ifo form .submit{
     margin-top: 10px;
     width: 100px;
 }

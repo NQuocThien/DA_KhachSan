@@ -98,6 +98,7 @@ ul li{
     cursor: pointer;
     text-align: center;
     display: flex;
+    padding-left: 10px;
     align-items: center;
     width: 200px;
     height: 45px;

@@ -1,19 +1,82 @@
-.img_room{
-    width: 300px;
-    height: 300px;
+.body_sudkindroom{
+    background-color: #fff;
+    margin: 10px 10px 0 10px;
+    min-height: 500px;
+    height: auto;
+    padding: 20px 0 0 20px;
+    position: relative;
 }
+.body_sudkindroom .btn_opinion{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    background-color: #26313c;
+    border-radius: 5px;
 
-#btn_chonImg_room{
+} 
+.body_sudkindroom .btn_opinion a{
+    width: 200px;
+    height: 30px;
+    padding-top: 5px;
     border: none;
     outline: none;
-    opacity: 0.7;
     cursor: pointer;
-    height: 30px;
-    width: 30px;
-    background-color: transparent;
+    text-align: center;
+    color: #fff;
+} 
+.body_sudkindroom #form_hienthi{
+    /* position: absolute; */
+    top: 0px;
+    /* display: none; */
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
 }
-#btn_chonImg_room i{
-    font-size: 30px;
-    height: 30px;
-    width: 30px;
+.container .InserkindRoom{
+    margin: 10px 10px 0 10px;
+    width: 98%;
+    min-height: 500px;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 -2px 0 gray;
 }
+.container .InserkindRoom .form_inser{
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+}
+.container .InserkindRoom .form_inser h3{
+   padding-bottom: 30px;
+}
+.container .InserkindRoom .form_inser .ifo_room{
+   padding-top: 10px;
+}
+.container .InserkindRoom .form_inser .ifo_room .p_ifo1{
+    margin-left: -140px;
+ }
+.container .InserkindRoom .form_inser .ifo_room input{
+    width: 200px;
+    height: 25px;
+    margin-left: 22px;
+ }
+.container .InserkindRoom .form_inser .ifo_room .p_ifo2{
+    margin-left: -93px;
+ }
+.container .InserkindRoom .form_inser .ifo_room .p_ifo3{
+    margin-left: -66px;
+ }
+.container .InserkindRoom .form_inser .ifo_room .p_ifo4{
+    margin-left: -85px;
+ }
+.container .InserkindRoom .form_inser .themphong{
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    border-radius: 60%;
+    cursor: pointer;
+    border: none;
+    background-color: aqua;
+    color: #000;
+ 
+ }
+
