@@ -41,7 +41,7 @@
             </div>
         </div>
     </div>
-    <div class="body row ">
+    <div class="body row no-gutters">
         <div class="col l-2 navigation">
             <div class="avatar" >
                 <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user_table" > 

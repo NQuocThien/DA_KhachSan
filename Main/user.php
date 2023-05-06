@@ -12,7 +12,7 @@
 <div class="main_list-user" >
 	<h3 >Danh sách người dùng</h3>
 	<div class="grid wide">
-		<div class="row">
+		<div class="row no-gutters">
 			<?php 
 			while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) 
 			{	
