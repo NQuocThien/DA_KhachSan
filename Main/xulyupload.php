@@ -33,7 +33,7 @@
                 }
                 else{
                     $_SESSION['Img']=$_FILES["myFileIMG"]["name"];
-                    header("Location: mainuser.php");
+                    header("Location: main.php");
                 }
     }
        

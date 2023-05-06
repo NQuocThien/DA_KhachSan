@@ -9,44 +9,57 @@
 	}
 
 ?>
-<div class="main_infouser" >
-<h3 >Danh sách người dùng</h3>
-<table class="DanhSach" style="margin-left: 200px;">
-	<tr>
-		<th align='center' style=" padding: 0 10px;">Mã ND</th>
-		<th align='center'style=" padding: 0 10px;">Họ và tên</th>
-		<th align='center'style=" padding: 0 10px;">Tên đăng nhập</th>
-		<th align='center'>Quyền</th>
-		<th colspan="3">Hành động</th>
-	</tr>
-	<?php
-		$stt = 1;
-		//Dùng vòng lặp while truy xuất các phần tử trong table
-		while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) 
-		{			
-			echo "<tr  bgcolor='#ffffff' onmouseover='this.style.background=\"#dee3e7\"' onmouseout='this.style.background=\"#ffffff\"'>";
-				echo "<td align='center'>" . $dong["MaNguoiDung"] . "</td>";
-				echo "<td align='center'>" . $dong["TenNguoiDung"] . "</td>";
-				echo "<td align='center'>" . $dong["TenDangNhap"] . "</td>";
+<div class="main_list-user" >
+	<h3 >Danh sách người dùng</h3>
+	<div class="grid wide">
+		<div class="row">
+			<?php 
+			while ($dong = $danhsach->fetch_array(MYSQLI_ASSOC)) 
+			{	
+				echo "<div class=\"item_user col l-4 grid\">";
+				echo "	<div class=\"row\">";
+				echo "		<div class=\"user-avatar col l-4 l-o-1\" >";
+				echo "			<img src=\"../upload/".$dong['Img']."\" alt=\"\">";
+				echo "		</div>";
+				echo "		<div class=\"user_content col l-7\">";
+				echo "			<div class=\"user-id\">";
+				echo "				<p>Mã ND: ". $dong["MaNguoiDung"] ."</p>";
+				echo "			</div>";
+				echo "			<div class=\"user-name\">";
+				echo "				<p>Họ tên: " . $dong["TenNguoiDung"] . "</p>";
+				echo "			</div>";
+				echo "			<div class=\"user-name-login\">";
+				echo "				<p>Username: " . $dong["TenDangNhap"] . "</p>";
+				echo "			</div>";
+				if($dong["Quyen"] == 1)
+				{
+					echo "			<div class=\"user-law\">";
+					echo "				<p>Quyền: Quản trị(<a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)</p>";
+					echo "			</div>";
+				}
+				else
+				{
+					echo "			<div class=\"user-law\">";
+					echo "				<p>Quyền: Thành viên (<a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)</p>";
+					echo "			</div>";
+				}
 				
-				echo "<td>";
-					if($dong["Quyen"] == 1)
-						echo "Quản trị (<a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=2'>Hạ quyền</a>)";
-					else
-						echo "Thành viên (<a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&quyen=1'>Nâng quyền</a>)";
-				echo "</td>";
-				
-				echo "<td align='center'>";
-					if($dong["Khoa"] == 0)
-						echo "<a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&khoa=1'><img src='../images/active.png' /></a>";
-					else
-						echo "<a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&khoa=0'><img src='../images/ban.png' /></a>";
-				echo "</td>";
-				
-				echo "<td align='center'><a href='update_user.php?do=nguoidung_sua&id=" . $dong["MaNguoiDung"] . "'><img src='../images/edit.png' /></a></td>";
-				echo "<td align='center'><a href='delete_user.php?do=nguoidung_xoa&id=" . $dong["MaNguoiDung"] . "' onclick='return confirm(\"Bạn có muốn xóa người dùng " . $dong['TenNguoiDung'] . " không?\")'><img src='../images/delete.png' /></a></td>";
-			echo "</tr>";
-		}
-	?>
-</table>
+				echo "			<div class=\"user-action\">";
+				if($dong["Khoa"] == 0)
+					echo "<p>HĐ:</p> <a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&khoa=1'><img src='../images/active.png' /></a> ";
+				else
+					echo "<p>HĐ: </p><a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&khoa=0'><img src='../images/ban.png' /></a>";
+					
+					echo "<a href='main.php?do=update_user&id=" . $dong["MaNguoiDung"] . "'><img src='../images/edit.png' /></a>";
+					echo "<a href='main.php?do=delete_user&id=" . $dong["MaNguoiDung"] . "' onclick='return confirm(\"Bạn có muốn xóa người dùng " . $dong['TenNguoiDung'] . " không?\")'><img src='../images/delete.png' /></a>";
+				echo "			</div>";
+				echo "		</div>";
+				echo "	</div>";
+				echo "</div>";
+			}
+			?>
+		</div>
+	</div>
+	
+	
 </div>
