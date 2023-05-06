@@ -23,21 +23,24 @@ ul li{
 .container .main_quanlroom 
 .header_room .hr_firt .menu_iconroom{
     position: relative;
-    cursor: pointer;
 }
 .container .main_quanlroom 
 .header_room .hr_firt .nav_menuroom{
     position: absolute;
     right: -10px;
     top: 29px;
+
     background-color: #000000;
     z-index: 99;
     width: 200px;
     display: flex;
     flex-direction: column;
-    /* display: none; */
+    display: none;
 }
-
+.container .main_quanlroom 
+.header_room .hr_firt .menu_iconroom i{
+    cursor: pointer;
+}
 .container .main_quanlroom 
 .header_room .hr_firt .nav_menuroom a{
     text-align: center;
@@ -54,12 +57,10 @@ ul li{
 .container .main_quanlroom .header_room 
 .hr_second .icon_trangthairoom{
     margin: 0 100px;
-
     width: 50px;
     height: 50px;
     border: none;
     border-radius: 4px;
-
     position: relative;
 }
 .container .main_quanlroom .header_room 
@@ -76,7 +77,7 @@ ul li{
 }
 .container .main_quanlroom .header_room 
 .hr_second .icon_trangthairoom p{
-    padding-top: 16px;
+    padding: 14px 0 0 22px;
     width: 50px;
     height: 50px;
 }
@@ -85,7 +86,7 @@ ul li{
     position: absolute;
     width: 100px;
     top: 15px;
-    right:-80px;
+    right:-106px;
 }
 /* body */
 .container .main_quanlroom .body_room {
@@ -95,7 +96,50 @@ ul li{
     height: auto;
     background-color: #fff;
 }
-
+.container .main_quanlroom .body_room .br_firt{
+    width: 100%;
+    height: auto;
+    display: flex;
+    
+}
+.container .main_quanlroom .body_room .br_firt 
+.room_mylist a.active{
+    border-top: 2px solid #3d8cbd;
+    border-bottom: 2px solid #3d8cbd;
+}
+.container .main_quanlroom .body_room .br_firt .room_mylist{
+    width: 150px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.container .main_quanlroom .body_room .br_firt .room_mylist a{
+    width: 100%;
+    cursor: pointer;
+    padding-left: 24px;
+    height: 100%;
+    padding-top: 10px;
+    
+}
+.container .main_quanlroom .body_room .br_firt .room_mylist i{
+    width: 25px;
+    height: 25px;
+    left: 4px;
+    top: 13px;
+    color: #000000;
+    position: absolute;
+}
+.container .main_quanlroom .body_room .br_firt .room_mylist span{
+    position: absolute;
+    width: 25px;
+    right: 15%;
+    color: #fff;
+    text-align: center;
+    height: 20px;
+    border-radius:40% ;
+    background-color: #ff0000;
+}
 .container .main_quanlroom .body_room .br_second{
     width: 100%;
     display: grid;
@@ -114,21 +158,30 @@ ul li{
 } 
 .br_second .room .content_nameroom{
     text-align: center;
-    padding-top: 10px;
+    margin-top: 10px;
     color: #fff;
 } 
 .br_second .room .trangthai{
     text-align: center;
-    padding-top: 20px;
+    margin-top: 20px;
     color: #fff;
 } 
 .br_second .room .ngaydat{
     text-align: center;
-    padding-top: 10px;
+    margin-top: 10px;
     color: #fff;
 } 
 .br_second .room .ngaytra{
     text-align: center;
-    padding-top: 10px;
+    margin-top: 10px;
     color: #fff;
 } 
+/* room */
+.br_second .room .trangthai i,
+.br_second .room .ngaydat i{
+margin-left: 0px;
+} 
+.br_second .room input{
+    margin-top: 25px;
+    width: 40px;
+}
