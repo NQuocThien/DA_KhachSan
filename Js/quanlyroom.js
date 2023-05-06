@@ -1,15 +1,12 @@
+var linksroom = document.querySelectorAll(".myLink");
+for (var i = 0; i < links.length; i++) {
+    linksroom[i].addEventListener("click", function() {
+        // Xóa lớp active của các thẻ <a> khác
+        for (var j = 0; j < linksroom.length; j++) {
+            linksroom[j].classList.remove("active");
+        }
 
-const menu_room=document.getElementById('my_menu');
-var ismenu1 = true;
-menu.addEventListener('click',()=>{
- var caption = document.querySelector('.nav_menuroom');
-
-   if(ismenu){
-       caption.style.display = 'block';
-       ismenu1 = false;
-   }
-   else{
-       caption.style.display = 'none';
-       ismenu1 = true;
-   }
-});
+        // Gán lớp active cho thẻ <a> được nhấp chuột
+        this.classList.add("active");
+    });
+}

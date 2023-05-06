@@ -1,6 +1,6 @@
-const img_user=document.querySelector('.img_user');
-var ismenu = true;
-img_user.addEventListener('click',() => {
+const img_usera=document.querySelector('.img_user');
+var ismenu = false;
+img_usera.addEventListener('click',() => {
     var caption = document.querySelector('.menu_user');
  
     if(ismenu){
@@ -41,4 +41,5 @@ img_user.addEventListener('click',() => {
        });
    });
  });
+
 

@@ -12,5 +12,5 @@
 		    die("Không kết nối :" . $conn->connect_error);
 		    exit();
 	}	
-		
+	$pdo = new PDO('mysql:host=localhost;dbname=da_khachsan', 'root', 'vertrigo');
 ?>
