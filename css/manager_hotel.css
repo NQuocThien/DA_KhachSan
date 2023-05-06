@@ -1,0 +1,43 @@
+.container .main_manager-hotel .list_hotel-header,
+.container .main_manager-hotel .list_hotel-body{
+    background-color: #fff;
+    margin: 10px;
+    border: 2px #ccc outset;
+    border-radius: 10px  ;
+    padding: 10px;
+}
+.container .main_manager-hotel .list_hotel-header .title{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+.container .main_manager-hotel .list_hotel-header .header-body .choose{
+    padding: 35px ;
+    
+}
+.container .main_manager-hotel .list_hotel-header .header-body .choose label,
+.container .main_manager-hotel .list_hotel-header .header-body .choose select{
+    font-size: 20px;
+    
+}
+.container .main_manager-hotel .list_hotel-header .header-body .infor .infor_avartar{
+    background-color: black;
+    min-height: 100px;
+    width: 10px;
+    border-radius: 15px 0 15px 0;
+}
+.container .main_manager-hotel .list_hotel-header .header-body .infor .number{
+    padding: 10px;
+}
+.container .main_manager-hotel .list_hotel-body {
+    padding: 20px;
+}
+.container .main_manager-hotel .list_hotel-body .hotel-element .warper{
+    background-color: #ccc;
+    border-radius: 0 10px 0 10px;
+
+}
+.container .main_manager-hotel .list_hotel-body .hotel-element .avatar{
+    min-height: 30px;
+    background-color: black;
+    border-radius: 10px;
+}

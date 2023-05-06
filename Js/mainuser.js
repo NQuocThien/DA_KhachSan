@@ -22,17 +22,17 @@ img_usera.addEventListener('click',() => {
      event.preventDefault();
      // Lấy đường dẫn của file PHP tương ứng
      const target = this.getAttribute('data-target');
-     
+    //  console.log(target);
      // Lấy nội dung của file PHP tương ứng bằng phương thức fetch()
      fetch(target)
        .then(response => response.text())
        .then(data => {
-         // Gán nội dung của file PHP vào phần tử HTML
+        // Gán nội dung của file PHP vào phần tử HTML
          const content = document.getElementById('container');
          content.innerHTML = data;
-         
+         //console.log(data);
          // Xóa lớp active khỏi tất cả các phần tử a
-         links.forEach(link => {
+           links.forEach(link => {
            link.classList.remove('active');
          });
          
@@ -55,34 +55,34 @@ img_usera.addEventListener('click',() => {
      });
  }
 
-const fileInput = document.getElementById('myFileInput');
-const image = document.getElementById('myImage');
-const image1 = document.getElementById('myImage1');
-fileInput.addEventListener('change', () => {
-    image1.style.display = 'none';
-    image.style.display = 'block';
-    // Lấy tệp hình ảnh đã chọn
-    const file = fileInput.files[0];
+// const fileInput = document.getElementById('myFileInput');
+// const image = document.getElementById('myImage');
+// const image1 = document.getElementById('myImage1');
+// fileInput.addEventListener('change', () => {
+//     image1.style.display = 'none';
+//     image.style.display = 'block';
+//     // Lấy tệp hình ảnh đã chọn
+//     const file = fileInput.files[0];
     
-    // Hiển thị hình ảnh
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = function () {
-    image.src = reader.result;
-    };
-});
+//     // Hiển thị hình ảnh
+//     const reader = new FileReader();
+//     reader.readAsDataURL(file);
+//     reader.onload = function () {
+//     image.src = reader.result;
+//     };
+// });
 
-const fileInputRoom = document.getElementById('myFileInputRoom');
-const imageRoom = document.getElementById('myImageRoom');
-fileInputRoom.addEventListener('change', function() {
-    // Lấy tệp hình ảnh đã chọn
-    const fileRoom = fileInputRoom.files[0];
+// const fileInputRoom = document.getElementById('myFileInputRoom');
+// const imageRoom = document.getElementById('myImageRoom');
+// fileInputRoom.addEventListener('change', function() {
+//     // Lấy tệp hình ảnh đã chọn
+//     const fileRoom = fileInputRoom.files[0];
     
-    // Hiển thị hình ảnh
-    const readerRoom = new FileReader();
-    readerRoom.readAsDataURL(fileRoom);
-    readerRoom.onload = function () {
-      imageRoom.src = readerRoom.result;
-    };
-});
+//     // Hiển thị hình ảnh
+//     const readerRoom = new FileReader();
+//     readerRoom.readAsDataURL(fileRoom);
+//     readerRoom.onload = function () {
+//       imageRoom.src = readerRoom.result;
+//     };
+// });
           
