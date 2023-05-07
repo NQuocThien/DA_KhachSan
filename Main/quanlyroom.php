@@ -15,9 +15,9 @@
             <div class="menu_iconroom ">
                 <i id="my_menu" class="fa-solid fa-bars"></i>
                  <div  id = "nav_menuroo"class="nav_menuroom ">
-                    <a href="#">Loại phòng</a>
-                    <a href="#">Loại phòng</a>
-                    <a href="#">Loại phòng</a>
+                    <a data-target="insertphong.php" class="myLink" >Loại phòng</a>
+                    <!-- <a data-target="" class="myLink" >Loại phòng</a>
+                    <a data-target="" class="myLink" >Loại phòng</a> -->
                 </div>
                 
             </div>
@@ -27,9 +27,9 @@
             
         </div>
         <div class="hr_second">
-            <div class="icon_trangthairoom"><p>a</p><span>:Trống</span></div>
-            <div class="icon_trangthairoom"><p>b</p><span>:Đang ở</span></div>
-            <div class="icon_trangthairoom"><p>c</p><span>:Đặt cọc</span></div>
+            <div class="icon_trangthairoom"><p></p><span>:Trống</span></div>
+            <div class="icon_trangthairoom"><p></p><span>:Đang ở</span></div>
+            <div class="icon_trangthairoom"><p></p><span>:Đặt cọc</span></div>
             
         </div>
        
@@ -49,18 +49,15 @@
 				        $_SESSION['MaKS'.$dong['MaKhachSan'].''] = $dong['MaKhachSan'];
                         echo  "<div class=\"room_mylist\">
                         <i class=\"fa-solid fa-hotel\"></i>
-                     <a id=\"aroom_mylist\"class=\"myLink\" data-target=\"quanlyroom.php?dr=hienthiphong&id=".$dong['MaKhachSan']."\">".$dong['TenKhachSan']."</a>
+                     <a id=\"aroom_mylist\"class=\"myLink\" data-target=\"hienthiphong.php?do=&id=".$dong['MaKhachSan']."\">".$dong['TenKhachSan']."</a>
                      <span>" .$dong1['tongphong']."</span>
                     </div>";
                     }
                 ?>
-                
+           
             </div>
             <div class="br_second" id="br_second">
-                <?php
-                    $do = isset($_GET['dr']) ? $_GET['dr'] : "hienthiphong";
-                    include $do.".php";
-                ?>
+                
             </div>
             
     </div>
