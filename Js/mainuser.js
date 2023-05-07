@@ -13,8 +13,8 @@ img_usera.addEventListener('click',() => {
     }
 });
 
-// const $ = document.querySelector.bind(document);
-// const $$ = document.querySelectorAll.bind(document);
+const $ = document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
 
 // const tabs = $$('#myList a');
 // //const panels = $$('.contains_item');
@@ -42,35 +42,35 @@ img_usera.addEventListener('click',() => {
 
 
  // Lấy tất cả các phần tử a
- const links = document.querySelectorAll('#myList a');
+//  const links = document.querySelectorAll('#myList a');
   
- //Thêm sự kiện click vào từng phần tử a
- links.forEach(link => {
-   link.addEventListener('click', function(event) {
-     // Ngăn chặn hành động mặc định của phần tử a
-     event.preventDefault();
-     // Lấy đường dẫn của file PHP tương ứng
-     const target = this.getAttribute('data-target');
-    //  console.log(target);
-     // Lấy nội dung của file PHP tương ứng bằng phương thức fetch()
-     fetch(target)
-       .then(response => response.text())
-       .then(data => {
-        // Gán nội dung của file PHP vào phần tử HTML
-        console.log(data);
-         const content = document.getElementById('container');
-         content.innerHTML = data;
-         //console.log(data);
-         // Xóa lớp active khỏi tất cả các phần tử a
-           links.forEach(link => {
-           link.classList.remove('active');
-         });
+//  //Thêm sự kiện click vào từng phần tử a
+//  links.forEach(link => {
+//    link.addEventListener('click', function(event) {
+//      // Ngăn chặn hành động mặc định của phần tử a
+//      event.preventDefault();
+//      // Lấy đường dẫn của file PHP tương ứng
+//      const target = this.getAttribute('data-target');
+//     //  console.log(target);
+//      // Lấy nội dung của file PHP tương ứng bằng phương thức fetch()
+//      fetch(target)
+//        .then(response => response.text())
+//        .then(data => {
+//         // Gán nội dung của file PHP vào phần tử HTML
+//         console.log(data);
+//          const content = document.getElementById('container');
+//          content.innerHTML = data;
+//          //console.log(data);
+//          // Xóa lớp active khỏi tất cả các phần tử a
+//            links.forEach(link => {
+//            link.classList.remove('active');
+//          });
          
-         // Thêm lớp active vào phần tử a được click
-         this.classList.add('active');
-       });
-   });
- });
+//          // Thêm lớp active vào phần tử a được click
+//          this.classList.add('active');
+//        });
+//    });
+//  });
 
  var linksroom = document.querySelectorAll(".myLink");
  for (var i = 0; i < linksroom.length; i++) {
