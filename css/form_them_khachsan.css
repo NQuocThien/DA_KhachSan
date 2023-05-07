@@ -1,0 +1,12 @@
+.container .main_form_addKS .form_group .MyFormLabel{
+    padding-left: 10px;
+ }
+.container .main_form_addKS .form_group .Mota textarea{
+    width: 100%x;
+ }
+ .container .main_form_addKS  h3{
+    text-align: center;
+ }
+ .container .main_form_addKS .button-submit{
+    height: 30px;
+ }

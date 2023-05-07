@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/quanlyloaiphong.css">
     <link rel="stylesheet" href="../css/infouser.css">
     <link rel="stylesheet" href="../css/manager_hotel.css">
+    <link rel="stylesheet" href="../css/form_them_khachsan.css">
 
     <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
 
