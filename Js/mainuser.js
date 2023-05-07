@@ -55,22 +55,22 @@ img_usera.addEventListener('click',() => {
      });
  }
 
-// const fileInput = document.getElementById('myFileInput');
-// const image = document.getElementById('myImage');
-// const image1 = document.getElementById('myImage1');
-// fileInput.addEventListener('change', () => {
-//     image1.style.display = 'none';
-//     image.style.display = 'block';
-//     // Lấy tệp hình ảnh đã chọn
-//     const file = fileInput.files[0];
+const fileInput = document.getElementById('myFileInput');
+const image = document.getElementById('myImage');
+const image1 = document.getElementById('myImage1');
+fileInput.addEventListener('change', () => {
+    image1.style.display = 'none';
+    image.style.display = 'block';
+    // Lấy tệp hình ảnh đã chọn
+    const file = fileInput.files[0];
     
-//     // Hiển thị hình ảnh
-//     const reader = new FileReader();
-//     reader.readAsDataURL(file);
-//     reader.onload = function () {
-//     image.src = reader.result;
-//     };
-// });
+    // Hiển thị hình ảnh
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+    image.src = reader.result;
+    };
+});
 
 // const fileInputRoom = document.getElementById('myFileInputRoom');
 // const imageRoom = document.getElementById('myImageRoom');

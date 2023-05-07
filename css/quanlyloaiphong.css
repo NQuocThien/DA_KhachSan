@@ -1,11 +1,16 @@
 .body_sudkindroom{
-    background-color: #fff;
+
     margin: 10px 10px 0 10px;
-    min-height: 500px;
-    height: auto;
-    padding: 20px 0 0 20px;
     position: relative;
 }
+.body_sudkindroom .hder_sudkindroom{
+    background-color: #fff;
+    padding: 20px;
+    border: none;
+    box-shadow: 0 -2px 0 gray;
+
+}
+
 .body_sudkindroom .btn_opinion{
     width: 200px;
     height: 30px;
@@ -51,16 +56,19 @@
 .container .InserkindRoom .form_inser .ifo_room{
    padding-top: 10px;
 }
+.container .InserkindRoom .form_inser .ifo_room .p_ifo0{
+    margin-left: -58px;
+ }
 .container .InserkindRoom .form_inser .ifo_room .p_ifo1{
     margin-left: -140px;
  }
-.container .InserkindRoom .form_inser .ifo_room input{
+.container .InserkindRoom .form_inser .ifo_room input[type="text"]{
     width: 200px;
     height: 25px;
     margin-left: 22px;
  }
 .container .InserkindRoom .form_inser .ifo_room .p_ifo2{
-    margin-left: -93px;
+    margin-left: -47px;
  }
 .container .InserkindRoom .form_inser .ifo_room .p_ifo3{
     margin-left: -66px;
@@ -79,4 +87,91 @@
     color: #000;
  
  }
+ .container .InserkindRoom .form_inser .ifo_room
+ .radio_loaigiuong input[type="radio"]{
+    margin: 10px 0;
+    width: 30px;
+    height: 15px;
+ }
+ .container .body_sudkindroom .giua_sudkindroom{
+    background-color: rgb(165, 134, 165);
+    margin-top: 20px;
+ }
+ .container .body_sudkindroom
+  .giua_sudkindroom .kindroom{
+padding: 10px 0 0 0 ;
+width: 200px;
+ }
+ .container .body_sudkindroom
+  .giua_sudkindroom .kindroom-avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    height: 130px ;
+    margin: 10px 9px 0 21px;
+    background-color: #dacece;
+ }
+ .container .body_sudkindroom
+  .giua_sudkindroom .kindroom-avatar img{
+    border-radius: 100%;
+    width: 100px;
+    min-height: 100px;
+    border: solid 4px #d6532f;
+    margin: 5px 0px;
+ }
+ .container .body_sudkindroom
+  .giua_sudkindroom .item_kindroom{
 
+    height: auto;
+    border: 1px dotted #40d343;
+    padding: 0;
+    border-radius: 5% 5% 5% 5%;
+    background-color: rgb(191, 227, 228);
+ }
+ .container .form_updateloaiphong{
+    margin: 10px 10px 0 10px;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 -2px 0 gray;
+    position: relative;
+ 
+ }
+ .container .form_updateloaiphong img{
+margin-left: 40%;
+
+ 
+ }
+ .container  .input_box,
+ .container  .updateloaiphong h2,
+ .container  .updateloaiphong .sua
+ 
+ {
+  margin-left: 40%;
+  padding: 10px 0;
+ }
+ .container  .updateloaiphong .sua{
+    width: 100px;
+ }
+ .container .Doianhloaiphong .img_user1,
+ .container .Doianhloaiphong .img_user2{
+   margin-left: 40%;
+ }
+ .container .Doianhloaiphong{
+   position: relative;
+ }
+ .container .Doianhloaiphong input[type="submit"]{
+  margin-left: 40%;
+ }
+ .container  #btn_chonImg1{
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+    bottom: 57%;
+    left: 70%;
+    opacity: 0.7;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+ }
