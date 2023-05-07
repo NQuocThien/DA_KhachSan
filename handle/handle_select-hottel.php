@@ -8,3 +8,4 @@
        echo " <option value=".$row["MaLoai"]."> ".$row["TenLoai"] ." </option>" ;
     }
 ?>
+<img src="" alt="">

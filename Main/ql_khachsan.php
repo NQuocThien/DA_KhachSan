@@ -1,3 +1,13 @@
+<?php 
+    include "../Chung/cauhinh.php";
+    $sql = "SELECT * FROM `chuoikhachsan`";
+    $danhsach = $connect->query($sql);
+    if(!$danhsach)
+    {
+        echo "Error:" . $sql;
+        exit();
+    }
+?>
 
 <div class="main_manager-hotel" >
     <div class="list_hotel-header ">
@@ -11,23 +21,29 @@
                         <label for="select_list-hotel">Chọn chổi khách sạn:</label>
                         <select name="select_list-hotel" id="select_list-hotel">
                             <option value="0">----chọn----</option>
+                            <?php 
+                                while($row = $danhsach->fetch_array(MYSQLI_ASSOC))
+                                {
+                                    echo "<option value =".$row["MaChuoi"].">".$row["TenChuoi"]."</option>"; ;
+                                }
+                            ?>
                         </select>
                     </div>
                     <div class="infor l-6">
                         <div class="row">
-                            <div class="infor_avartar l-3">
-                
+                            <div class="infor_avartar l-3" id="infor_avatar-hotel">
+                                
                             </div>
+                        
                             <div class="number l-9">
 
-                                <h3  >
-                                    Số Lượng: 
-                                </h3>
-                                <p>
-                                    10 
+                                <h4  >
+                                    Số lượng khách sạn của chuổi: 
+                                </h4>
+                                <p style="font-size: 18px;">
                                 </p>
                             </div>
-
+                    
                         </div>
                     </div>
                 </div>
@@ -40,7 +56,7 @@
         <h3>
             Danh sách các khách sạn:
         </h3>
-        <div class="row">
+        <div class="list_hotel-main row">
 
             <div class="hotel-element col l-6">
                 <div class="warper">
@@ -53,7 +69,9 @@
                             <p>Xếp loai:</p>
                             <p>Địa chỉ:</p>
                             <a href="">Sdt:</a>
-                            <div> hd</div>
+                            <div class = "action">
+
+                            </div>
                         </div>
                     </div>
                 </div>
