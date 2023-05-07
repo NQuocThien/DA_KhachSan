@@ -31,7 +31,7 @@ ul li{
     top: 29px;
 
     background-color: #000000;
-    z-index: 99;
+    z-index: 10;
     width: 200px;
     display: flex;
     flex-direction: column;
@@ -184,4 +184,21 @@ margin-left: 0px;
 .br_second .room input{
     margin-top: 25px;
     width: 40px;
+}
+.br_second .room .img_iconroom{
+    margin-top: 4px;
+  
+}
+.br_second {
+    position: relative;
+}
+.tinhtrang{
+    position: absolute;
+    top: -120px;
+    left: 5px;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+}
+.tinhtrang .potion_tt{
+    padding: 0 0 0 245px;
 }

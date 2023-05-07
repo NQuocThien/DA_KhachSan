@@ -41,36 +41,32 @@ const $$ = document.querySelectorAll.bind(document);
 
 
 
- // Lấy tất cả các phần tử a
-//  const links = document.querySelectorAll('#myList a');
+//  Lấy tất cả các phần tử a
+ const links = document.querySelectorAll('.myLink');
   
-//  //Thêm sự kiện click vào từng phần tử a
-//  links.forEach(link => {
-//    link.addEventListener('click', function(event) {
-//      // Ngăn chặn hành động mặc định của phần tử a
-//      event.preventDefault();
-//      // Lấy đường dẫn của file PHP tương ứng
-//      const target = this.getAttribute('data-target');
-//     //  console.log(target);
-//      // Lấy nội dung của file PHP tương ứng bằng phương thức fetch()
-//      fetch(target)
-//        .then(response => response.text())
-//        .then(data => {
-//         // Gán nội dung của file PHP vào phần tử HTML
-//         console.log(data);
-//          const content = document.getElementById('container');
-//          content.innerHTML = data;
-//          //console.log(data);
-//          // Xóa lớp active khỏi tất cả các phần tử a
-//            links.forEach(link => {
-//            link.classList.remove('active');
-//          });
-         
-//          // Thêm lớp active vào phần tử a được click
-//          this.classList.add('active');
-//        });
-//    });
-//  });
+ //Thêm sự kiện click vào từng phần tử a
+ links.forEach(link => {
+   link.addEventListener('click', function(event) {
+     // Ngăn chặn hành động mặc định của phần tử a
+     event.preventDefault();
+     // Lấy đường dẫn của file PHP tương ứng
+     const target = this.getAttribute('data-target');
+    //  console.log(target);
+     // Lấy nội dung của file PHP tương ứng bằng phương thức fetch()
+     fetch(target)
+       .then(response => response.text())
+       .then(data => {
+        // Gán nội dung của file PHP vào phần tử HTML
+        console.log(data);
+         const content = document.getElementById('br_second');
+         content.innerHTML = data;
+           var test= document.getElementById('back');
+           test.addEventListener('click',()=>{
+                window.history.back();
+           });
+       });
+   });
+ });
 
  var linksroom = document.querySelectorAll(".myLink");
  for (var i = 0; i < linksroom.length; i++) {
@@ -85,22 +81,7 @@ const $$ = document.querySelectorAll.bind(document);
      });
  }
 
-const fileInput = document.getElementById('myFileInput');
-const image = document.getElementById('myImage');
-const image1 = document.getElementById('myImage1');
-fileInput.addEventListener('change', () => {
-    image1.style.display = 'none';
-    image.style.display = 'block';
-    // Lấy tệp hình ảnh đã chọn
-    const file = fileInput.files[0];
-    
-    // Hiển thị hình ảnh
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = function () {
-    image.src = reader.result;
-    };
-});
+
 
 // const fileInputRoom = document.getElementById('myFileInputRoom');
 // const imageRoom = document.getElementById('myImageRoom');
@@ -115,4 +96,17 @@ fileInput.addEventListener('change', () => {
 //       imageRoom.src = readerRoom.result;
 //     };
 // });
-          
+const my_menu=document.getElementById('my_menu');
+var ismenu1 = true;
+my_menu.addEventListener('click',() => {
+    var caption = document.getElementById('nav_menuroo');
+ 
+    if(ismenu1){
+        caption.style.display = 'block';
+        ismenu1 = false;
+    }
+    else{
+        caption.style.display = 'none';
+        ismenu1 = true;
+    }
+});        

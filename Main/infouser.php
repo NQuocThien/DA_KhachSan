@@ -14,6 +14,24 @@
         <button id="btn_chonImg" onclick="document.getElementById('myFileInput').click();">
         <i class="fa-solid fa-camera"></i>
     </button>
+    <script>
+        const fileInput = document.getElementById('myFileInput');
+        const image = document.getElementById('myImage');
+        const image1 = document.getElementById('myImage1');
+        fileInput.addEventListener('change', () => {
+            image1.style.display = 'none';
+            image.style.display = 'block';
+            // Lấy tệp hình ảnh đã chọn
+            const file = fileInput.files[0];
+            
+            // Hiển thị hình ảnh
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+            image.src = reader.result;
+            };
+        });
+    </script>
         <div class="contener_user">
             <span>Họ và tên:</span>
             <div class="name"><?php echo $_SESSION['HoTen']?></div>

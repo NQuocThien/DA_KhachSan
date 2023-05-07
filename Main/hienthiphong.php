@@ -1,11 +1,20 @@
 <?php
      include "../Chung/cauhinh.php";
-    
-     $select_ksphong = $pdo->prepare("SELECT * FROM KhachSan ks, Phong p WHERE ks.`MaKhachSan` = p.`MaKhachSan` AND p.`MaKhachSan`='1'");	
+    $ma=$_GET['id'];
+     $select_ksphong = $pdo->prepare("SELECT * FROM KhachSan ks, Phong p WHERE ks.`MaKhachSan` = p.`MaKhachSan` AND p.`MaKhachSan`='$ma'");	
      $select_ksphong->execute();
-     
-     $date = date('d-m-Y H:i');
+     $select_ksphong_trong = $pdo->prepare("SELECT COUNT(*)AS 'Trong' FROM KhachSan ks, Phong p WHERE ks.`MaKhachSan` = p.`MaKhachSan` AND p.`MaKhachSan`='$ma' AND p.`TinhTrang`='Trống'");	
+     $select_ksphong_dango = $pdo->prepare("SELECT COUNT(*) AS 'DangO'FROM KhachSan ks, Phong p WHERE ks.`MaKhachSan` = p.`MaKhachSan` AND p.`MaKhachSan`='$ma'AND p.`TinhTrang`='Đang ở'");	
+     $select_ksphong_datcoc = $pdo->prepare("SELECT COUNT(*) AS 'DatCoc'FROM KhachSan ks, Phong p WHERE ks.`MaKhachSan` = p.`MaKhachSan` AND p.`MaKhachSan`='$ma'AND p.`TinhTrang`='Đặt cọc'");
+     $select_ksphong_trong->execute();
+     $select_ksphong_dango->execute();
+     $select_ksphong_datcoc->execute();	
+     $slks_trong= $select_ksphong_trong->fetch(PDO::FETCH_ASSOC);
+     $slks_dango= $select_ksphong_dango->fetch(PDO::FETCH_ASSOC);
+     $slks_dat= $select_ksphong_datcoc->fetch(PDO::FETCH_ASSOC);
 
+     $date = date('d-m-Y H:i');
+    
     while ($row = $select_ksphong->fetch(PDO::FETCH_ASSOC)){
         if($row['TinhTrang']=='Đang ở'){
             echo "<div class=\"room\" style=\"background-color: #00a65a;\" >";
@@ -17,7 +26,7 @@
             echo "<div class=\"room\" style=\"background-color: #3d8cbd;\" >";
         }
         echo "<form action=\"\">";
-        echo "<div class=\"img_iconroom\">".$_SESSION['MaKS1']."</div>";
+        echo "<div class=\"img_iconroom\"><i class=\"fa-brands fa-slideshare\"></i></div>";
         echo "<div class=\"content_nameroom\">".$row['TenPhong']."</div>";
         echo "<div class=\"trangthai\">".$row['TinhTrang']."</div>";
         echo "<div class=\"ngaydat\"><i class=\"fa-solid fa-calendar-check\"></i>".  $date."</div>";
@@ -27,6 +36,11 @@
         echo "</div>";
     }
 ?>
+<div class="tinhtrang">
+    <div class="potion_tt Trong"><?php if ($slks_trong["Trong"]>0){echo $slks_trong["Trong"];} else{ echo "0";}?></div>
+    <div class="potion_tt dango"><?php if ($slks_dango["DangO"]>0){echo $slks_dango["DangO"];} else{ echo "0";}?></div>
+    <div class="potion_tt datcoc"><?php if ($slks_dat["DatCoc"]>0){echo $slks_dat["DatCoc"];} else{ echo "0";}?></div>
+</div>
 <div class="room"></div>
 <div class="room"></div>
 <div class="room"></div>

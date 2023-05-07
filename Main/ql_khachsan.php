@@ -18,7 +18,7 @@
             <div class="header-body  l-12">
                 <div class="row no-gutters ">
                     <div class="choose  l-6">
-                        <label for="select_list-hotel">Chọn chổi khách sạn:</label>
+                        <label for="select_list-hotel">Chọn đổi khách sạn:</label>
                         <select name="select_list-hotel" id="select_list-hotel">
                             <option value="0">----chọn----</option>
                             <?php 
