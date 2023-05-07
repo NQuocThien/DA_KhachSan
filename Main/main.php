@@ -52,7 +52,11 @@
                 <span><?php echo$_SESSION['HoTen']?></span>
             </div>
             <div id="myList" class="row no-gutters">
-                <a class="col l-12 active" data-target="user.php?do=user">Danh Sách Người Dùng</a>
+                <?php
+                    if($_SESSION['Quyen']==1){
+                        echo "<a class=\"col l-12\" data-target=\"user.php?do=user\">Danh Sách Người Dùng</a>";
+                    }
+                ?>
                 <a class="col l-12"data-target="quanlyroom.php?do=quanlyroom">Quản lý phòng</a>
                 <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaiphong">Quản lý Khách sạn</a>
                 <a class="col l-12"data-target="quanlyloaiphong.php?do=quanlyloaiphong">Quản lý đặt phòng</a>
@@ -63,7 +67,7 @@
         </div>
         <div class="col l-10 container" id="container">
             <?php
-                $do = isset($_GET['do']) ? $_GET['do'] : "user";
+                $do = isset($_GET['do']) ? $_GET['do'] : "infouser";
                 include $do.".php";
             ?>
         </div>
