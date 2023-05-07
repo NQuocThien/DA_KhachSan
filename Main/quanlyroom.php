@@ -1,6 +1,6 @@
 <?php
      include "../Chung/cauhinh.php";
-     session_start();
+    //  session_start();
      $stmt = $pdo->prepare("SELECT DISTINCT ks.`MaKhachSan`,ks.`TenKhachSan` FROM KhachSan ks, Phong p WHERE ks.`MaKhachSan` = p.`MaKhachSan`");	
      $stmt->execute();
      
