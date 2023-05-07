@@ -38,6 +38,7 @@
                 <div class="menu_user">
                     <ul>
                         <a href="main.php?do=infouser">Thông tin cá nhân</a>
+                        <a href="main.php?do=doimatkhau">Đổi mật khẩu</a>
                         <a href="main.php?do=dangxuat">Đăng xuất</a>
                     </ul>
                 </div>
