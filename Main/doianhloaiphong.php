@@ -20,11 +20,11 @@ $row = $danhsach->fetch_array(MYSQLI_ASSOC);
 ?>
 
 <form action="doianhloaiphong_submit.php" class="Doianhloaiphong" enctype="multipart/form-data" method="post">
-        <img id="myImage2" class="img_user2" >
-        <input type="text"name="malpid"value="<?php echo $malpid?> " style="display:none">
-        <input type="file" name="img_loaiphonganh"  id="myFileInput1"   style="display:none">
-        <img src='../upload/<?php echo$row['HinhAnh']?>' id='myImage3' class='img_user1'style="display:block">
-        <input type="submit" value="Upload" class="sua"/>
+    <img id="myImage2" class="img_user2" >
+    <input type="text"name="malpid"value="<?php echo $malpid?> " style="display:none">
+    <input type="file" name="img_loaiphonganh"  id="myFileInput1"   style="display:none">
+    <img src='../upload/<?php echo$row['HinhAnh']?>' id='myImage3' class='img_user1'style="display:block">
+    <input type="submit" value="Upload" class="sua"/>
 </form>
 <button id="btn_chonImg1" onclick="document.getElementById('myFileInput1').click();"><i class="fa-solid fa-camera"></i></button>
        
@@ -42,7 +42,7 @@ $row = $danhsach->fetch_array(MYSQLI_ASSOC);
         const reader1 = new FileReader();
         reader1.readAsDataURL(file1);
         reader1.onload = function () {
-        image2.src = reader1.result;
+            image2.src = reader1.result;
         };
     });
 </script>
