@@ -100,6 +100,7 @@ ul li{
     width: 100%;
     height: auto;
     display: flex;
+    overflow-x: scroll;
     
 }
 .container .main_quanlroom .body_room .br_firt 

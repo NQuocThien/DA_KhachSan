@@ -6,6 +6,7 @@ export const myAjax = (parentElement, currentElement, pathFile)=>
             $.post(pathFile,{id : id} , function(date)
             {
                 $(currentElement).html(date);
+                
                  });
             })
         })
