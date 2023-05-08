@@ -3,20 +3,20 @@
 }
 .Ngoai .form_inserphong{
     position: absolute;
-    width: 1224px;
+    width:500px;
     height: 500px;
     border-radius: 10px;
-    top: -200px;
-    left: -200px;
+    top: -11px;
+    left: 177px;
     background-color: #fff;
     z-index: 20;
 }
 .Ngoai .che{
     position: absolute;
     width: 1265px;
-    height: 670px;
-    top: -234px;
-    left: -222px;
+    height: 549px;
+    top: -49px;
+    left: -212px;
     backdrop-filter: blur(5px);
     z-index: 20;
 }
@@ -26,11 +26,9 @@
     border-bottom: 1px solid gray;
     display: flex;
 }
-.Ngoai .form_inserphong .form_isphong_header p{
-    margin-left: 77%;
-}
+
 .Ngoai .form_inserphong .form_isphong_header h2{
-    width: 250px;
+    width: 500px;
     padding-left: 10px;
 }
 .Ngoai .form_inserphong .form_isphong_header p #back{
@@ -39,4 +37,13 @@
 }
 .Ngoai .form_inserphong .form_isphong_body .firt_isphong{
     display: flex;
+}
+.Ngoai .form_inserphong .form_isphong_body {
+    padding:15px 0 0 130px;
+}
+.Ngoai .form_inserphong .form_isphong_body .choose {
+    padding-bottom: 15px;
+}
+.Ngoai .form_inserphong .form_isphong_body .thongtinphong .ttpten {
+    padding-bottom: 15px;
 }

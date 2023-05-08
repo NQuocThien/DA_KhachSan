@@ -42,10 +42,7 @@
                     console.log(data);
                     const content = document.getElementById('br_second');
                     content.innerHTML = data;
-                        var test= document.getElementById('back');
-                        test.addEventListener('click',()=>{
-                            window.history.back();
-                        });
+                   
                     });
                 });
             });
@@ -61,4 +58,5 @@
                     this.classList.add("active");
                 });
             }
+          
             </script>
