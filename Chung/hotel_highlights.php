@@ -9,30 +9,24 @@
     {
 
         while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) {
-            $duongdan = getPath($row["MaKhachSan"] , $connect);
-            if($duongdan != null)
-            {
-                echo" <div class = \"col l-3 m-3 c-12\">";
-                echo"     <div class=\"warpCard\">";
-                echo"         <div class=\"card_img\">";
-                echo"             <img src=".$duongdan." class = \"l-12\" alt=\"\">";
-                echo"         </div>";
-                echo"         <div class=\"card_title l-12 m-12 c-12 \">";
-                echo"             <a href=\"index.php?do=hotel_chitiet&id=".$row["MaKhachSan"]." \" class =\"fronText\">".$row["TenKhachSan"]."</a>";
-                echo"         </div>";
-                echo"         <div class=\"card_body fronText\">";
-                echo"             <p>Xếp loại: ".$row["XepLoai"]." <i class=\"fa-solid fa-star\"></i></p>";
-                echo"             <p>Địa chỉ: ".$row["DiaChi"]." </p>";
-                echo"             <p>Liên hệ:  ".$row["Sdt"]."</p>";
-                echo"             <div class=\"btn btn1\">";
-                echo"                 <a href=\"index.php?do=hotel_chitiet&id=".$row["MaKhachSan"]."\" class=\"fronText\">Xem thêm</a>";
-                echo"             </div>";
-                echo"         </div>";
-                echo"     </div>";
-                echo" </div>";
-                
-            }
-
+            echo" <div class = \"col l-3 m-3 c-12\">";
+            echo"     <div class=\"warpCard\">";
+            echo"         <div class=\"card_img\">";
+            echo"             <img src=".$row["HinhAnh"]." class = \"l-12\" alt=\"\">";
+            echo"         </div>";
+            echo"         <div class=\"card_title l-12 m-12 c-12 \">";
+            echo"             <a href=\"index.php?do=hotel_chitiet&id=".$row["MaKhachSan"]." \" class =\"fronText\">".$row["TenKhachSan"]."</a>";
+            echo"         </div>";
+            echo"         <div class=\"card_body fronText\">";
+            echo"             <p>Xếp loại: ".$row["XepLoai"]." <i class=\"fa-solid fa-star\"></i></p>";
+            echo"             <p>Địa chỉ: ".$row["DiaChi"]." </p>";
+            echo"             <p>Liên hệ:  ".$row["Sdt"]."</p>";
+            echo"             <div class=\"btn btn1\">";
+            echo"                 <a href=\"index.php?do=hotel_chitiet&id=".$row["MaKhachSan"]."\" class=\"fronText\">Xem thêm</a>";
+            echo"             </div>";
+            echo"         </div>";
+            echo"     </div>";
+            echo" </div>";
         }
     }
     function getPath($MaKhachSan, $connect)

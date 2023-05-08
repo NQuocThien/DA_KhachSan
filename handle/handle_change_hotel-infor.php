@@ -17,6 +17,8 @@
         echo "                    <p>Địa chỉ: ".$row['DiaChi']."</p>";
         echo "                    <a href=\"\">Sdt: ".$row['Sdt']."</a>";
         echo "                    <div class = \"action\">";
+        echo "                         <a href='main.php?do=xoa_khachsan&id=" . $row["MaKhachSan"] . "'><img src='../images/edit.png' /></a>";
+		echo "                         <a href='main.php?do=xoa_khachsan&id=" . $row["MaKhachSan"] . "' onclick='return confirm(\"Bạn có muốn xóa khách sạn " . $row['TenKhachSan'] . " không?\")'><img src='../images/delete.png' /></a>";                                
         echo "                    </div>";
         echo "                </div>";
         echo "            </div>";

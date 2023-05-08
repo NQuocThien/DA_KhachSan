@@ -152,6 +152,9 @@ a{
     text-align: start;
     font-size: 14px;
 }
+.warpCard .card_body i{
+    color: #d69c2f;
+}
 .warpCard .card_body .btn{
     display: flex;
     justify-content: center;
