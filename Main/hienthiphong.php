@@ -25,14 +25,13 @@
         else{
             echo "<div class=\"room\" style=\"background-color: #3d8cbd;\" >";
         }
-        echo "<form action=\"\">";
         echo "<div class=\"img_iconroom\"><i class=\"fa-brands fa-slideshare\"></i></div>";
         echo "<div class=\"content_nameroom\">".$row['TenPhong']."</div>";
         echo "<div class=\"trangthai\">".$row['TinhTrang']."</div>";
         echo "<div class=\"ngaydat\"><i class=\"fa-solid fa-calendar-check\"></i>".  $date."</div>";
         echo " <div class=\"ngaytra\"><i class=\"fa-regular fa-calendar-xmark\"></i>".$date."</div>";
-        echo "<input type=\"submit\" value=\"Đặt\">";
-        echo "</form>";
+        echo "<a href='?do=update_phong&id=" . $row["MaPhong"] . "'><img src='../images/edit.png' /></a>";
+        echo "<a href='?do=delete_phong&id=" . $row["MaPhong"] . "' onclick='return confirm(\"Bạn có muốn xóa phòng " . $row['TenPhong'] . " không?\")'><img src='../images/delete.png' /></a>";
         echo "</div>";
     }
 ?>

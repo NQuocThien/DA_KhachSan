@@ -69,7 +69,7 @@
         </div>
     </div>
 </div>
-<!-- <script src="../Js/validator.js"></script>
+<script src="../Js/validator.js"></script>
 <script>
     Validator({
         form: '#form_themphong',
@@ -79,10 +79,10 @@
         Validator.isRequired('#select_list-hotel'),
         Validator.isRequired('#select_room-type'),
         Validator.isRequired('#room-name'),
-        Validator.isRequired('input[name="TinhTrang"]'),
+
         ]
     }) 
-</script> -->
+</script>
 <script>
     var test= document.getElementById('back');
                     test.addEventListener('click',()=>{
