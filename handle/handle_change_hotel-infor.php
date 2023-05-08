@@ -9,7 +9,7 @@
         echo "        <div class=\"warper\">";
         echo "            <div class=\"row no-gutters \">";
         echo "                <div class=\"avatar l-3\">";
-        echo "                    <img src=".$row['HinhAnh']." alt=\"\">";
+        echo "                    <img src=../images/".$row['HinhAnh']." alt=\"\">";
         echo "                </div>";
         echo "                <div class=\"infor l-9\">";
         echo "                    <h4>".$row['TenKhachSan']." </h4>";
@@ -17,6 +17,8 @@
         echo "                    <p>Địa chỉ: ".$row['DiaChi']."</p>";
         echo "                    <a href=\"\">Sdt: ".$row['Sdt']."</a>";
         echo "                    <div class = \"action\">";
+        echo "                         <a href='main.php?do=sua_khachsan&id=" . $row["MaKhachSan"] . "'><img src='../images/edit.png' /></a>";
+		echo "                         <a href='main.php?do=xoa_khachsan&id=" . $row["MaKhachSan"] . "' onclick='return confirm(\"Bạn có muốn xóa khách sạn " . $row['TenKhachSan'] . " không?\")'><img src='../images/delete.png' /></a>";                                
         echo "                    </div>";
         echo "                </div>";
         echo "            </div>";
