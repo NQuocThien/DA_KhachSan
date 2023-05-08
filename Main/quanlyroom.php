@@ -7,6 +7,7 @@
 ?>
 <div class="main_quanlroom" >
     <div class="header_room">
+        <form action="main.php?do=insertphong" method="post">
         <div class="hr_firt">
             <p>Quản lý phòng</p>
             <div class="select_chuoi">
@@ -27,13 +28,14 @@
             <div class="menu_iconroom ">
                 <i id="my_menu" class="fa-solid fa-bars"></i>
                  <div  id = "nav_menuroo"class="nav_menuroom ">
-                    <a data-target="insertphong.php" class="myLink" >Loại phòng</a>
+                    <button type="submit"  >Loại phòng</button>
                 </div>
                 
             </div>
                 
             </div>
         </div>
+        </form>
         <div class="hr_second">
             <div class="icon_trangthairoom"><p></p><span>:Trống</span></div>
             <div class="icon_trangthairoom"><p></p><span>:Đang ở</span></div>
