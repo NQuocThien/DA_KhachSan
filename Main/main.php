@@ -1,3 +1,6 @@
+<?php
+        $page = isset($_GET['do']) ? $_GET['do'] : "ql_khachsan";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,9 +43,9 @@
                 <img src="../upload/<?php echo$_SESSION['Img']?>" alt="" class="img_user" >
                 <div class="menu_user">
                     <ul>
-                        <a href="main.php?do=infouser">Thông tin cá nhân</a>
-                        <a href="main.php?do=doimatkhau">Đổi mật khẩu</a>
-                        <a href="main.php?do=dangxuat">Đăng xuất</a>
+                        <a href="?do=infouser" >Thông tin cá nhân</a>
+                        <a href="?do=doimatkhau">Đổi mật khẩu</a>
+                        <a href="?do=dangxuat">Đăng xuất</a>
                     </ul>
                 </div>
             </div>
@@ -59,16 +62,20 @@
                     </div>
                     <div id="myList" class="row no-gutters">
                         <?php
-                            if($_SESSION['Quyen']==1){
-                                echo "<a class=\"col l-12\" href=\"main.php?do=user\">Danh Sách Người Dùng</a>";
+                            if($_SESSION['Quyen']==1&&$page=='user'){
+                                echo "<a class=\"col l-12 active\" href=\"main.php?do=user\">Danh Sách Người Dùng</a>";
                             }
+                            if($_SESSION['Quyen']==1&&$page!='user'){
+                                echo "<a class=\"col l-12 \" href=\"main.php?do=user\">Danh Sách Người Dùng</a>";
+                            }
+                            
                         ?>
                         <!-- <a class="col l-12 active" href="user.php?do=user">Danh Sách Người Dùng</a> -->
-                        <a class="col l-12" href="main.php?do=quanlyroom">Quản lý phòng</a>
-                        <a class="col l-12" href="main.php?do=ql_khachsan">Quản lý Khách sạn</a>
-                        <a class="col l-12" href="main.php?do=quanlyloaiphong">Quản lý đặt phòng</a>
-                        <a class="col l-12" href="main.php?do=quanlyloaiphong">Quản lý loại phòng</a>
-                        <a class="col l-12" href="main.php?do=quanlyloaip  hong">Quản lý tin tức</a>
+                        <a class="col l-12 <?php if( $page=='quanlyroom') echo "active"; else echo "" ?>" href="main.php?do=quanlyroom">Quản lý phòng</a>
+                        <a class="col l-12 <?php if( $page=='ql_khachsan') echo "active"; else echo "" ?>" href="main.php?do=ql_khachsan">Quản lý Khách sạn</a>
+                        <a class="col l-12 <?php if( $page=='quanlydatphong') echo "active"; else echo "" ?>" href="main.php?do=quanlydatphong">Quản lý đặt phòng</a>
+                        <a class="col l-12 <?php if( $page=='quanlyloaiphong') echo "active"; else echo "" ?>" href="main.php?do=quanlyloaiphong">Quản lý loại phòng</a>
+                        <a class="col l-12 <?php if( $page=='quanlytintuc') echo "active"; else echo "" ?>" href="main.php?do=quanlytintuc">Quản lý tin tức</a>
                     </div>
                     <!-- <script src="../Js/mainuser.js"></script> -->
                 </div>

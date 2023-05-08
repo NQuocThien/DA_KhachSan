@@ -26,7 +26,7 @@
             <p  ><i id="back"class="fa-solid fa-xmark"></i></p>
         </div>
         <div class="form_isphong_body">
-            <form action="" method="post" id="form_themphong">
+            <form action="insertphong_submit.php" method="post" id="form_themphong">
                 <div class="choose form_group">
                     <label for="select_list-hotel">Chọn khách sạn:</label>
                     <select name="select_list-hotel" id="select_list-hotel" class="form-control">
@@ -61,16 +61,7 @@
                             <input name = "room-name" type="text" id="room-name" class="form-control">
                             <span class="form-message"></span>
                         </div>
-                        <div class="ttptinhtrang form_group">
-                            <span class="">Tình trạng:</span>
-                            <input type="radio" class="form-control" id="trong" name="TinhTrang" value="Trống">
-                            <label for="trong">Trống</label><br>
-                            <input type="radio" class="form-control" id="DangO" name="TinhTrang" value="Đang ở">
-                            <label for="DangO">Đang ở</label><br>
-                            <input type="radio" class="form-control" id="datcoc" name="TinhTrang" value="Đặt cọc">
-                            <label for="datcoc">Đặt cọc</label><br>
-                            <span class="form-message"></span>
-                        </div>
+                        
                     </div>
                 </div>
                 <button type="submit"> Thêm Phòng </button>
@@ -78,7 +69,7 @@
         </div>
     </div>
 </div>
-<script src="../Js/validator.js"></script>
+<!-- <script src="../Js/validator.js"></script>
 <script>
     Validator({
         form: '#form_themphong',
@@ -91,7 +82,7 @@
         Validator.isRequired('input[name="TinhTrang"]'),
         ]
     }) 
-</script>
+</script> -->
 <script>
     var test= document.getElementById('back');
                     test.addEventListener('click',()=>{

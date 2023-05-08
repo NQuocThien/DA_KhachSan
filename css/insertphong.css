@@ -3,7 +3,7 @@
 }
 .Ngoai .form_inserphong{
     position: absolute;
-    width:500px;
+    width:570px;
     height: 500px;
     border-radius: 10px;
     top: -11px;
@@ -28,7 +28,7 @@
 }
 
 .Ngoai .form_inserphong .form_isphong_header h2{
-    width: 500px;
+    width: 540px;
     padding-left: 10px;
 }
 .Ngoai .form_inserphong .form_isphong_header p #back{
@@ -46,4 +46,13 @@
 }
 .Ngoai .form_inserphong .form_isphong_body .thongtinphong .ttpten {
     padding-bottom: 15px;
+}
+.Ngoai .form_inserphong .form_isphong_body .thongtinphong .ttptinhtrang {
+    display: flex;
+}
+.Ngoai .form_inserphong .form_isphong_body .thongtinphong .ttptinhtrang input[type="radio"]{
+    padding-left: 20px;
+}
+.Ngoai .form_inserphong .form_isphong_body button[type="submit"]{
+    margin-top: 10px;
 }

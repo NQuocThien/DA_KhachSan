@@ -82,7 +82,6 @@ const $$ = document.querySelectorAll.bind(document);
  }
 
 
-
 // const fileInputRoom = document.getElementById('myFileInputRoom');
 // const imageRoom = document.getElementById('myImageRoom');
 // fileInputRoom.addEventListener('change', function() {
