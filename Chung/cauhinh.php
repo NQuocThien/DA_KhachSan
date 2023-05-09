@@ -1,7 +1,7 @@
 <?php
 	$servername = "localhost";
 	$username = "root";
-	$password = "vertrigo";
+	$password = "";
 	$dbname = "da_khachsan";	
 	
 	
@@ -12,5 +12,5 @@
 		    die("Không kết nối :" . $conn->connect_error);
 		    exit();
 	}	
-	$pdo = new PDO('mysql:host=localhost;dbname=da_khachsan', 'root', 'vertrigo');
+	$pdo = new PDO('mysql:host=localhost;dbname=da_khachsan', 'root', '');
 ?>
