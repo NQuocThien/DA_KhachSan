@@ -11,7 +11,7 @@
 ?>
 <div class="main_list-user" >
 	<h3 >Danh sách người dùng</h3>
-
+	<a href="main.php?do=regis_user">Đăng ký tài khoản cho nhân viên</a>
 	<div class="grid wide">
 		<div class="row no-gutters">
 			<?php 
