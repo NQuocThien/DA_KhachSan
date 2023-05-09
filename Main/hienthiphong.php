@@ -19,7 +19,7 @@
         if($row['TinhTrang']=='Đang ở'){
             echo "<div class=\"room\" style=\"background-color: #00a65a;\" >";
         }
-        elseif($row['TinhTrang']=='Đặt'){
+        elseif($row['TinhTrang']=='Đặt cọc'){
             echo "<div class=\"room\" style=\"background-color: #605ca8;\" >";
         }
         else{

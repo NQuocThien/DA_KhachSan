@@ -48,7 +48,7 @@
                             <label for = "room-tinhtrang" >Tình Trạng:</label>
                             <input type="radio" name="room-tinhtrang" id="" value="Trống" checked>Trống
                             <input type="radio" name="room-tinhtrang" id="" value="Đang ở">Đang ở
-                            <input type="radio" name="room-tinhtrang" id="" value="Đã đặt"> Đã đặt
+                            <input type="radio" name="room-tinhtrang" id="" value="Đặt cọc"> Đặt cọc
                             
                             <span class="form-message"></span>
                         </div>
