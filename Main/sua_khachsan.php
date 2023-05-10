@@ -11,7 +11,7 @@
     $Image = $ksan["HinhAnh"];
     $Description = $ksan["MoTa"];
 ?>
-<div class="main_update">
+<div class="main_update main_form_addKS	">
     <h3>Thêm Khách Sạn</h3>
 
 	<form enctype="multipart/form-data"  action="sua_khachsan-submit.php" method="post" id="form_post">
@@ -52,9 +52,9 @@
 			</div>
 			<div class="form_group col l-12" >
 				<div class="row no-gutters">
-                    <img id="myImage2" class="img_user2" >
 					<span class="MyFormLabel col l-2">Hình ảnh</span>
-                    <img src="../images/<?php echo $Image; ?>" id='myImage3' class='img_user1'style="display:block">
+                    <img id="myImage2" class="img_user2" style="width: 240px; height: 240px;" >
+                    <img src="../images/<?php echo $Image; ?>" id='myImage3' class='img_user1'style="display:block;width: 240px; height: 240px;" >
 					<input type="file" name="HinhAnh"id="myFileInput1" >
 					<span class="form-message"></span>
 				</div>
@@ -71,7 +71,23 @@
 		</div>
         <input type="submit" value="Sửa bài" class="button-submit col l-12"/>
     </form>
+	<script src="../Js/validator.js"></script>
+	<script>
+		Validator({
+			form: '#form_post',
+			orrorSelector: '.form-message',
+			formGroupSelector: '.form_group' ,
+			rules: [
+			Validator.isRequired('#hotel_name'),
+			Validator.isRequired('#hotel_adress'),
+			Validator.isRequired('#hotel_number-phone'),
+			//Validator.isRequired('#hotel_image'),
+			Validator.isRequired('#hotel_description'),
+			Validator.isRequired('input[name="XepLoai"]'),
+			]
+		}) 
 
+	</script>
     <script>
         const fileInput1 = document.getElementById('myFileInput1');
         const image2 = document.getElementById('myImage2');

@@ -37,7 +37,7 @@
     <div class="tasbars row no-gutters">
         <div class="col l-2 header_logo">
             <header class="logo">
-               <a href="mainuser.php" style="  color: #fff;" > Hotel AGU</a>
+               <a href="../Chung/index.php" style="  color: #fff;" > Hotel AGU</a>
             </header>
         </div>
         <div class="col l-10 header_main">

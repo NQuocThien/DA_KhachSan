@@ -13,7 +13,6 @@
         </script>';
         exit;
 	}
-		
 	elseif(trim($user) == ""){
 		echo '<script>
         alert("Tên đăng nhập không được bỏ trống!");
@@ -21,7 +20,6 @@
         </script>';
         exit;
 	}
-
 	elseif(trim($pass) == ""){
 		echo '<script>
         alert("Mật khẩu không được bỏ trống!");
@@ -37,7 +35,6 @@
         </script>';
         exit;
 	}
-	
 	else
 	{
 		echo $user;
@@ -78,7 +75,5 @@
 				</script>';
 				exit;
 			}
-
-		
 	}
 ?>

@@ -47,10 +47,18 @@
 				</div>
 			</div>
 			
-			<div class="form_group col l-12" >
+			<!-- <div class="form_group col l-12" >
 				<div class="row no-gutters">
 					<span class="MyFormLabel col l-2">Hình ảnh</span>
 					<input id="hotel_image" class="form-control" type="file" name="HinhAnh">
+					<span class="form-message"></span>
+				</div>
+			</div> -->
+			<div class="form_group col l-12" >
+				<div class="row no-gutters">
+					<span class="MyFormLabel col l-2">Hình ảnh</span>
+                    <img id="myImage2" class="img_user2" style="height: 120px; width: 150px;" >
+					<input type="file" name="HinhAnh"id="hotel_image" >
 					<span class="form-message"></span>
 				</div>
 			</div>
@@ -68,6 +76,21 @@
 	</form>
 
 </div>
+<script>
+        const fileInput1 = document.getElementById('hotel_image');
+        const image2 = document.getElementById('myImage2');
+        fileInput1.addEventListener('change', () => {
+			image2.style.display = 'block';
+            // Lấy tệp hình ảnh đã chọn
+            const file1 = fileInput1.files[0];
+            // Hiển thị hình ảnh
+            const reader1 = new FileReader();
+            reader1.readAsDataURL(file1);
+            reader1.onload = function () {
+                image2.src = reader1.result;
+            };
+        });
+    </script>
 	<script src="../Js/validator.js"></script>
 	<script>
 		Validator({

@@ -8,7 +8,6 @@
         exit();
     }
 ?>
-
 <div class="main_manager-hotel" >
     <div class="list_hotel-header ">
         <div class="row no-gutters ">

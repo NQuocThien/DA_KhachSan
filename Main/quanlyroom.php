@@ -1,9 +1,5 @@
 <?php
      include "../Chung/cauhinh.php";
-    //  session_start();
-     
-     
-
 ?>
 <div class="main_quanlroom" >
     <div class="header_room">
