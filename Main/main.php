@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../css/insertphong.css">
     <link rel="stylesheet" href="../css/regis_user.css">
     <link rel="stylesheet" href="../css/regis_user.css">
+    <link rel="stylesheet" href="../css/quanlydatphong.css">
     <link rel="stylesheet" href="../css/form_them_khachsan.css">
     <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
 
