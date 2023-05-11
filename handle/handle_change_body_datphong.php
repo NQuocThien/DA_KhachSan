@@ -11,23 +11,39 @@
             <th>Tên khách sạn</th>
             <th>Tên Khách hàng</th>
             <th>Tên loại phòng</th>
+            <th>Tên phòng</th>
             <th>Ngày đặt</th>
             <th>Ngày nhận</th>
             <th>Ngày trả</th>
             <th>Ghi chú</th>
             <th>Số lượng</th>
             <th>Trạng thái</th>
+            <th>Hoạt động</th>
         </tr>
         <?php
              while ($dong = $selectdatphong->fetch(PDO::FETCH_ASSOC)){
+                
                 if($dong["TrangThai"]==1){
                     echo "<tr style=\" background-color: #fff;\">";
-                }else{
+                }
+                elseif($dong['MaPhong']==0){
+                    echo "<tr style=\" background-color: #fff;\">";
+                }
+                else{
                     echo "<tr >";
                 }
                 echo "<td>".$dong['TenKhachSan']."</td>";
                 echo "<td>".$dong['HoTen']."</td>";
                 echo "<td>".$dong['TenLoaiPhong']."</td>";
+                if($dong['MaPhong']==0){
+                    echo "<td>Chưa đặt phòng</td>";
+                }
+                else{
+                    $selecttenphong = $pdo->prepare("SELECT * FROM `phong` where `MaPhong`='".$dong['MaPhong']."'");	
+                    $selecttenphong->execute();
+                    $dong_tenphong = $selecttenphong->fetch(PDO::FETCH_ASSOC);
+                    echo "<td>".$dong_tenphong['TenPhong']."</td>";
+                }
                 echo "<td>".$dong['NgayDat']."</td>";
                 echo "<td>".$dong['NgayNhan']."</td>";
                 echo "<td>".$dong['NgayTra']."</td>";
@@ -36,15 +52,19 @@
                 if($dong["TrangThai"] == 1)
 				{
 					echo "			<td class=\"user-law\">";
-					echo "				<a href='main.php?do=datphongtrangthai&id=" . $dong["MaDatPhong"] . "&trangthai=0'>Đã đặt cọc phòng</a>";
+					echo "				<a href='main.php?do=huydat&id=" . $dong["MaDatPhong"] . "'>Đã đặt cọc phòng</a>";
 					echo "			</td>";
 				}
 				else
 				{
 					echo "			<td class=\"user-law\">";
-					echo "				<a href='main.php?do=datphongtrangthai&id=" . $dong["MaDatPhong"] . "&trangthai=1'>Chưa đặt phòng</a>";
+					echo "				<a href='main.php?do=datphongtrangthai&id=" . $dong["MaDatPhong"] . "&idks=" . $dong["MaKhachSan"] . "&idlp=" . $dong["MaLoaiPhong"] . "&trangthai=1'>Chưa đặt phòng</a>";
 					echo "			</td>";
 				}
+                echo "<td>";
+                echo "<a  href='main.php?do=&id=" . $dong["MaDatPhong"] . "'><img src='../images/edit.png' /></a>";
+                echo "<a  href='main.php?do=&id=" . $dong["MaDatPhong"] . "' onclick='return confirm(\"Bạn có muốn xóa khách hàng :" . $dong['HoTen'] . " không?\")' style=\"margin-left: 20px;\"><img src='../images/delete.png' /></a>";
+                echo "</td>";
                 echo "</tr>";   
              }
         ?>
