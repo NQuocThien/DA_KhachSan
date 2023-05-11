@@ -1,28 +1,28 @@
 <div class="br_firt" id = "br_firt">
-                <?php
-                    include "../Chung/cauhinh.php";
-                    $key = $_POST['id'];
-                    $stmt = $pdo->prepare("SELECT ks.`MaKhachSan`,ks.`TenKhachSan` FROM KhachSan ks WHERE ks.MaChuoi =".$key);	
-                    $stmt->execute();
-                    while ($dong = $stmt->fetch(PDO::FETCH_ASSOC)){
-                        $stmt1 = $pdo->prepare("SELECT COUNT(ks.`MaKhachSan`)as'tongphong' from KhachSan ks, Phong p WHERE ks.`MaKhachSan` = p.`MaKhachSan` AND ks.`TenKhachSan`=:value");
-                        $stmt1->bindParam(':value', $dong['TenKhachSan']);
-                        $stmt1->execute();
-                        $dong1 = $stmt1->fetch(PDO::FETCH_ASSOC);
-                       
-				        $_SESSION['MaKS'.$dong['MaKhachSan'].''] = $dong['MaKhachSan'];
-                        echo  "<div class=\"room_mylist\">
-                        <i class=\"fa-solid fa-hotel\"></i>
-                     <a id=\"aroom_mylist\"class=\"myLink\" data-target=\"hienthiphong.php?do=&id=".$dong['MaKhachSan']."\">".$dong['TenKhachSan']."</a>
-                     <span>" .$dong1['tongphong']."</span>
-                    </div>";
-                    }
-                ?>
-           
-            </div>
-            <div class="br_second" id="br_second">
-                
-            </div>
+    <?php
+        include "../Chung/cauhinh.php";
+        $key = $_POST['id'];
+        $stmt = $pdo->prepare("SELECT ks.`MaKhachSan`,ks.`TenKhachSan` FROM KhachSan ks WHERE ks.MaChuoi =".$key);	
+        $stmt->execute();
+        while ($dong = $stmt->fetch(PDO::FETCH_ASSOC)){
+            $stmt1 = $pdo->prepare("SELECT COUNT(ks.`MaKhachSan`)as'tongphong' from KhachSan ks, Phong p WHERE ks.`MaKhachSan` = p.`MaKhachSan` AND ks.`TenKhachSan`=:value");
+            $stmt1->bindParam(':value', $dong['TenKhachSan']);
+            $stmt1->execute();
+            $dong1 = $stmt1->fetch(PDO::FETCH_ASSOC);
+            
+            $_SESSION['MaKS'.$dong['MaKhachSan'].''] = $dong['MaKhachSan'];
+            echo  "<div class=\"room_mylist\">
+            <i class=\"fa-solid fa-hotel\"></i>
+            <a id=\"aroom_mylist\"class=\"myLink\" data-target=\"hienthiphong.php?do=&id=".$dong['MaKhachSan']."\">".$dong['TenKhachSan']."</a>
+            <span>" .$dong1['tongphong']."</span>
+        </div>";
+        }
+    ?>
+
+</div>
+<div class="br_second" id="br_second">
+    
+</div>
             <script>
                  const links = document.querySelectorAll('.myLink');
   

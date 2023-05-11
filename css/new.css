@@ -6,6 +6,7 @@
 }
 .list_new .new-item .new-body{
     display: flex ;
+
 }
 .list_new .new-item .new-body .new-body_img {
     max-height: 105px;
