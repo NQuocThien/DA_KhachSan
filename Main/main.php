@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="../css/insertphong.css">
     <link rel="stylesheet" href="../css/regis_user.css">
     <link rel="stylesheet" href="../css/regis_user.css">
+    <link rel="stylesheet" href="../css/updatedatphong.css">
     <link rel="stylesheet" href="../css/quanlydatphong.css">
     <link rel="stylesheet" href="../css/form_them_khachsan.css">
     <link rel="stylesheet" href="../css/ql_chude.css">
