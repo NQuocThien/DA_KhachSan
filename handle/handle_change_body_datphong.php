@@ -52,7 +52,7 @@
                 if($dong["TrangThai"] == 1)
 				{
 					echo "			<td class=\"user-law\">";
-					echo "				<a href='main.php?do=huydat&id=" . $dong["MaDatPhong"] . "'>Đã đặt cọc phòng</a>";
+					echo "				<a href='main.php?do=huydat&id=" . $dong["MaDatPhong"] . "&idphong=" . $dong["MaPhong"] . "'onclick='return confirm(\"Bạn có muốn hủy đặt không?\")'>Đã đặt cọc phòng</a>";
 					echo "			</td>";
 				}
 				else
@@ -62,8 +62,8 @@
 					echo "			</td>";
 				}
                 echo "<td>";
-                echo "<a  href='main.php?do=&id=" . $dong["MaDatPhong"] . "'><img src='../images/edit.png' /></a>";
-                echo "<a  href='main.php?do=&id=" . $dong["MaDatPhong"] . "' onclick='return confirm(\"Bạn có muốn xóa khách hàng :" . $dong['HoTen'] . " không?\")' style=\"margin-left: 20px;\"><img src='../images/delete.png' /></a>";
+                echo "<a  href='main.php?do=updatedatphong&id=" . $dong["MaDatPhong"] . "'><img src='../images/edit.png' /></a>";
+                echo "<a  href='main.php?do=delete_datphong&id=" . $dong["MaDatPhong"] . "' onclick='return confirm(\"Bạn có muốn xóa khách hàng :" . $dong['HoTen'] . " không?\")' style=\"margin-left: 20px;\"><img src='../images/delete.png' /></a>";
                 echo "</td>";
                 echo "</tr>";   
              }
