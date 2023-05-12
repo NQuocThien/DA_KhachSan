@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../css/quanlydatphong.css">
     <link rel="stylesheet" href="../css/form_them_khachsan.css">
     <link rel="stylesheet" href="../css/ql_chude.css">
+    <link rel="stylesheet" href="../css/ql_baiviet.css">
     <script src="https://kit.fontawesome.com/0f57b9b4e5.js" crossorigin="anonymous"></script>
 
     <script src="../handle/jquery-1.8.0.min.js"></script>
@@ -79,7 +80,7 @@
                         <a class="col l-12 <?php if( $page=='ql_khachsan') echo "active"; else echo "" ?>" href="main.php?do=ql_khachsan">Quản lý Khách sạn</a>
                         <a class="col l-12 <?php if( $page=='quanlydatphong') echo "active"; else echo "" ?>" href="main.php?do=quanlydatphong">Quản lý đặt phòng</a>
                         <a class="col l-12 <?php if( $page=='quanlyloaiphong') echo "active"; else echo "" ?>" href="main.php?do=quanlyloaiphong">Quản lý loại phòng</a>
-                        <a class="col l-12 <?php if( $page=='quanlytintuc') echo "active"; else echo "" ?>" href="main.php?do=quanlytintuc">Quản lý tin tức</a>
+                        <a class="col l-12 <?php if( $page=='ql_baiviet') echo "active"; else echo "" ?>" href="main.php?do=ql_baiviet">Quản lý tin tức</a>
                         <a class="col l-12 <?php if( $page=='ql_chude') echo "active"; else echo "" ?>" href="main.php?do=ql_chude">Quản lý chủ đề</a>
                     </div>
                     <!-- <script src="../Js/mainuser.js"></script> -->
