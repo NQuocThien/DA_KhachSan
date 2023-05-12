@@ -12,7 +12,12 @@
     {
 ?>
 <div class="main_list-content">
-    <h3>Danh sánh bài viết</h3>
+    <div class="title">
+        <h3>Danh sánh bài viết</h3>
+    </div>
+    <div class="button_insert">
+        <a href="main.php?do=them_baiviet"> <i class="fa-sharp fa-solid fa-plus"></i> Đăng bài</a>
+    </div>
     <table>
         <tr>
             <th>
