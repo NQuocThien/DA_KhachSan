@@ -53,6 +53,7 @@
 		
 		$sql = "INSERT INTO `khachsan`(`MaChuoi`, `TenKhachSan`, `XepLoai`, `MoTa`, `DiaChi`, `Sdt`, `HinhAnh`)
 		 VALUES ('$MaChuoi','$TenKS','$XepLoai','$MoTa','$DiaChi','$Sdt','$target_path')";
+		//  echo $sql;
 		$danhsach = $connect->query($sql);
 		//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 		if (!$danhsach) {

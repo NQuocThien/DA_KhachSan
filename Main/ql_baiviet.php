@@ -61,8 +61,8 @@
                 else 
                     echo "<a href=\"main.php?do=kiemduyet&id=".$row['MaBaiViet']."\"><img src=\"../images/active.png\" alt=\"\"></a>";
             echo "      
-                        <a href='main.php?do=ql_chude&id=" . $row["MaBaiViet"] . "'><img src='../images/edit.png' /></a>
-                        <a href='main.php?do=xoa_chude&id=" . $row["MaBaiViet"] . "' onclick='return confirm(\"Bạn có muốn xóa chủ đề " . $row['TenChuDe'] . " không?\")'><img src='../images/delete.png' /></a>";
+                        <a href='main.php?do=sua_baiviet&id=" . $row["MaBaiViet"] . "'><img src='../images/edit.png' /></a>
+                        <a href='main.php?do=xoa_baiviet&id=" . $row["MaBaiViet"] . "' onclick='return confirm(\"Bạn có muốn xóa bài viết không\")'><img src='../images/delete.png' /></a>";
             echo " </td>";
             echo "</tr>";
         }
