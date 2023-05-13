@@ -6,7 +6,7 @@
 	$Sdt = $_POST['Sdt'];
 	$MoTa = $_POST['Mota'];
 	$XepLoai = $_POST['XepLoai'];
-	
+	$hinh = $_FILES['HinhAnh'];
 	// Kiểm tra
 	if(trim($TenKS) == "")
 	{

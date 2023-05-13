@@ -1,5 +1,5 @@
-.main_list-topic h1{
-    background-color: #278d85;
+.main_list-hotel h1{
+    background-color: #41727e;
     border: 2px solid black;
     text-align: center;
     border-radius: 10px ;
@@ -12,32 +12,61 @@
 
 }
 
-.main_list-topic .list_topic .topic-right .table-topic {
-    width: 450px;
+.main_list-hotel .list_hotel .hotel-right .table-hotel {
+    width: 850px;
     border: 1px solid #000;
     border-collapse: collapse;  
     font-size: 18px;
 }
-.main_list-topic .list_topic .topic-right .table-topic th {
-    background-color: #9e822f;
+.main_list-hotel .list_hotel .hotel-right .table-hotel th {
+    background-color: #e29504;
     border: solid 1px #000;
     color: white;
 }
-.main_list-topic .list_topic .topic-right .table-topic td {
+.main_list-hotel .list_hotel .hotel-right .table-hotel td {
     border: solid 1px #535252;
-    background-color: #62ebdd;
+    background-color: #bbebe6;
     color:#34361e;
     text-align: center;
 }
-.main_list-topic .list_topic .topic-left form {
+.main_list-hotel .list_hotel .hotel-right .table-hotel td:last-child div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.main_list-hotel .list_hotel .hotel-right .table-hotel .image_list-hotle{
+    height: 100px;
+    width: 120px;
+}
+.main_list-hotel .list_hotel .hotel-right .table-hotel tr:nth-child(even) {
+    border: solid 1px #535252;
+    background-color: #bbebe6;
+    color:#34361e;
+    text-align: center;
+}
+.main_list-hotel .list_hotel .hotel-right .table-hotel tr:nth-child(2n) {
+    border: solid 1px #535252;
+    background-color: #e7f0ef;
+    color:#34361e;
+    text-align: center;
+}
+.main_list-hotel .list_hotel .hotel-left form {
    margin: auto;
 }
-.main_list-topic .list_topic .topic-left form {
-    background-color: #c8dfbb;
+.main_list-hotel .list_hotel .hotel-left form {
+    background-color: #464745;
     margin-top: auto;
     padding: 20px;
     border-radius: 20px;
     color: white;
+}
+.main_list-hotel .list_hotel .hotel-left .insert-form .form_group img ,
+.main_list-hotel .list_hotel .hotel-left .form-update .form_group img {
+    width: 220px;
+    height: 200px;
+}
+.main_list-hotel .list_hotel .hotel-left .insert-form .form_group textarea {
+    width: 100%;
 }
 
 .form_group {
@@ -49,7 +78,7 @@
     margin-left: 10px;
 }
 
-#topic-form button{
+#list_hotel-form button{
     border-radius: 10px;
     height: 30px;
     margin-left: 10px;
@@ -61,7 +90,7 @@
 }
 .btn-insert{
     display: flex;
-    margin-top: 20px;
+    margin: 0 0 5px 0;
     justify-content: center;
     align-items: center;
     cursor: pointer;
