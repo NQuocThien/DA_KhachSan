@@ -138,10 +138,12 @@
                                         jQuery(document).ready(function ($) {
                                         $("#select_hotel").change(function(){
                                             var id = $("#select_hotel").val();
-                                            $.post("../handle/handle_select-hottel.php",{id : id} , function(date)
-                                            {
+                                             $.post("../handle/handle_select-hottel.php",{id : id} , function(date)
+                                             {
                                                 $("#select_type-room").html(date);
-                                            });
+                                                alert(date);
+                                             });
+                                            
                                         });
                                     }) 
                                    </script>

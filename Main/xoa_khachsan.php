@@ -17,7 +17,6 @@
     if(!$connect->query($sql_hinhanh))
     {
         echo "Error: " .$sql_hinhanh;
-        
     }
     $sql_delete_booking = "DELETE FROM `datphong` WHERE `MaKhachSan`='$maks'";
     if(!$connect->query($sql_delete_booking))

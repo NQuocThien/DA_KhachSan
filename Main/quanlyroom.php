@@ -24,7 +24,7 @@
             <div class="menu_iconroom ">
                 <i id="my_menu" class="fa-solid fa-bars"></i>
                  <div  id = "nav_menuroo"class="nav_menuroom ">
-                    <button type="submit"  >Loại phòng</button>
+                    <button type="submit"  >Thêm Phòng</button>
                 </div>
                 
             </div>
@@ -36,7 +36,7 @@
             <div class="icon_trangthairoom"><p></p><span>:Trống</span></div>
             <div class="icon_trangthairoom"><p></p><span>:Đang ở</span></div>
             <div class="icon_trangthairoom"><p></p><span>:Đặt cọc</span></div>
-            
+                        
         </div>
        
       

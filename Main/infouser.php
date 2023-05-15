@@ -6,8 +6,8 @@
         <form action="xulyupload.php" method="POST" enctype="multipart/form-data">
 
              <input type="file" name ="myFileIMG"id="myFileInput" style="display:none">
-             <img id="myImage" class="img_user2" style="display:none">
-             <img src='../upload/<?php echo$_SESSION['Img']?>' id='myImage1' class='img_user1'style="display:block">
+             <img id="myImage" class="img_user" style="display:none">
+             <img src='../upload/<?php echo$_SESSION['Img']?>' id='myImage1' class='img_user'style="display:block">
            
             <input type="submit" value="Upload" name="submit">
 		</form>

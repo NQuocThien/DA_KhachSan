@@ -7,7 +7,16 @@
 	$MoTa = $_POST['Mota'];
 	$XepLoai = $_POST['XepLoai'];
 	$hinh = $_FILES['HinhAnh'];
+	echo $MaChuoi;
 	// Kiểm tra
+	if(trim($MaChuoi) == "")
+	{
+		echo '<script>
+		alert("Chuổi Khách sạn không có ");
+		window.history.back();
+		</script>';
+		exit;
+	}
 	if(trim($TenKS) == "")
 	{
 		echo '<script>
@@ -44,7 +53,8 @@
 	{
 		//Lưu tập tin upload vào thư mục hinhanh
 		$target_path = "../images/";
-		$target_path = $target_path . basename($_FILES['HinhAnh']['name']);
+		$ImgName = basename($_FILES['HinhAnh']['name']);
+		$target_path = $target_path .$ImgName ;
 		if (move_uploaded_file($_FILES['HinhAnh']['tmp_name'], $target_path))
 			echo "";
 			//echo "Tập tin " . basename($_FILES['HinhAnh']['name']) . " đã được upload.<br/>";
@@ -52,12 +62,12 @@
 			echo "Tập tin upload không thành công.<br/>";	
 		
 		$sql = "INSERT INTO `khachsan`(`MaChuoi`, `TenKhachSan`, `XepLoai`, `MoTa`, `DiaChi`, `Sdt`, `HinhAnh`)
-		 VALUES ('$MaChuoi','$TenKS','$XepLoai','$MoTa','$DiaChi','$Sdt','$target_path')";
+		 VALUES ('$MaChuoi','$TenKS','$XepLoai','$MoTa','$DiaChi','$Sdt','$ImgName')";
 		//  echo $sql;
 		$danhsach = $connect->query($sql);
 		//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 		if (!$danhsach) {
-			die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+			die("Không thể thực hiện câu lệnh SQL: " . $sql);
 			exit();
 		}
 		else

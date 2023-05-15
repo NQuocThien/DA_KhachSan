@@ -19,6 +19,12 @@
     }
     else 
     {
+        //echo "xóa";
+       // $user= $users->fetch_array(MYSQLI_ASSOC); 
+        $path = "../upload/".$_SESSION["Img"];
+        //echo $path;
+        unlink($path);
+
         move_uploaded_file($_FILES["myFileIMG"]["tmp_name"], "../upload/" . $_FILES["myFileIMG"]["name"]);
           $img=$_FILES["myFileIMG"]["name"];
                 

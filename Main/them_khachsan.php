@@ -6,7 +6,15 @@
 </style>
 <?php 
 	$key = $_POST["select_list-hotel"];
-	
+	echo $key;
+	if(trim($key) == 0)
+	{
+		echo '<script>
+		alert("Chuổi Khách sạn không có ");
+		window.history.back();
+		</script>';
+		exit;
+	}
  ?>
 <div class="main_form_addKS grid wide">
 	<h3>Thêm Khách Sạn</h3>
@@ -16,21 +24,21 @@
 			<div class="form_group col l-12" >
 				<div class="row no-gutters">
 					<span class="MyFormLabel col l-2">Tên Khách Sạn:</span>
-					<input class="form-control col l-10" id="hotel_name" type="text" name="TenKS" class = "col l-10" size = " 60" />
+					<input class="form-control col l-8" id="hotel_name" type="text" name="TenKS"  size = " 60" />
 					<span class="form-message"></span>
 				</div>
 			</div>
 			<div class="form_group col l-12" >
 				<div class="row no-gutters">
 					<span class="MyFormLabel col l-2">Địa chỉ:</span>
-					<textarea id="hotel_adress" class="form-control col l-10" name="DiaChi" class = "col l-10" cols="50"></textarea>
+					<textarea id="hotel_adress" class="form-control col l-8" name="DiaChi"  cols="50"></textarea>
 					<span class="form-message"></span>
 				</div>
 			</div>
 			<div class="form_group col l-12" >
 				<div class="row no-gutters">
 					<span class="MyFormLabel col l-2">Số điện thoại:</span>
-					<input id="hotel_number-phone" class="form-control col l-10" name="Sdt" cols="50" class = "col l-10"></input>
+					<input id="hotel_number-phone" class="form-control col l-8" name="Sdt" cols="50" ></input>
 					<span class="form-message"></span>
 				</div>
 			</div>
