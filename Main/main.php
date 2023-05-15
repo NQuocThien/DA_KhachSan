@@ -77,12 +77,12 @@
                 ?>
                 <!-- <a class="col l-12 active" href="user.php?do=user">Danh Sách Người Dùng</a> -->
                 <a class="col l-12 <?php if( $page=='ql_chuoikhachsan') echo "active"; else echo "" ?>" href="main.php?do=ql_chuoikhachsan"><p><i class="fa-solid fa-rectangle-list"></i> Chuỗi</p></a>
-                <a class="col l-12 <?php if( $page=='ql_khachsan') echo "active"; else echo "" ?>" href="main.php?do=ql_khachsan"><p><i class="fa-solid fa-hotel"></i> Khách sạn </p></a>
-                <a class="col l-12 <?php if( $page=='quanlydatphong') echo "active"; else echo "" ?>" href="main.php?do=quanlydatphong"><p><i class="fa-solid fa-bookmark"></i> đặt phòng </p></a>
-                <a class="col l-12 <?php if( $page=='quanlyroom') echo "active"; else echo "" ?>" href="main.php?do=quanlyroom"><p><i class="fa-sharp fa-solid fa-cloud"></i> phòng </p></a>
-                <a class="col l-12 <?php if( $page=='quanlyloaiphong') echo "active"; else echo "" ?>" href="main.php?do=quanlyloaiphong"><p><i class="fa-solid fa-newspaper"></i> loại phòng </p></a>
-                <a class="col l-12 <?php if( $page=='ql_baiviet') echo "active"; else echo "" ?>" href="main.php?do=ql_baiviet"><p><i class="fa-solid fa-newspaper"></i> tin tức </p></a>
-                <a class="col l-12 <?php if( $page=='ql_chude') echo "active"; else echo "" ?>" href="main.php?do=ql_chude"><p><i class="fa-sharp fa-solid fa-book-open-reader"></i> chủ đề </p></a>
+                <a class="col l-12 <?php if( $page=='ql_khachsan') echo "active"; else echo "" ?>" href="main.php?do=ql_khachsan"><p><i class="fa-solid fa-hotel"></i> Khách Sạn </p></a>
+                <a class="col l-12 <?php if( $page=='quanlydatphong') echo "active"; else echo "" ?>" href="main.php?do=quanlydatphong"><p><i class="fa-solid fa-bookmark"></i> Đặt Phòng </p></a>
+                <a class="col l-12 <?php if( $page=='quanlyroom') echo "active"; else echo "" ?>" href="main.php?do=quanlyroom"><p><i class="fa-sharp fa-solid fa-cloud"></i> Phòng </p></a>
+                <a class="col l-12 <?php if( $page=='quanlyloaiphong') echo "active"; else echo "" ?>" href="main.php?do=quanlyloaiphong"><p><i class="fa-solid fa-newspaper"></i> Loại Phòng </p></a>
+                <a class="col l-12 <?php if( $page=='ql_baiviet') echo "active"; else echo "" ?>" href="main.php?do=ql_baiviet"><p><i class="fa-solid fa-newspaper"></i> Tin tức </p></a>
+                <a class="col l-12 <?php if( $page=='ql_chude') echo "active"; else echo "" ?>" href="main.php?do=ql_chude"><p><i class="fa-sharp fa-solid fa-book-open-reader"></i> Chủ Đề </p></a>
             </div>
             <!-- <script src="../Js/mainuser.js"></script> -->
         </div>
