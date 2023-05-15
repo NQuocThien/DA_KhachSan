@@ -41,7 +41,7 @@
     <div id="header" class = "grid">
         <div class="grid wide">
             <div class="menu row">
-                <a href="Main.php" id="logo_header" class="logo col l-2 m-2 c-2"><img src="../img/logo.jpg" alt=""></a>
+                <a href="index.php" id="logo_header" class="logo col l-2 m-2 c-2"><img src="../img/logo.jpg" alt=""></a>
              
                 <ul id="menu_nav" class="menu_nav col l-10 m-0 c-0">
                       <a href="index.php?do=home">Trang chủ</a>   
@@ -107,6 +107,7 @@
                             <div class="icon_item"><a href=""><span><i class="fa-brands fa-instagram"></i></span></a></div>
                             <div class="icon_item"><a href=""><span><i class="fa-brands fa-youtube"></i></span></a></div>
                         </div>
+                        <a href="../Main/login.php">trang admins</a>
                     </div>
                 </div>
                 <div class="col l-12 end_footer">

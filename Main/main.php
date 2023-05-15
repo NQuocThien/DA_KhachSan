@@ -41,7 +41,7 @@
     <div class="tasbars row no-gutters">
         <div class="col l-2 header_logo">
             <header class="logo">
-                <a href="../Chung/index.php" style="  color: #fff;" > Hotel AGU</a>
+                <a href="../Chung/index.php" style="  color: #fff;" ><i class="fa-solid fa-house"></i></a>
             </header>
         </div>
         <div class="col l-10 header_main">
@@ -68,10 +68,10 @@
             <div id="myList" class="row no-gutters">
                 <?php
                     if($_SESSION['Quyen']==1&&$page=='user'){
-                        echo "<a class=\"col l-12 active\" href=\"main.php?do=user\">Danh Sách Người Dùng</a>";
+                        echo "<a class=\"col l-12 active\" href=\"main.php?do=user\"><p><i class=\"fa-sharp fa-solid fa-user\"></i> Danh Sách Người Dùng</p></a>";
                     }
                     if($_SESSION['Quyen']==1&&$page!='user'){
-                        echo "<a class=\"col l-12 \" href=\"main.php?do=user\">Danh Sách Người Dùng</a>";
+                        echo "<a class=\"col l-12 \" href=\"main.php?do=user\"><p><i class=\"fa-sharp fa-solid fa-user\"></i> Danh Sách Người Dùng</p></a>";
                     }
                     
                 ?>

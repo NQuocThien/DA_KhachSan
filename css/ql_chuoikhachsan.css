@@ -1,17 +1,20 @@
-.main_list-hotel h1{
+.main_list-hotel h2{
     background-color: #41727e;
     border: 2px solid black;
     text-align: center;
     border-radius: 10px ;
     color: white;
     margin: 10px 20px;
-    height: 40px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
+.main_list-hotel .list_hotel .hotel-right {
+    max-height: 550px;
+    overflow: auto;
+}
 .main_list-hotel .list_hotel .hotel-right .table-hotel {
     width: 850px;
     border: 1px solid #000;
@@ -56,13 +59,13 @@
 .main_list-hotel .list_hotel .hotel-left form {
     background-color: #464745;
     margin-top: auto;
-    padding: 20px;
+    padding: 15px;
     border-radius: 20px;
     color: white;
 }
 .main_list-hotel .list_hotel .hotel-left .insert-form .form_group img ,
 .main_list-hotel .list_hotel .hotel-left .form-update .form_group img {
-    width: 220px;
+    width: 215px;
     height: 200px;
 }
 .main_list-hotel .list_hotel .hotel-left .insert-form .form_group textarea {

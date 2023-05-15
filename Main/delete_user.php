@@ -1,8 +1,19 @@
 <?php
     include "../Chung/cauhinh.php";
-    session_start();
     $mandid=$_GET['id'];
-    $sql_kiemtra = "DELETE FROM `user` WHERE `MaNguoiDung`='$mandid'";
+    $sql_check_user = "SELECT * FROM user s, baiviet bv WHERE s.MaNguoiDung = bv.MaNguoiDung and s.MaNguoiDung = '$mandid'";
+    if($connect->query($sql))
+    {
+        
+    }else 
+    {
+        delete_user($mandid);
+    }
+    
+    function delete_user($mandid)
+    {
+        include "../Chung/cauhinh.php";
+        $sql_kiemtra = "DELETE FROM `user` WHERE `MaNguoiDung`='$mandid'";
 		
 		$danhsach = $connect->query($sql_kiemtra);
 		
@@ -18,4 +29,5 @@
             }else
             header("Location: main.php");
         }
+    }
 ?>
