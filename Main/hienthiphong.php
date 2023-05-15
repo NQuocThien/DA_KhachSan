@@ -40,3 +40,4 @@
     <div class="potion_tt dango"><?php if ($slks_dango["DangO"]>0){echo $slks_dango["DangO"];} else{ echo "0";}?></div>
     <div class="potion_tt datcoc"><?php if ($slks_dat["DatCoc"]>0){echo $slks_dat["DatCoc"];} else{ echo "0";}?></div>
 </div>
+

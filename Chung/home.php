@@ -40,7 +40,7 @@
     </div>
     <script src="../Js/starter.js"></script>
     <div class="booking grid">
-        <div class="row ">
+        <div class="row  no-gutters">
             <div class="col l-6 m-12 c-12">
                 <div class="booking__item one_item">
                     <div class="tab_main"><a href="">Đặt phòng ngay</a></div>
@@ -230,7 +230,7 @@
                     <h3 class="title_box">Tin tức nổi bật</h3>
                 </div>
                 <div class="bookingbody">
-                    <div class="media row">
+                    <div class="media row no-gutters">
                         <div class="media_img col l-4"><img src="" alt=""></div>
                         <div class="media_body col l-8">
                         
@@ -238,7 +238,7 @@
                             <p>Khách sạn MiaLiza  Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội </p>
                         </div>
                     </div>
-                    <div class="intro_genar row">
+                    <div class="intro_genar row no-gutters">
                         
                         <a href="" class="col l-12">
                         <?php
