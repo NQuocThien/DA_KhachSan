@@ -32,6 +32,7 @@
         echo " <div class=\"ngaytra\"><i class=\"fa-regular fa-calendar-xmark\"></i>".$date."</div>";
         echo "<a href='?do=update_phong&idmaphong=".$row["MaPhong"]."&idmaks=".$row["MaKhachSan"]."'><img src='../images/edit.png' /></a>";
         echo "<a href='?do=delete_phong&id=" . $row["MaPhong"] . "' onclick='return confirm(\"Bạn có muốn xóa phòng " . $row['TenPhong'] . " không?\")'><img src='../images/delete.png' /></a>";
+        echo "<a href='?do=xemchitietkh_phong&idmaphong=".$row["MaPhong"]."'>Xem chi tiết</a>";
         echo "</div>";
     }
 ?>

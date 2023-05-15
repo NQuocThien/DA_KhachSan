@@ -58,3 +58,7 @@
 .Ngoai .form_inserphong .form_isphong_body button[type="submit"]{
     margin-top: 10px;
 }
+.Ngoai .form_inserphong .body_kh_phong .ifo_kh{
+    margin-left: 200px;
+    padding-top: 10px;
+}
