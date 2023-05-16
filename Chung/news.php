@@ -35,14 +35,14 @@
                         ?>
                     </div>
             </div>
-            <div class="col l-8">
-                <?php
-                    $do = isset($_GET['do']) ? $_GET['news'] : "dsbaiviet";
-                    include $do . ".php";
-                ?>
+            <div class="list_news col l-10">
+                <div class="row">
+                    <?php
+                        $do = isset($_GET['do']) ? $_GET['news'] : "dsbaiviet";
+                        include $do . ".php";
+                    ?>
+                </div>
             </div>
-            <div class="l-2">
-                
             </div>
         </div>
 

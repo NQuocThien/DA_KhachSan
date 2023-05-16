@@ -19,7 +19,7 @@
             echo        "<p>".$row['NgayDang']."</p>";
             echo        "<div class=\"new-body row \">";
             echo              "<div class=\"new-body_img col l-4\">";
-            echo                    "<img src='".$row['HinhAnh']."' alt=\"\" >";
+            echo                    "<img src='../images/".$row['HinhAnh']."' alt=\"\" >";
             echo              "</div>";
             echo                    "<p class=\"col l-8\">".$row['TomTat']."</p>";
             echo        "</div>";

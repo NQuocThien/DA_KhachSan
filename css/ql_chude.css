@@ -12,6 +12,10 @@
 
 }
 
+.main_list-topic .list_topic .topic-right{
+    max-height: 500px;
+    overflow: auto;
+}
 .main_list-topic .list_topic .topic-right .table-topic {
     width: 450px;
     border: 1px solid #000;

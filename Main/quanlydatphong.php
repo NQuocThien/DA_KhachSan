@@ -2,9 +2,10 @@
      include "../Chung/cauhinh.php";
 ?>
 <div class="dsDatPhong">
-    <div class="header_datphong">
+    <div class="dsDatPhong">
         <h2>Danh sách đặt phòng</h2>
         <div class="search_datphongchuoi">
+            <h4>Chọn Chuỗi Khách Sạn</h4>
             <select name="chuoi" id="select_chuoiKS">
                 <option value="0"> ---- chon ---</option>
                 <?php 
@@ -18,6 +19,8 @@
             </select>
         </div>
         <div class="search_datphongtheoks">
+            <h4>Chọn Khách Sạn</h4>
+
             <select name="chuoi" id="select_KS">
             <option value="0"> ---- Chọn ---</option>
                 

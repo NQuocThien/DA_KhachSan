@@ -56,7 +56,7 @@ ul li{
 }
 .body{
     margin: 0 auto;
-    height:calc(100% - 50px);
+    height: auto;
 }
 .body .container {
     background-color: #d2d6de;
@@ -69,7 +69,7 @@ ul li{
     color: gray;
     padding-left: 19px;
     overflow: auto;
-    height: 100%;
+    height: auto;
 }
 .body .navigation .avatar{
     position: relative;

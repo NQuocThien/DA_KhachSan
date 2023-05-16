@@ -31,15 +31,7 @@
     background-size: 70% 70%;
     background-repeat: no-repeat;
 }
-.img_user1{
-    border: 1px solid #000;
-    width: 240px;
-    height: 240px;
-    border-radius: 10px;
-    position: relative;
-    background-size: 70% 70%;
-    background-repeat: no-repeat;
-}
+
 .ifo form{
     display: flex;
 

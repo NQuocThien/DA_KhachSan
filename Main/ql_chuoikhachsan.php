@@ -6,7 +6,7 @@
 
     $id = isset($_GET['id'])? $_GET['id'] : 0 ;
 ?>
-    <h1>Danh sách các chuỗi khách sạn</h1>
+    <h2>Danh sách các chuỗi khách sạn</h2>
     <div class="list_hotel row">
         <div class="hotel-right col l-9 ">
             <table class="table-hotel">
@@ -52,9 +52,9 @@
                     {
                         $infor = $topic->fetch_array(MYSQLI_ASSOC)
             ?> 
-            <a href="main.php?do=ql_chuoikhachsan" class="btn-insert">Sửa chuỗi</a>
+            <a href="main.php?do=ql_chuoikhachsan" class="btn-insert">Thêm chuỗi</a>
             <form enctype="multipart/form-data" action="sua_chuoi.php" id= "list_hotel-form" method="post" class="form-update">
-                <h3>Thêm Chuỗi </h3>
+                <h3>Sửa Chuỗi </h3>
                 <input type="hidden"name="list_id" value="<?php echo $infor["MaChuoi"] ?>">
                 <div class="form_group">
                     <label for="list_hotel-id">Mã Chuỗi</label>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="form_group">
                     <label for="list_hotel-name">Mô Tả</label>
-					<textarea id="list_hotel-description" class="form-control" name="list_hotel-description" cols="50"><?php echo $infor["MoTa"] ?></textarea>
+					<textarea id="list_hotel-description" class="form-control" name="list_hotel-description"  cols="27"><?php echo $infor["MoTa"] ?></textarea>
                     <span class="form-message"></span>
                 </div>
                 <div class="form_group">
