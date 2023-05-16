@@ -9,7 +9,7 @@
 			exit();
 		}
         else{
-            header("Location: main.php");
+            header("Location: main.php?do=user");
         }
 	}
 	elseif(isset($_GET['khoa']))
@@ -21,11 +21,11 @@
 			exit();
 		}
         else{
-            header("Location: main.php");
+            header("Location: main.php?do=user");
         }
 	}
 	else
 	{
-		header("Location: main.php");
+		header("Location: main.php?do=user");
 	}
 ?>
