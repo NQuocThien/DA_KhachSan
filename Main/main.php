@@ -73,7 +73,6 @@
                     if($_SESSION['Quyen']==1&&$page!='user'){
                         echo "<a class=\"col l-12 \" href=\"main.php?do=user\">Danh Sách Người Dùng</a>";
                     }
-                    
                 ?>
                 <!-- <a class="col l-12 active" href="user.php?do=user">Danh Sách Người Dùng</a> -->
                 <a class="col l-12 <?php if( $page=='ql_chuoikhachsan') echo "active"; else echo "" ?>" href="main.php?do=ql_chuoikhachsan"><p><i class="fa-solid fa-rectangle-list"></i> Chuỗi</p></a>
