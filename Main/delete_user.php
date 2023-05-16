@@ -42,7 +42,7 @@
                 session_unset();
                 header("Location: login.php");
             }else
-            header("Location: main.php?do=user");
+            header("Location: index.php?do=user");
        }
     }
 ?>

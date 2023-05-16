@@ -19,7 +19,7 @@
                 die("Error: " . $connect->error);
             }
             else{
-                header("Location: main.php?do=ql_baiviet");
+                header("Location: index.php?do=ql_baiviet");
             }
         }else{
             $sql_update = "UPDATE baiviet SET KiemDuyet = '1' WHERE MaBaiViet = $key ";
@@ -28,7 +28,7 @@
                 die("Error: " . $connect->error);
             }
             else{
-                header("Location: main.php?do=ql_baiviet");
+                header("Location: index.php?do=ql_baiviet");
             }
         }
     }

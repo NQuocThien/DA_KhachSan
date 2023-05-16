@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col l-2">
                 <div class="search">
-                    <form action="index.php?do=news&news=dsbaiviet" method="post">
+                    <form action="index.php?do=news&news=dsbaiviettk" method="post">
                         <input type="text" class="input_search" name="input_search">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>

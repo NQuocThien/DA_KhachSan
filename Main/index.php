@@ -68,20 +68,20 @@
             <div id="myList" class="row no-gutters">
                 <?php
                     if($_SESSION['Quyen']==1&&$page=='user'){
-                        echo "<a class=\"col l-12 active\" href=\"main.php?do=user\"><p><i class=\"fa-sharp fa-solid fa-user\"></i> Danh Sách Người Dùng</p></a>";
+                        echo "<a class=\"col l-12 active\" href=\"index.php?do=user\"><p><i class=\"fa-sharp fa-solid fa-user\"></i> Danh Sách Người Dùng</p></a>";
                     }
                     if($_SESSION['Quyen']==1&&$page!='user'){
-                        echo "<a class=\"col l-12 \" href=\"main.php?do=user\"><p><i class=\"fa-sharp fa-solid fa-user\"></i> Danh Sách Người Dùng</p></a>";
+                        echo "<a class=\"col l-12 \" href=\"index.php?do=user\"><p><i class=\"fa-sharp fa-solid fa-user\"></i> Danh Sách Người Dùng</p></a>";
                     }
                 ?>
                 <!-- <a class="col l-12 active" href="user.php?do=user">Danh Sách Người Dùng</a> -->
-                <a class="col l-12 <?php if( $page=='ql_chuoikhachsan') echo "active"; else echo "" ?>" href="main.php?do=ql_chuoikhachsan"><p><i class="fa-solid fa-rectangle-list"></i> Chuỗi</p></a>
-                <a class="col l-12 <?php if( $page=='ql_khachsan') echo "active"; else echo "" ?>" href="main.php?do=ql_khachsan"><p><i class="fa-solid fa-hotel"></i> Khách Sạn </p></a>
-                <a class="col l-12 <?php if( $page=='quanlydatphong') echo "active"; else echo "" ?>" href="main.php?do=quanlydatphong"><p><i class="fa-solid fa-bookmark"></i> Đặt Phòng </p></a>
-                <a class="col l-12 <?php if( $page=='quanlyroom') echo "active"; else echo "" ?>" href="main.php?do=quanlyroom"><p><i class="fa-sharp fa-solid fa-cloud"></i> Phòng </p></a>
-                <a class="col l-12 <?php if( $page=='quanlyloaiphong') echo "active"; else echo "" ?>" href="main.php?do=quanlyloaiphong"><p><i class="fa-solid fa-people-roof"></i>Loại Phòng </p></a>
-                <a class="col l-12 <?php if( $page=='ql_baiviet') echo "active"; else echo "" ?>" href="main.php?do=ql_baiviet"><p><i class="fa-solid fa-newspaper"></i> Tin tức </p></a>
-                <a class="col l-12 <?php if( $page=='ql_chude') echo "active"; else echo "" ?>" href="main.php?do=ql_chude"><p><i class="fa-sharp fa-solid fa-book-open-reader"></i> Chủ Đề </p></a>
+                <a class="col l-12 <?php if( $page=='ql_chuoikhachsan') echo "active"; else echo "" ?>" href="index.php?do=ql_chuoikhachsan"><p><i class="fa-solid fa-rectangle-list"></i> Chuỗi</p></a>
+                <a class="col l-12 <?php if( $page=='ql_khachsan') echo "active"; else echo "" ?>" href="index.php?do=ql_khachsan"><p><i class="fa-solid fa-hotel"></i> Khách Sạn </p></a>
+                <a class="col l-12 <?php if( $page=='quanlydatphong') echo "active"; else echo "" ?>" href="index.php?do=quanlydatphong"><p><i class="fa-solid fa-bookmark"></i> Đặt Phòng </p></a>
+                <a class="col l-12 <?php if( $page=='quanlyroom') echo "active"; else echo "" ?>" href="index.php?do=quanlyroom"><p><i class="fa-sharp fa-solid fa-cloud"></i> Phòng </p></a>
+                <a class="col l-12 <?php if( $page=='quanlyloaiphong') echo "active"; else echo "" ?>" href="index.php?do=quanlyloaiphong"><p><i class="fa-solid fa-people-roof"></i>Loại Phòng </p></a>
+                <a class="col l-12 <?php if( $page=='ql_baiviet') echo "active"; else echo "" ?>" href="index.php?do=ql_baiviet"><p><i class="fa-solid fa-newspaper"></i> Tin tức </p></a>
+                <a class="col l-12 <?php if( $page=='ql_chude') echo "active"; else echo "" ?>" href="index.php?do=ql_chude"><p><i class="fa-sharp fa-solid fa-book-open-reader"></i> Chủ Đề </p></a>
             </div>
             <!-- <script src="../Js/mainuser.js"></script> -->
         </div>

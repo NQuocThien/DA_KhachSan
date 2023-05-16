@@ -43,7 +43,7 @@
                 window.history.back();
                 </script>';
                 exit;
-                header("Location: main.php");
+                header("Location: index.php");
             }
 
        

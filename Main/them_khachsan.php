@@ -18,7 +18,7 @@
  ?>
 <div class="main_form_addKS grid wide">
 	<h3>Thêm Khách Sạn</h3>
-	<form enctype="multipart/form-data"  action="main.php?do=them_khachsan_xuly" method="post" id="form_post">
+	<form enctype="multipart/form-data"  action="index.php?do=them_khachsan_xuly" method="post" id="form_post">
 		<input name ="MaChuoi" type="hidden" value=<?php echo $key; ?>>
 		<div class="row no-gutters">
 			<div class="form_group col l-12" >

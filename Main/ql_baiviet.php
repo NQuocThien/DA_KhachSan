@@ -16,7 +16,7 @@
         <h3>Danh sánh bài viết</h3>
     </div>
     <div class="button_insert">
-        <a href="main.php?do=them_baiviet"> <i class="fa-sharp fa-solid fa-plus"></i> Đăng bài</a>
+        <a href="index.php?do=them_baiviet"> <i class="fa-sharp fa-solid fa-plus"></i> Đăng bài</a>
     </div>
     <table>
         <tr>
@@ -56,13 +56,13 @@
             echo "   <td class=\"\">";
                 if($row["KiemDuyet"] == 1)
                 {
-                    echo "<a href=\"main.php?do=kiemduyet&id=".$row['MaBaiViet']."\"><img src=\"../images/ban.png\" alt=\"\"></a>";
+                    echo "<a href=\"index.php?do=kiemduyet&id=".$row['MaBaiViet']."\"><img src=\"../images/ban.png\" alt=\"\"></a>";
                 }
                 else 
-                    echo "<a href=\"main.php?do=kiemduyet&id=".$row['MaBaiViet']."\"><img src=\"../images/active.png\" alt=\"\"></a>";
+                    echo "<a href=\"index.php?do=kiemduyet&id=".$row['MaBaiViet']."\"><img src=\"../images/active.png\" alt=\"\"></a>";
             echo "      
-                        <a href='main.php?do=sua_baiviet&id=" . $row["MaBaiViet"] . "'><img src='../images/edit.png' /></a>
-                        <a href='main.php?do=xoa_baiviet&id=" . $row["MaBaiViet"] . "' onclick='return confirm(\"Bạn có muốn xóa bài viết không\")'><img src='../images/delete.png' /></a>";
+                        <a href='index.php?do=sua_baiviet&id=" . $row["MaBaiViet"] . "'><img src='../images/edit.png' /></a>
+                        <a href='index.php?do=xoa_baiviet&id=" . $row["MaBaiViet"] . "' onclick='return confirm(\"Bạn có muốn xóa bài viết không\")'><img src='../images/delete.png' /></a>";
             echo " </td>";
             echo "</tr>";
         }

@@ -38,7 +38,7 @@
                 $path = "../images/".$hotel["HinhAnh"];
                 unlink($path);
             }
-            header("Location: main.php?do=ql_khachsan");
+            header("Location: index.php?do=ql_khachsan");
         }
     }
 ?>

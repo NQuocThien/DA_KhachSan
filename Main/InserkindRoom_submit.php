@@ -51,7 +51,7 @@
             alert("Thêm phòng thành công.");
             window.history.back();
             </script>';
-            header("Location: main.php?do=quanlyloaiphong");
+            header("Location: index.php?do=quanlyloaiphong");
         }
     }
 ?>

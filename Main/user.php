@@ -11,7 +11,7 @@
 ?>
 <div class="main_list-user" >
 	<h3 >Danh sách người dùng</h3>
-	<a href="main.php?do=regis_user">Đăng ký tài khoản cho nhân viên</a>
+	<a href="index.php?do=regis_user">Đăng ký tài khoản cho nhân viên</a>
 	<div class="grid wide">
 		<div class="row no-gutters">
 			<?php 
@@ -51,8 +51,8 @@
 				else
 					echo "<p>HĐ: </p><a href='user_active.php?do=nguoidung_kichhoat&id=" . $dong["MaNguoiDung"] . "&khoa=0'><img src='../images/ban.png' /></a>";
 					
-					echo "<a href='main.php?do=update_user&id=" . $dong["MaNguoiDung"] . "'><img src='../images/edit.png' /></a>";
-					echo "<a href='main.php?do=delete_user&id=" . $dong["MaNguoiDung"] . "' onclick='return confirm(\"Bạn có muốn xóa người dùng " . $dong['TenNguoiDung'] . " không?\")'><img src='../images/delete.png' /></a>";
+					echo "<a href='index.php?do=update_user&id=" . $dong["MaNguoiDung"] . "'><img src='../images/edit.png' /></a>";
+					echo "<a href='index.php?do=delete_user&id=" . $dong["MaNguoiDung"] . "' onclick='return confirm(\"Bạn có muốn xóa người dùng " . $dong['TenNguoiDung'] . " không?\")'><img src='../images/delete.png' /></a>";
 				echo "			</div>";
 				echo "		</div>";
 				echo "	</div>";

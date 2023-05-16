@@ -42,7 +42,7 @@
 				$_SESSION['Taikhoan'] = $dong['TenDangNhap'];
 				$_SESSION['Quyen'] = $dong['Quyen'];
 				$_SESSION['Img'] = $dong['Img'];
-				header("Location: main.php");
+				header("Location: index.php");
 			}
 			else
 			{

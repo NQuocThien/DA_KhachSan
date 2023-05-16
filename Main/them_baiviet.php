@@ -9,7 +9,7 @@
 ?>
 <div class="main_insert-content">
 <h3>Đăng bài viết</h3>
-<form enctype="multipart/form-data"  action="main.php?do=them_baiviet-submit" method="post" id="form_insert-content">
+<form enctype="multipart/form-data"  action="index.php?do=them_baiviet-submit" method="post" id="form_insert-content">
 	<div class="row ">
         <div class="form_group item col l-12">
             <div class="row">

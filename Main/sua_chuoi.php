@@ -40,7 +40,7 @@
             $sql_update_list_hotel = "UPDATE  `chuoikhachsan` set TenChuoi = '$List_name', MoTa = '$List_description', HinhAnh = '$image_name' WHERE Machuoi = ".$List_id;
             if($connect->query($sql_update_list_hotel))
             {
-                header("Location: main.php?do=ql_chuoikhachsan");
+                header("Location: index.php?do=ql_chuoikhachsan");
             }
             else 
             {

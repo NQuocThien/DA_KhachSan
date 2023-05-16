@@ -68,7 +68,7 @@
                 window.history.back();
                 </script>';
                 exit;
-                header("Location: main.php?do=quanlydatphong");
+                header("Location: index.php?do=quanlydatphong");
             }
 
        

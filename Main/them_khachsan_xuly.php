@@ -72,7 +72,7 @@
 		}
 		else
 		{
-			header("Location: main.php?do=ql_khachsan");
+			header("Location: index.php?do=ql_khachsan");
 		}
 		
 		

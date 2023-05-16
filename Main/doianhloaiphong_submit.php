@@ -20,7 +20,7 @@
             window.history.back();
             </script>';
             exit;
-            header("Location: main.php?do=quanlyloaiphong");
+            header("Location: index.php?do=quanlyloaiphong");
         }
     }
     else{ echo '<script>
@@ -28,7 +28,7 @@
         window.history.back();
         </script>';
         exit;
-        header("Location: main.php?do=quanlyloaiphong");
+        header("Location: index.php?do=quanlyloaiphong");
        
     }
 ?>

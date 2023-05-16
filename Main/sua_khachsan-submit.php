@@ -38,7 +38,7 @@
         }
         else
         {
-            header("Location: main.php?do=ql_khachsan");
+            header("Location: index.php?do=ql_khachsan");
         }
         }else {
             $sql = " UPDATE `khachsan` SET 
@@ -51,7 +51,7 @@
             }
             else
             {
-                header("Location: main.php?do=ql_khachsan");
+                header("Location: index.php?do=ql_khachsan");
             }
         }
 	//}

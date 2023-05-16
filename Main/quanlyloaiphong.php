@@ -43,9 +43,9 @@
                         elseif($row['LoaiGiuong']==2){
                         echo "               <p>Loại Giường: Bình thường</p>"; 
                         }
-                        echo "                 <a href='main.php?do=doianhloaiphong&id=" . $row["MaLoai"] . "'>Đổi ảnh</a>";
-                        echo "                 <a href='main.php?do=updateloaiphong&id=" . $row["MaLoai"] . "'><img src='../images/edit.png' /></a>";
-					    echo "                 <a href='main.php?do=deleteloaiphong&id=" . $row["MaLoai"] . "' onclick='return confirm(\"Bạn có muốn xóa tên phòng" . $row['TenLoaiPhong'] . " không?\")'><img src='../images/delete.png' /></a>"; 
+                        echo "                 <a href='index.php?do=doianhloaiphong&id=" . $row["MaLoai"] . "'>Đổi ảnh</a>";
+                        echo "                 <a href='index.php?do=updateloaiphong&id=" . $row["MaLoai"] . "'><img src='../images/edit.png' /></a>";
+					    echo "                 <a href='index.php?do=deleteloaiphong&id=" . $row["MaLoai"] . "' onclick='return confirm(\"Bạn có muốn xóa tên phòng" . $row['TenLoaiPhong'] . " không?\")'><img src='../images/delete.png' /></a>"; 
                         echo "            </div>";
                         echo "        </div>";
                         echo "    </div>";

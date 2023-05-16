@@ -3,7 +3,7 @@
 ?>
 <div class="main_quanlroom" >
     <div class="header_room">
-        <form action="main.php?do=insertphong" method="post">
+        <form action="index.php?do=insertphong" method="post">
         <div class="hr_firt">
             <p>Quản lý phòng</p>
             <div class="select_chuoi">

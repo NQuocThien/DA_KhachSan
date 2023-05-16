@@ -30,7 +30,7 @@
             $sql_insert_list_hotel = "INSERT INTO `chuoikhachsan` values(NULL, '$List_name', '$List_description', '$image_name') ";
             if($connect->query($sql_insert_list_hotel))
             {
-                header("Location: main.php?do=ql_chuoikhachsan");
+                header("Location: index.php?do=ql_chuoikhachsan");
             }
             else 
             {

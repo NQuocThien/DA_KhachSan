@@ -28,6 +28,6 @@
     }
     else
     {
-        header("Location: main.php?do=ql_baiviet");
+        header("Location: index.php?do=ql_baiviet");
     }
 ?>

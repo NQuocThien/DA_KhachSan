@@ -31,8 +31,8 @@
                     echo "    <td>".$row["TenChuoi"]."</td>";
                     echo "    <td>".$row["MoTa"]."</td>";
                     echo "    <td>  <img class =\"image_list-hotle\" src= '../images/".$row["HinhAnh"]."'/> </td>";
-                    echo "    <td> <div>  <a href='main.php?do=ql_chuoikhachsan&id=" . $row["MaChuoi"] . "'><img src='../images/edit.png' /></a>
-                                <a href='main.php?do=xoa_chuoi&id=" . $row["MaChuoi"] . "' onclick='return confirm(\"Bạn có muốn xóa chủ đề " . $row['TenChuoi'] . " không?\")'><img src='../images/delete.png' /></a> </div> </td> " ;
+                    echo "    <td> <div>  <a href='index.php?do=ql_chuoikhachsan&id=" . $row["MaChuoi"] . "'><img src='../images/edit.png' /></a>
+                                <a href='index.php?do=xoa_chuoi&id=" . $row["MaChuoi"] . "' onclick='return confirm(\"Bạn có muốn xóa chủ đề " . $row['TenChuoi'] . " không?\")'><img src='../images/delete.png' /></a> </div> </td> " ;
                 }
                 ?>
             </table>
@@ -52,7 +52,7 @@
                     {
                         $infor = $topic->fetch_array(MYSQLI_ASSOC)
             ?> 
-            <a href="main.php?do=ql_chuoikhachsan" class="btn-insert">Thêm chuỗi</a>
+            <a href="index.php?do=ql_chuoikhachsan" class="btn-insert">Thêm chuỗi</a>
             <form enctype="multipart/form-data" action="sua_chuoi.php" id= "list_hotel-form" method="post" class="form-update">
                 <h3>Sửa Chuỗi </h3>
                 <input type="hidden"name="list_id" value="<?php echo $infor["MaChuoi"] ?>">

@@ -44,7 +44,7 @@
 			exit();
 		}
         else{
-            header("Location: main.php?do=user");
+            header("Location: index.php?do=user");
         }
         
     }

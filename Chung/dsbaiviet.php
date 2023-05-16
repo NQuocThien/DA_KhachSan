@@ -1,20 +1,8 @@
 <?php
-      $search = $_POST['input_search']? $_POST['input_search']: '';
-      if($search == '') 
-      {
             $sql = "select t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat, t.MaChuDe, t.HinhAnh, t.ChuThichAnh, l.MaChuDe, l.TenChuDe
             from (chude l inner join baiviet t on t.MaChuDe=l.MaChuDe)
             group by t.MaChuDe, t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat
             having (t.NgayDang >= all (select NgayDang from baiviet where MaChuDe=l.MaChuDe))";
-      }else
-      {
-            $sql = "select t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat, t.MaChuDe, t.HinhAnh, t.ChuThichAnh, l.MaChuDe, l.TenChuDe
-            from (chude l inner join baiviet t on t.MaChuDe=l.MaChuDe)
-            where t.TieuDe like '%$search%'
-            group by t.MaChuDe, t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat
-            having (t.NgayDang >= all (select NgayDang from baiviet where MaChuDe=l.MaChuDe))";
-      }
-      
 		$danhsach = $connect->query($sql);
 		//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 		if (!$danhsach) {
@@ -25,8 +13,8 @@
 		{
 
             echo    "<div class=\"new-item col l-6\">";
-            echo        "<a href= 'index.php?do=baiviet_chitiet&news=dsbaiviet&id= ".$row['MaBaiViet']."' class=\"new-link\">".$row['TieuDe']."</a> <br>";
-            echo        "<a href='index.php?do=baiviet_chude&news=dsbaiviet&id=".$row['MaChuDe']." ' class=\"new-link-cd\">".$row['TenChuDe']."</a> " ;
+            echo        "<a href= 'index.php?do=baiviet_chitiet&id=".$row['MaBaiViet']."' class=\"new-link\">".$row['TieuDe']."</a> <br>";
+            echo        "<a href='index.php?do=baiviet_chude&id=".$row['MaChuDe']." ' class=\"new-link-cd\">".$row['TenChuDe']."</a> " ;
             echo        "<p>".$row['NgayDang']."</p>";
             echo        "<div class=\"new-body row \">";
             echo              "<div class=\"new-body_img col l-4\">";
@@ -37,7 +25,6 @@
             echo        "<a href='index.php?do=baiviet_chitiet&news=dsbaiviet&id=".$row['MaBaiViet']."' class=\"new-about\">chi tiet</a>";
             echo      "</div>";
 		}
-
 ?>
 	</body>
 </html>

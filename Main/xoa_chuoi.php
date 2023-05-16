@@ -16,7 +16,7 @@
     $sql_delete_list = "DELETE FROM `chuoikhachsan` WHERE MaChuoi = '$list_id'";
     if($connect->query($sql_delete_list))
     {
-        header("Location: main.php?do=ql_chuoikhachsan");
+        header("Location: index.php?do=ql_chuoikhachsan");
     }
     else 
     {

@@ -141,7 +141,6 @@
                                              $.post("../handle/handle_select-hottel.php",{id : id} , function(date)
                                              {
                                                 $("#select_type-room").html(date);
-                                                alert(date);
                                              });
                                             
                                         });
@@ -233,7 +232,7 @@
                 </div>
                 <div class="bookingbody">
                     <div class="media row no-gutters">
-                        <div class="media_img col l-4"><img src="" alt=""></div>
+                        <div class="media_img col l-4"><img src="../img/2.png" alt=""></div>
                         <div class="media_body col l-8">
                         
                             <h5>Khách sạn Mializa Hotel là chuỗi khách sạn tình yêu được phân bổ trên toàn thủ đô Hà nội</h5>

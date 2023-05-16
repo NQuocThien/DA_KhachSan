@@ -1,5 +1,6 @@
 <?php
     include "cauhinh.php";
+    $MaBV = $_GET["id"];
     $sql = "SELECT *
             FROM baiviet A, chude B, user C
             WHERE A.MaChuDe = B.MaChuDe AND A.maNguoiDung = C.MaNguoiDung AND A.MaBaiViet = $MaBV";

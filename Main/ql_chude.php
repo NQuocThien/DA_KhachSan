@@ -26,8 +26,8 @@
                             echo "<tr>";
                             echo "    <td>".$row["MaChuDe"]."</td>";
                             echo "    <td>".$row["TenChuDe"]."</td>";
-                            echo "    <td><a href='main.php?do=ql_chude&id=" . $row["MaChuDe"] . "'><img src='../images/edit.png' /></a>
-                                        <a href='main.php?do=xoa_chude&id=" . $row["MaChuDe"] . "' onclick='return confirm(\"Bạn có muốn xóa chủ đề " . $row['TenChuDe'] . " không?\")'><img src='../images/delete.png' /></a> </td>" ;
+                            echo "    <td><a href='index.php?do=ql_chude&id=" . $row["MaChuDe"] . "'><img src='../images/edit.png' /></a>
+                                        <a href='index.php?do=xoa_chude&id=" . $row["MaChuDe"] . "' onclick='return confirm(\"Bạn có muốn xóa chủ đề " . $row['TenChuDe'] . " không?\")'><img src='../images/delete.png' /></a> </td>" ;
                         }
                         ?>
                     </table>
@@ -60,7 +60,7 @@
                         </div>
                         <button type="submit">Sửa</button>
                     </form>
-                    <a href="main.php?do=ql_chude" class="btn-insert">Thêm Chủ Đề</a>
+                    <a href="index.php?do=ql_chude" class="btn-insert">Thêm Chủ Đề</a>
                     <?php } }
                     else {
                     ?>

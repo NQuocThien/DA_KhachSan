@@ -17,7 +17,7 @@
             <div class="header-body  l-12">
                 <div class="row no-gutters ">
                     <div class="choose  l-6">
-                        <form action="./main.php?do=them_khachsan" method="post">
+                        <form action="./index.php?do=them_khachsan" method="post">
                             <div class="row no-gutters">
                                 <label class = "col l-12" for="select_list-hotel">Chọn chổi khách sạn:</label>
                                 <select class = "col l-12"name="select_list-hotel" id="select_list-hotel">

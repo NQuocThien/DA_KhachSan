@@ -4,7 +4,7 @@
     <div class="main">
         <div class="">
             <ul>
-                <li><a href="../Main.php">Trang chủ</a>
+                <li><a href="../index.php">Trang chủ</a>
                     <span></span>
                 </li>
                 <li>

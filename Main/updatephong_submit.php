@@ -35,7 +35,7 @@
             window.history.back();
             </script>';
             exit;
-            header("Location: main.php?do=quanlyroom");
+            header("Location: index.php?do=quanlyroom");
         }
 
        

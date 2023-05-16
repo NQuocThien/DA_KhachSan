@@ -8,6 +8,6 @@
     }
 
     else {
-        header("location: main.php?do=ql_chude");
+        header("location: index.php?do=ql_chude");
     }
 ?>
