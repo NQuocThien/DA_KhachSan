@@ -1,5 +1,5 @@
 <?php
-    include "../Chung/cauhinh.php";
+    include "../Client/cauhinh.php";
     $key = $_POST['id'];
     if($key != 0)
     {

@@ -1,6 +1,6 @@
 <div class="thongtindsks_datphong">
     <?php
-            include "../Chung/cauhinh.php";
+            include "../Client/cauhinh.php";
             $keymaks = $_POST['id'];
             $selectdatphong = $pdo->prepare("SELECT * FROM `KhachSan` ks,`datphong` dp,`loaiphong` lp,`khachhang` kh WHERE ks.`MaKhachSan`= dp.`MaKhachSan` and dp.`MaKhachHang`=kh.`MaKhachHang` and dp.`MaLoaiPhong`=lp.`MaLoai` and dp.`MaKhachSan`=". $keymaks);	
             $selectdatphong->execute();

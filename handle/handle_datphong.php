@@ -1,5 +1,5 @@
 <?php
-    include "../Chung/cauhinh.php";
+    include "../Client/cauhinh.php";
     $fullName = $_POST["full_name"];
     $numberPhone = $_POST["number_phone"];
     $email = $_POST["email"];
@@ -33,7 +33,7 @@
         VALUES ('$MaKS','$typeRoom','$maKhachHang' , '$today','$date_come','$date_leave','$note','$soluong', '0' )";
          if($connect->query($sql) === TRUE)
          {
-            header( "Location: ../Chung/index.php");
+            header( "Location: ../Client/index.php");
          }else {
              die( "Lỗi: ".$sql . "<br>". $connect->error);
          }

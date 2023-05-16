@@ -1,6 +1,6 @@
 <div class="br_firt" id = "br_firt">
     <?php
-        include "../Chung/cauhinh.php";
+        include "../Client/cauhinh.php";
         $key = $_POST['id'];
         $stmt = $pdo->prepare("SELECT ks.`MaKhachSan`,ks.`TenKhachSan` FROM KhachSan ks WHERE ks.MaChuoi =".$key);	
         $stmt->execute();

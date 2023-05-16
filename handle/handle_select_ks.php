@@ -1,6 +1,6 @@
 
 <?php 
-    include "../Chung/cauhinh.php";
+    include "../Client/cauhinh.php";
         $keychuoi = $_POST['id'];
     $sql = "SELECT * FROM khachsan where `MaChuoi`=".$keychuoi;
     $danhsach1 = $connect -> query($sql);
