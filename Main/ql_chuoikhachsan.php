@@ -7,7 +7,7 @@
     $id = isset($_GET['id'])? $_GET['id'] : 0 ;
 ?>
     <h2>Danh sách các chuỗi khách sạn</h2>
-    <div class="list_hotel row">
+    <div class="list_hotel row no-gutters">
         <div class="hotel-right col l-9 ">
             <table class="table-hotel">
                 <tr class="hotel-title">

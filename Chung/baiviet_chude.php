@@ -1,64 +1,40 @@
 <?php
-	$MaBV = $_GET['id'];
-	// asda
-	$sql = "SELECT *
-			FROM baiviet A, chude B, user C
-			WHERE A.MaChuDe = B.MaChuDe AND A.maNguoiDung = C.MaNguoiDung AND A.MaBaiViet = $MaBV";
-	
-	$danhsach = $connect->query($sql);
-	//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
-	if (!$danhsach) {
-		die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
-		exit();
-	}
-	
-	$dong = $danhsach->fetch_array(MYSQLI_ASSOC);
-	
-	// Tăng lượt xem
-	$sql = "UPDATE baiviet SET LuotXem = LuotXem + 1 WHERE MaBaiViet = $MaBV";
-	$truyvan_luotxem = $connect->query($sql);
-	
-	
-?>
-<h3><?php echo $dong['TieuDe']; ?></h3>
-
-<p class="ThongTin">[<?php echo $dong['TenChuDe']; ?>] Đăng bởi <?php echo $dong['TenNguoiDung']; ?>, 
-vào lúc <?php echo $dong['NgayDang']; ?>, có  <?php echo $dong['LuotXem']; ?> lượt xem. </p>
-
-
-
-<p class="TomTat"><?php echo $dong['TomTat']; ?></p>
-<p><?php echo    "<td colspan=\"2\"><img width=\"400\" src=" . $dong["HinhAnh"] . "></br>" . $dong['ChuThichAnh'] . "</td>"; ?></p>
-<p class="NoiDung"><?php echo $dong['NoiDung']; ?></p>
-
-<table border="0" cellspacing="0" width="550" align="center" valign="top">
-
-<?php
-	// các tin khác cũ hơn cùng lĩnh vực
-	$sql = "select MaBaiViet, TieuDe , date_format(NgayDang,'%d/%m') as Ngay, MaChuDe from  baiviet " .
-        " where MaChuDe='" . $dong['MaChuDe'] .
-        "' and NgayDang < (select NgayDang from  baiviet where MaBaiViet=" . $dong["MaBaiViet"] . ") order by MaBaiViet desc";
-	
-	$danhsach2 = $connect->query($sql);
-	if (!$danhsach2) {
-		die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
-		exit();
-	}
-		
-	
-	echo "<tr>";
-		echo "<td class=\"tieude\"><hr/>Các tin khác cùng lĩnh vực:<ul>";
-	while ($row = $danhsach2->fetch_array(MYSQLI_ASSOC))
+	$MaCD = $_GET['id']? $_GET['id']: 0;
+	if($MaCD ==0)
 	{
-		echo "<li>";
-		
-		
-		echo "<a href='index.php?do=baiviet_chitiet&id=" . $row['MaBaiViet'] . "'>" . $row['TieuDe'] . "</a>";
-		echo "&nbsp;<span class=\"ngay\">(" . $row["Ngay"] . ")</span>";
-		echo "</li>";
-	}
-	echo "</ul></td></tr> </table>";
-
+		echo "Không có bài viết nào";
+	}else
+	{
+		$sql = "select t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat, t.MaChuDe, t.HinhAnh, t.ChuThichAnh, l.MaChuDe, l.TenChuDe
+		  from (chude l inner join baiviet t on t.MaChuDe=l.MaChuDe)
+		  where t.MaChuDe='$MaCD'
+		  group by t.MaChuDe, t.MaBaiViet, t.TieuDe, t.NgayDang, t.TomTat
+		  having (t.NgayDang >= all (select NgayDang from baiviet where MaChuDe=l.MaChuDe))";
+	
+			$danhsach = $connect->query($sql);
+			//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
+			if (!$danhsach) {
+				die("Không thể thực hiện câu lệnh SQL: " . $connect->connect_error);
+				exit();
+			}
+			while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
+			{
+	
+				echo    "<div class=\"new-item col l-6\">";
+				echo        "<a href= 'index.php?do=baiviet_chitiet&news=dsbaiviet&id= ".$row['MaBaiViet']."' class=\"new-link\">".$row['TieuDe']."</a> <br>";
+				echo        "<a href='index.php?do=baiviet_chude&news=dsbaiviet&id=".$row['MaChuDe']." ' class=\"new-link-cd\">".$row['TenChuDe']."</a> " ;
+				echo        "<p>".$row['NgayDang']."</p>";
+				echo        "<div class=\"new-body row \">";
+				echo              "<div class=\"new-body_img col l-4\">";
+				echo                    "<img src='../images/".$row['HinhAnh']."' alt=\"\" >";
+				echo              "</div>";
+				echo                    "<p class=\"col l-8\">".$row['TomTat']."</p>";
+				echo        "</div>";
+				echo        "<a href='index.php?do=baiviet_chitiet&news=dsbaiviet&id=".$row['MaBaiViet']."' class=\"new-about\">chi tiet</a>";
+				echo      "</div>";
+			}
+	} 
 
 ?>
-
+	</body>
+</html>

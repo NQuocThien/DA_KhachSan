@@ -18,8 +18,14 @@
     <div class="list_new grid wide">
         <div class="row">
             <div class="col l-2">
+                <div class="search">
+                    <form action="index.php?do=news&news=dsbaiviet" method="post">
+                        <input type="text" class="input_search" name="input_search">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
                 <div class="list_cd">
-                    <h3> Danh </h3>
+                    <h3> Chủ Đề</h3>
                         <?php
                             $sql = "select * from chude";
                             $danhsach = $connect->query($sql);
@@ -30,7 +36,7 @@
                             }
                             while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
                             {
-                                echo "<a href='index.php?do=baiviet_chude&id=".$row['MaChuDe']."'>".$row['TenChuDe']."</a> " ;
+                                echo "<a href='index.php?do=news&news=baiviet_chude&id=".$row['MaChuDe']."'>".$row['TenChuDe']."</a> " ;
                             }
                         ?>
                     </div>

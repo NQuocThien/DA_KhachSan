@@ -492,3 +492,8 @@ footer{
     }
     
 }
+#move_to_admin{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}

@@ -5,7 +5,7 @@
     $email = $_POST["email"];
     $maChuoiKS = $_POST["select_branch"];
     $MaKS = $_POST["select_hotel"];
-    $typeRoom = $_POST["select_hotel"];
+    $typeRoom = $_POST["select_type-room"];
     $date_come = $_POST["date_come"];
     $date_leave = $_POST["date_leave"];
     $note = $_POST["note"];
@@ -16,15 +16,15 @@
     
     $sql_insertKH ="INSERT INTO `khachhang`(`HoTen`, `Sdt`, `Email`) 
     VALUES ('$fullName','$numberPhone','$email')";
-    echo $sql_insertKH;
     if($connect->query($sql_insertKH) === TRUE)
     {
 
     }else {
         die( "Lỗi: ".$sql_insertKH . "<br>". $connect->error);
+        exit;
     }
 
-    $sql_kh = "SELECT * FROM `khachhang` where HoTen = '$fullName' and Sdt = '$numberPhone' and Email = '$email'" ;
+    $sql_kh = "SELECT * FROM `khachhang` where HoTen = '$fullName' and Sdt = '$numberPhone' and Email = '$email' and MaKhachHang not in (select MaKhachHang from DatPhong)" ;
     $danhsach = $connect->query($sql_kh);
     if($row = $danhsach->fetch_array(MYSQLI_ASSOC))
     {
@@ -34,17 +34,11 @@
          if($connect->query($sql) === TRUE)
          {
             header( "Location: ../Chung/index.php");
-            echo "thành cong";
          }else {
              die( "Lỗi: ".$sql . "<br>". $connect->error);
          }
     }else 
     {
-        die( "Lỗi: ".$sql . "<br>". $connect->error);
+        die( "Lỗi: ".$sql_kh . "<br>". $connect->error);
     }
-
-        
-        
-
-
 ?>

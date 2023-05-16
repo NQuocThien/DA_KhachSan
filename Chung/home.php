@@ -256,8 +256,7 @@
                         }
                         while ($row = $danhsach->fetch_array(MYSQLI_ASSOC)) 		
                         {
-                            echo "<i class=\"fa-solid fa-check\"></i>";
-                            echo "<span>".$row["TieuDe"]."</span>";
+                            echo "<a href=\"index.php?do=baiviet_chitiet&id=".$row["MaBaiViet"]."\"><i class=\"fa-solid fa-check\"></i>".$row["TieuDe"]."</a>";
                         }
                     ?>
                         </a>

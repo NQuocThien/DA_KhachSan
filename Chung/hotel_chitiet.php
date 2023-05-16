@@ -38,7 +38,7 @@
                 <div class="hearder col l-12">
                     <div class="row">
                         <div class="image col l-4">
-                            <img src=" <?php echo $dong["HinhAnh"] ?>" alt="">
+                            <img src="../images/<?php echo $dong["HinhAnh"] ?>" alt="">
                         </div>
                         <div class="col l-8">
                             <h3 class="title">

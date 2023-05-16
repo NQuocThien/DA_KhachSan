@@ -107,7 +107,7 @@
                             <div class="icon_item"><a href=""><span><i class="fa-brands fa-instagram"></i></span></a></div>
                             <div class="icon_item"><a href=""><span><i class="fa-brands fa-youtube"></i></span></a></div>
                         </div>
-                        <a href="../Main/login.php">trang admins</a>
+                        <a id="move_to_admin" href="../Main/main.php" style="color: white; text-decoration:none; font-size:18px;">trang admin</a>
                     </div>
                 </div>
                 <div class="col l-12 end_footer">

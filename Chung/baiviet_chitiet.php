@@ -1,11 +1,8 @@
 <?php
     include "cauhinh.php";
-	$MaBV = $_GET['id'];
-	
-	$sql = "SELECT *
-			FROM baiviet A, chude B, user C
-			WHERE A.MaChuDe = B.MaChuDe AND A.maNguoiDung = C.MaNguoiDung AND A.MaBaiViet = $MaBV";
-	
+    $sql = "SELECT *
+            FROM baiviet A, chude B, user C
+            WHERE A.MaChuDe = B.MaChuDe AND A.maNguoiDung = C.MaNguoiDung AND A.MaBaiViet = $MaBV";
 	$danhsach = $connect->query($sql);
 	//Nếu kết quả kết nối không được thì xuất báo lỗi và thoát
 	if (!$danhsach) {
@@ -33,7 +30,7 @@
                 vào lúc <?php echo $dong['NgayDang']; ?>, có  <?php echo $dong['LuotXem']; ?> lượt xem. </p>
                 
                 <p class="TomTat"><?php echo $dong['TomTat']; ?></p>
-                <p><?php echo    "<td colspan=\"2\"><img width=\"400\" src=" . $dong["HinhAnh"] . "></br>" . $dong['ChuThichAnh'] . "</td>"; ?></p>
+                <p><?php echo    "<td colspan=\"2\"><img width=\"400\" src=" ."../images/" . $dong["HinhAnh"] . "></br>" . $dong['ChuThichAnh'] . "</td>"; ?></p>
                 <p class="NoiDung"><?php echo $dong['NoiDung']; ?></p>
                 
                 <table border="0" cellspacing="0" width="550" align="center" valign="top">

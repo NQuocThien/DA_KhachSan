@@ -2,7 +2,6 @@
     include "../Chung/cauhinh.php";
     $sql_select = "SELECT * FROM chude";
     $list = $connect->query($sql_select);
-    echo $sql_select;
     if(!$list)
     {
         echo "loi";    }
