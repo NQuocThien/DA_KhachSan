@@ -82,7 +82,7 @@
                 <a class="col l-12 <?php if( $page=='quanlyloaiphong') echo "active"; else echo "" ?>" href="index.php?do=quanlyloaiphong"><p><i class="fa-solid fa-people-roof"></i>Loại Phòng </p></a>
                 <a class="col l-12 <?php if( $page=='ql_baiviet') echo "active"; else echo "" ?>" href="index.php?do=ql_baiviet"><p><i class="fa-solid fa-newspaper"></i> Tin tức </p></a>
                 <a class="col l-12 <?php if( $page=='ql_chude') echo "active"; else echo "" ?>" href="index.php?do=ql_chude"><p><i class="fa-sharp fa-solid fa-book-open-reader"></i> Chủ Đề </p></a>
-                <a class="col l-12 <?php if( $page=='ql_khachhang') echo "active"; else echo "" ?>" href="index.php?do=ql_khachhang"><p><i class="fa-sharp fa-solid fa-book-open-reader"></i> Khách hàng</p></a>
+                <a class="col l-12 <?php if( $page=='ql_khachhang') echo "active"; else echo "" ?>" href="index.php?do=ql_khachhang"><p><i class="fa-solid fa-person-military-pointing"></i>Khách hàng</p></a>
             </div>
             <!-- <script src="../Js/mainuser.js"></script> -->
         </div>
