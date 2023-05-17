@@ -47,15 +47,17 @@
                             {
                                 $infor = $topic->fetch_array(MYSQLI_ASSOC)
                     ?> 
-                    <form action="" method="post" id="topic-form">
+                    <form action="sua_chude-submit.php" method="post" id="topic-form">
                         <h3>Sửa chủ đề bài viết</h3>
+                        <input type="hidden" name="MaChuDe" value="<?php echo $infor['MaChuDe']?>">
+                        
                         <div class="form_group">
                             <label for="topic-id">Mã chủ đề</label>
                             <input type="text" id="topic-id" value="<?php echo $infor['MaChuDe']?>" disabled>
                         </div>
                         <div class="form_group">
                             <label for="topic-name">Tên chủ đề</label>
-                            <input class = "form-control" type="text" id="topic-name" value="<?php echo $infor['TenChuDe']?>">
+                            <input class = "form-control" type="text" name="TenChuDe" id="topic-name" value="<?php echo $infor['TenChuDe']?>">
                             <span class="form-message"></span>
                         </div>
                         <button type="submit">Sửa</button>

@@ -37,7 +37,7 @@
             window.history.back();
             </script>';
             
-            header("Location: index.php?do=quanlyloaiphong");
+            header("Location: index.php?do=quanlyroom");
         }
     }
 ?>
