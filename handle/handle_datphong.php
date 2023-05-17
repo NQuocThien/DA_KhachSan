@@ -18,27 +18,38 @@
     VALUES ('$fullName','$numberPhone','$email')";
     if($connect->query($sql_insertKH) === TRUE)
     {
-
+        $sql_kh = "SELECT * FROM `khachhang` where HoTen = '$fullName' and Sdt = '$numberPhone' and Email = '$email' and MaKhachHang not in (select MaKhachHang from DatPhong)" ;
+        $danhsach = $connect->query($sql_kh);
+        if($row = $danhsach->fetch_array(MYSQLI_ASSOC))
+        {
+            $maKhachHang = $row['MaKhachHang'];
+            $sql = "INSERT INTO `datphong`( `MaKhachSan`, `MaLoaiPhong`, `MaKhachHang`, `NgayDat`, `NgayNhan`, `NgayTra`, `GhiChu`, `SoLuong`, `TrangThai`) 
+            VALUES ('$MaKS','$typeRoom','$maKhachHang' , '$today','$date_come','$date_leave','$note','$soluong', '0' )";
+            if($connect->query($sql) === TRUE)
+            {
+                header( "Location: ../Client/index.php");
+            }else {
+                echo '<script>
+                alert("Lỗi insert đặt phòng");
+                window.history.back();
+                </script>';
+                exit;
+            }
+        }else 
+        {
+            echo '<script>
+            alert("Lỗi select MaKhachHang");
+            window.history.back();
+            </script>';
+            exit;
+        }
     }else {
-        die( "Lỗi: ".$sql_insertKH . "<br>". $connect->error);
+        echo '<script>
+        alert("Lỗi insert khachhang trùng dữ liệu");
+        window.history.back();
+        </script>';
         exit;
     }
 
-    $sql_kh = "SELECT * FROM `khachhang` where HoTen = '$fullName' and Sdt = '$numberPhone' and Email = '$email' and MaKhachHang not in (select MaKhachHang from DatPhong)" ;
-    $danhsach = $connect->query($sql_kh);
-    if($row = $danhsach->fetch_array(MYSQLI_ASSOC))
-    {
-        $maKhachHang = $row['MaKhachHang'];
-        $sql = "INSERT INTO `datphong`( `MaKhachSan`, `MaLoaiPhong`, `MaKhachHang`, `NgayDat`, `NgayNhan`, `NgayTra`, `GhiChu`, `SoLuong`, `TrangThai`) 
-        VALUES ('$MaKS','$typeRoom','$maKhachHang' , '$today','$date_come','$date_leave','$note','$soluong', '0' )";
-         if($connect->query($sql) === TRUE)
-         {
-            header( "Location: ../Client/index.php");
-         }else {
-             die( "Lỗi: ".$sql . "<br>". $connect->error);
-         }
-    }else 
-    {
-        die( "Lỗi: ".$sql_kh . "<br>". $connect->error);
-    }
+    
 ?>

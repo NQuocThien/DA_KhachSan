@@ -105,7 +105,7 @@
 </div>
 <footer>
     <h4>Đồ án lập trình web quản lý khách sạn</h4>
-    <p>Giáo viên hướng dẫn: Trần Thanh Quan Phú</p>
+    <p>Giáo viên hướng dẫn: Thiều Thanh Quan Phú</p>
     <p>Sinh viên thực hiện: Nguyễn Quốc Thiện DTH205987 - Nguyễn Hoàng Thắng DTH205977 - Nguyễn Trường Thịnh DTH205997 </p>
 </footer>
 </body>
