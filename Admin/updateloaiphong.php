@@ -17,36 +17,36 @@
   <form action="updateloaiphong_submit.php" method="post"enctype="multipart/form-data">
    
 
-        <div class="box updateloaiphong">
+        <div class="box1 updateloaiphong">
             <h2>Update Loại phòng</h2>
             
                 
-                <div class="input_box">
+                <div class="input_box1">
                     <span><i class="fa-brands fa-codepen"></i>Mã Loại Phòng</span>
                     <input type="text"name="malpid"value="<?php echo $malpid?> " readonly >
                     
                 </div>
-                <div class="input_box">
+                <div class="input_box1">
                     <span><i class="fa-solid fa-people-roof"></i>Tên Loại phòng </span>
                     <input type="text" name="TenLoaiPhong"value="<?php echo $row['TenLoaiPhong']?>">
                     
                 </div>
-                <div class="input_box">
+                <div class="input_box1">
                     <span><i class="fa-solid fa-dollar-sign"></i>Giá</span>
                     <input type="text"  name="Gia" value="<?php echo $row['Gia']?>">
                     
                 </div>
-                <div class="input_box">
+                <div class="input_box1">
                     <span><i class="fa-solid fa-ruler-horizontal"></i>Kích thước</span>
                     <input type="text" name="KichThuoc" value="<?php echo $row['KichThuoc']?>">
                     
                 </div>
-                <div class="input_box">
+                <div class="input_box1">
                     <span><i class="fa-solid fa-users"></i>Số lượng Người</span>
                     <input type="text"  name ="SLNguoi" value="<?php echo $row['SLNguoi']?>">
                     
                 </div>
-                <div class="input_box">
+                <div class="input_box1">
                     <span><i class="fa-solid fa-bed"></i></i>Loại Giường</span>
                     <?php
                         if($row['LoaiGiuong']==1){
