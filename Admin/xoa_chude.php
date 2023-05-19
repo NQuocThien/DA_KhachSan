@@ -8,6 +8,10 @@
     }
 
     else {
-        header("location: index.php?do=ql_chude");
+        echo '<script>
+        alert("Xóa thành công!");
+        window.history.back();
+        </script>';
+        header("location:index.php?do=ql_chude");
     }
 ?>
