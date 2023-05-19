@@ -1,5 +1,6 @@
 <?php 
     include "../Client/cauhinh.php";
+    ob_start();
     $key = $_GET['id'];
     $sql_delete = "DELETE FROM baiviet WHERE MaBaiViet = '$key'";
     $test = $connect->query($sql_delete);
