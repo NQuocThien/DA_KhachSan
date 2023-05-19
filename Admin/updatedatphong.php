@@ -74,7 +74,7 @@
                                 <select name="select_datphong_phong" id="MaLoaiPhong" class="form-control">
                                 <option value="<?php echo $row['MaPhong'];?>"><?php echo $rowphong['TenPhong'];?></option> 
                                     <?php 
-                                        $sql_tenphong=$pdo->prepare("SELECT * FROM `phong` WHERE `MaPhong` <> '".$row['MaPhong']."'");
+                                        $sql_tenphong=$pdo->prepare("SELECT DISTINCT * FROM `phong` WHERE `MaPhong` <> '".$row['MaPhong']."' and `MaKhachSan` ='".$row['MaKhachSan']."'");
                                         $sql_tenphong->execute();
                                         while($rowtenphong_select = $sql_tenphong->fetch(PDO::FETCH_ASSOC))
                                         {

@@ -9,9 +9,10 @@
 
     else {
         echo '<script>
-        alert("Xóa thành công!");
+        alert("Xóa chủ đề thành công!");
         window.history.back();
         </script>';
-        header("location:index.php?do=ql_chude");
+        exit;
+        header("location: index.php?do=ql_chude");
     }
 ?>

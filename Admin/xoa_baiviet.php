@@ -12,10 +12,10 @@
     else 
     {
         echo '<script>
-        alert("Xóa thành công!");
+        alert("Xóa bài viết thành công!");
         window.history.back();
         </script>';
-        header("Location:index.php?do=ql_baiviet");
-        ob_end_flush();
+        exit;
+        header("Location: index.php?do=ql_baiviet");
     }
 ?>
