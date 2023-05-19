@@ -11,6 +11,7 @@
    
     $target_path = "../images/";
     echo $image_name = basename($_FILES['image']['name']);
+    echo "hay".$user_id;
     $target_path = $target_path . $image_name;
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target_path))
         echo "";

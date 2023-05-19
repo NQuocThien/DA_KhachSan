@@ -1,9 +1,8 @@
 <?php 
     include "../Client/cauhinh.php";
-    
-    $sql1 ="select * from datphong where MaKhachHang = ".$_GET['id'];
-    $action1 =  $connect->query($sql1);
-    if($action1){
+    $select_kiemtra1 = $pdo->prepare("select * from datphong where MaKhachHang = ".$_GET['id']);	
+    $select_kiemtra1->execute();
+    if($select_kiemtra1->rowCount() > 0){
         echo '<script>
         alert("Vui lòng xóa khách hàng đang đặt phòng!");
         window.history.back();

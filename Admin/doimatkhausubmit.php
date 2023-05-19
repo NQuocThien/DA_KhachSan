@@ -33,10 +33,11 @@
         exit;
     }
     else{
-        $passold=md5( $passold);
-        $select_kiemtra1 = $pdo->prepare("SELECT * FROM user WHERE `MatKhau`='".$passold ."' and `MaNguoiDung`='".$_SESSION['MaND']."'");	
-        $danhsach =$select_kiemtra1->execute();
-        if($danhsach){
+        $passold1=md5($passold);
+        echo $passold1;
+        $select_kiemtra1 = $pdo->prepare("SELECT * FROM `user` WHERE `MatKhau`='".$passold1."' and `MaNguoiDung`='".$_SESSION['MaND']."'");	
+        $select_kiemtra1->execute();
+        if( $select_kiemtra1->rowCount() > 0){
             $passnewo=md5( $passnewo);
             $sql_update_userpass = $pdo->prepare("UPDATE `user` SET `MatKhau`='$passnewo' WHERE `MaNguoiDung`=".$_SESSION['MaND']);
             $sql_update_userpass->execute();

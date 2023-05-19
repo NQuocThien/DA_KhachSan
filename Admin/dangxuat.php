@@ -6,6 +6,6 @@
 	unset($_SESSION['Quyen']);
 	unset($_SESSION['Img']);
 	
-	// Chuyển hướng về trang login.php
-	header("Location: login.php");
+	// Chuyển hướng về trang index.php
+	header("Location: index.php");
 ?>
