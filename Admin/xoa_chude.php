@@ -8,6 +8,11 @@
     }
 
     else {
+        echo '<script>
+        alert("Xóa chủ đề thành công!");
+        window.history.back();
+        </script>';
+        exit;
         header("location: index.php?do=ql_chude");
     }
 ?>

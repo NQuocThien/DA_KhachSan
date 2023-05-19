@@ -38,6 +38,11 @@
                 $path = "../images/".$hotel["HinhAnh"];
                 unlink($path);
             }
+            echo '<script>
+            alert("Xóa khách sạn thành công!");
+            window.history.back();
+            </script>';
+            exit;
             header("Location: index.php?do=ql_khachsan");
         }
     }

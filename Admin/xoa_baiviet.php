@@ -10,6 +10,11 @@
     }
     else 
     {
+        echo '<script>
+        alert("Xóa bài viết thành công!");
+        window.history.back();
+        </script>';
+        exit;
         header("Location: index.php?do=ql_baiviet");
     }
 ?>

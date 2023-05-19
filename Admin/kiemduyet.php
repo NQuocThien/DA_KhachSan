@@ -28,6 +28,10 @@
                 die("Error: " . $connect->error);
             }
             else{
+                echo '<script>
+                window.history.back();
+                </script>';
+                exit;
                 header("Location: index.php?do=ql_baiviet");
             }
         }
